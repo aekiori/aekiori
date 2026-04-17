@@ -5,8 +5,7 @@
 
 # Aekiori
 ## Backend Engineer (4 years experience)
-- ### Backend Engineer with strong debugging and root cause analysis skills
-
+### Backend Engineer with strong debugging and root cause analysis skills
 
 ---
 ## History
@@ -14,6 +13,10 @@
   - Backend Engineer - League of Legends Service
   - Designed and optimized high-traffic APIs
   - Performance tuning and scalability improvements
+---
+## My Blog
+https://velog.io/@aekiori/posts
+
 ---
 ## Main
 ![PHP](https://img.shields.io/badge/PHP-1F425F?style=for-the-badge&logo=php&logoColor=white)
