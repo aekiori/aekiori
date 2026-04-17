@@ -7,6 +7,7 @@
 ## Backend Engineer (4 years experience)
 ### Backend Engineer with strong debugging and root cause analysis skills
 
+
 ---
 ## History
 - ### OP.GG (4 years, 2021.01 ~ 2025.02)
