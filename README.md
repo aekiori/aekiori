@@ -15,8 +15,9 @@
   - Designed and optimized high-traffic APIs
   - Performance tuning and scalability improvements
 ---
-## My Blog
-https://velog.io/@aekiori/posts
+## Community
+https://velog.io/@aekiori/posts  
+https://www.youtube.com/@aekiori
 
 ---
 ## Main
