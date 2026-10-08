@@ -1,0 +1,58 @@
+{
+  "run_id": "CAL-0001-DR01",
+  "checks": [
+    {
+      "check_id": "CHK-B01-01",
+      "source_query_id": "N-B01-K2-01",
+      "candidate_url": "https://kroung.com/local-currency/gyeonggi-do/gunpo/view.php?cat=%EB%86%8D%EC%82%B0%EB%AC%BC%2C%EC%B2%AD%EA%B3%BC%EB%AC%BC",
+      "opened_at": "2026-08-10T21:52:18.677Z",
+      "observed_at": "2026-08-10T21:52:46.035Z",
+      "page_title": "군포시 지역화폐 농산물,청과물 사용 가능한 곳 찾기",
+      "source_description": "Current third-party page stating it is based on Gyeonggi local-currency public data and may differ from real time.",
+      "rows_inspected": 77,
+      "exact_name": "야채나라",
+      "exact_name_row_count": 0,
+      "target_address": "경기도 군포시 광정로 25-57",
+      "target_address_rows": [
+        {
+          "address": "경기도 군포시 광정로 25-57",
+          "name": "곡물이야기"
+        }
+      ],
+      "outcome": "candidate_rejected_for_name_address_match; current page contains no 야채나라 and maps target building address only to 곡물이야기",
+      "claim_boundary": "Does not disprove a past 야채나라 at the building or identify a facade bay."
+    },
+    {
+      "check_id": "CHK-B01-02",
+      "source_query_id": "G-B01-K2-02",
+      "candidate_url": "https://kt99.tistory.com/383",
+      "opened_at": "2026-08-10T21:52:53.217Z",
+      "observed_at": "2026-08-10T21:53:11.788Z",
+      "page_title": "군포시 지역화폐 가맹점 알아보기",
+      "displayed_publication_date": "2020. 4. 26.",
+      "exact_name": "야채나라",
+      "exact_name_occurrence_count": 1,
+      "exact_address_occurrence_count": 0,
+      "any_광정로_occurrence_count": 0,
+      "context_excerpt": "C방\n앨리스의옷장\n앳트모스피어(Atmosphere)앳트모스피어\n앵두\n앵콜노래연습장\n앵콜노래연습장\n앵콜노래연습장\n야간얼큰우동군포점\n야구하는형\n야미가\n야미살롱\n야미정\n야미쿡\n야밤포차\n야시\n야와라스포츠\n야인신닭발\n야제르\n야채나라\n야호양꼬치\n야화\n야후노래연습장\n약산골순대국\n약속\n약손명가 에스테틱 (산본점)\n약손한의원\n약초약국\n양가네코다리찜&뿔난쭈꾸미\n양계장집아들\n양계장집아들군포점\n양석민골프클럽\n양선생김밥\n양신\n양은냄비\n양자강\n양정어린이집[아이행복]\n양정텔레콤\n양지공인중개사 사무소\n양지분식\n양지어린이집[아이행복]\n양지유통\n양지축산\n양지커피앤호프\n양치과의원\n양키캔들 산본점\n양파랑\n양평신내서울해장국\n양평정육점\n어게",
+      "outcome": "candidate_name_city_hit_only; exact storefront address absent",
+      "identity_status": "possible",
+      "claim_boundary": "The page establishes that a merchant named 야채나라 appeared in a 2020 군포시 regional-currency merchant-name list. It does not establish that it is CAL-0001-B01."
+    },
+    {
+      "check_id": "CHK-B03-01",
+      "source_query_id": "N-B03-K2-01",
+      "candidate_url": "https://search.naver.com/search.naver?query=%22%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%EB%9C%A8%22%20%22%EA%B4%91%EC%A0%95%EB%A1%9C%2025-57%22",
+      "page_title": "\"파리바게뜨\" \"광정로 25-57\" : 네이버 검색",
+      "place_module_name": "파리바게뜨 산본3단지점",
+      "name_present": true,
+      "address": "광정로 25-57 율곡아파트 율곡A상가",
+      "exact_address_present": true,
+      "units": "106호, 110호, 120호",
+      "unit_string_present": true,
+      "phone_recorded": false,
+      "outcome": "current_brand_place_match",
+      "claim_boundary": "Current place identity only; not a retrieved 2015 temporal anchor and not proof of continuous operator or legal entity."
+    }
+  ]
+}

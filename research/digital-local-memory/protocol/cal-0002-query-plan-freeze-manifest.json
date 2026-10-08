@@ -1,0 +1,45 @@
+{
+  "manifest_version": "0.3",
+  "plan_id": "CAL-0002-QP01",
+  "scope_id": "CAL-0002-S01",
+  "protocol_version": "PILOT_PROTOCOL_V0.3",
+  "status": "FROZEN_BEFORE_RETRIEVAL",
+  "frozen_at": "2026-08-11T07:44:51+09:00",
+  "query_count": 20,
+  "budget_cell_count": 14,
+  "target_queries_before_freeze": 0,
+  "first_result_viewed_before_freeze": false,
+  "substantive_result_allowed": false,
+  "pre_freeze_validation": {
+    "query_ids_unique": true,
+    "query_orders_complete_1_through_20": true,
+    "query_texts_present": true,
+    "entity_cross_references": true,
+    "bay_cross_references": true,
+    "budget_cells_contiguous": true,
+    "raw_phone_pattern_hits": 0
+  },
+  "files": [
+    {
+      "path": "CAL-0002_QUERY_PLAN_V0.3.md",
+      "byte_size": 3910,
+      "sha256": "969D080320101EE3E462D66B9DC87D07F1D8D80F24178161E50E2D1EC25B485E"
+    },
+    {
+      "path": "cal-0002-query-plan.v0.3.json",
+      "byte_size": 8926,
+      "sha256": "6725AF69CF6C4A2615B61F9F74DF04FB4682B19A4FB95BFF13438DEE9BEBCE29"
+    },
+    {
+      "path": "../evidence/CAL-0002/scope-freeze-manifest.json",
+      "byte_size": 1842,
+      "sha256": "EC9C6D3D97B13E79B061E204320AB5F7454FDAEFDEFE3E74B5B2B239628346C6"
+    },
+    {
+      "path": "protocol-v0.3-freeze-manifest.json",
+      "byte_size": 1892,
+      "sha256": "95C7A872A02A3F6345CBBF8D993CD46E2550030DEDE08802EEF8F5DC1C16511F"
+    }
+  ],
+  "mutation_rule": "Do not edit listed files or add target queries under this plan ID. Any change requires a new plan ID and results must not be merged across plans."
+}

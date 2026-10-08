@@ -1,0 +1,89 @@
+{
+  "plan_version": "0.3",
+  "plan_id": "CAL-0002-QP01",
+  "protocol_version": "PILOT_PROTOCOL_V0.3",
+  "scope_id": "CAL-0002-S01",
+  "status": "FROZEN_BEFORE_RETRIEVAL_BY_MANIFEST",
+  "created_at": "2026-08-11T07:42:13+09:00",
+  "execution_mode": "single_investigator_progressive_ladder",
+  "substantive_inference_allowed": false,
+  "anchor_image_counts_as_retrieval_outcome": false,
+  "platform_order": ["GOOGLE_WEB", "NAVER_WEB"],
+  "stabilization_contract": {
+    "probe_interval_ms": 1000,
+    "stable_probe_count": 2,
+    "max_stabilization_ms": 8000,
+    "google_title_observation": "Visible non-navigation candidate title links; organic h3 titles are coded as GOOGLE_ORGANIC_WEB and other modules separately.",
+    "naver_title_observation": "Visible candidate title links in the accessibility snapshot; modules are separated before outcome coding."
+  },
+  "explicit_no_result_patterns": {
+    "GOOGLE_WEB": ["일치하는 검색결과가 없습니다", "검색어와 일치하는 결과가 없습니다"],
+    "NAVER_WEB": ["검색결과가 없습니다", "검색 결과가 없습니다"]
+  },
+  "search_surfaces": {
+    "GOOGLE_WEB": {
+      "url_template": "https://www.google.com/search?hl=ko&pws=0&q={urlencoded_query}",
+      "modules": ["GOOGLE_ORGANIC_WEB", "GOOGLE_MAP_PLACE", "GOOGLE_AI", "GOOGLE_IMAGE", "GOOGLE_OTHER", "GOOGLE_FALLBACK"]
+    },
+    "NAVER_WEB": {
+      "url_template": "https://search.naver.com/search.naver?query={urlencoded_query}",
+      "modules": ["NAVER_PLACE", "NAVER_WEB_DOCUMENT", "NAVER_BLOG_CAFE", "NAVER_IMAGE", "NAVER_AD", "NAVER_OTHER"]
+    }
+  },
+  "inspection_rule": {
+    "google_organic_rank_cap": 10,
+    "candidate_click_cap_per_query": 2,
+    "pagination_allowed": false,
+    "suggestion_following_allowed": false,
+    "automatic_fallback_outcome_eligible": false,
+    "ads_outcome_eligible": false,
+    "raw_phone_query_allowed": false,
+    "unplanned_alias_query_allowed": false,
+    "raw_dom_export_allowed": false
+  },
+  "budget_cells": [
+    {"budget_cell_id":"G-K0-SITE","platform":"GOOGLE_WEB","knowledge_regime":"K0","bay_or_site_id":"CAL-0002","max_active_review_seconds":120},
+    {"budget_cell_id":"G-K1-B01","platform":"GOOGLE_WEB","knowledge_regime":"K1","bay_or_site_id":"CAL-0002-B01","max_active_review_seconds":120},
+    {"budget_cell_id":"G-K1-B02","platform":"GOOGLE_WEB","knowledge_regime":"K1","bay_or_site_id":"CAL-0002-B02","max_active_review_seconds":120},
+    {"budget_cell_id":"G-K1-B03","platform":"GOOGLE_WEB","knowledge_regime":"K1","bay_or_site_id":"CAL-0002-B03","max_active_review_seconds":120},
+    {"budget_cell_id":"G-K2-B01","platform":"GOOGLE_WEB","knowledge_regime":"K2","bay_or_site_id":"CAL-0002-B01","max_active_review_seconds":180},
+    {"budget_cell_id":"G-K2-B02","platform":"GOOGLE_WEB","knowledge_regime":"K2","bay_or_site_id":"CAL-0002-B02","max_active_review_seconds":180},
+    {"budget_cell_id":"G-K2-B03","platform":"GOOGLE_WEB","knowledge_regime":"K2","bay_or_site_id":"CAL-0002-B03","max_active_review_seconds":180},
+    {"budget_cell_id":"N-K0-SITE","platform":"NAVER_WEB","knowledge_regime":"K0","bay_or_site_id":"CAL-0002","max_active_review_seconds":120},
+    {"budget_cell_id":"N-K1-B01","platform":"NAVER_WEB","knowledge_regime":"K1","bay_or_site_id":"CAL-0002-B01","max_active_review_seconds":120},
+    {"budget_cell_id":"N-K1-B02","platform":"NAVER_WEB","knowledge_regime":"K1","bay_or_site_id":"CAL-0002-B02","max_active_review_seconds":120},
+    {"budget_cell_id":"N-K1-B03","platform":"NAVER_WEB","knowledge_regime":"K1","bay_or_site_id":"CAL-0002-B03","max_active_review_seconds":120},
+    {"budget_cell_id":"N-K2-B01","platform":"NAVER_WEB","knowledge_regime":"K2","bay_or_site_id":"CAL-0002-B01","max_active_review_seconds":180},
+    {"budget_cell_id":"N-K2-B02","platform":"NAVER_WEB","knowledge_regime":"K2","bay_or_site_id":"CAL-0002-B02","max_active_review_seconds":180},
+    {"budget_cell_id":"N-K2-B03","platform":"NAVER_WEB","knowledge_regime":"K2","bay_or_site_id":"CAL-0002-B03","max_active_review_seconds":180}
+  ],
+  "queries": [
+    {"order":1,"query_id":"G-K0-01","platform":"GOOGLE_WEB","knowledge_regime":"K0","bay_id":null,"target_entity_ids":[],"budget_cell_id":"G-K0-SITE","query":"\"우륵 주공7단지아파트\" 2015"},
+    {"order":2,"query_id":"G-K0-02","platform":"GOOGLE_WEB","knowledge_regime":"K0","bay_id":null,"target_entity_ids":[],"budget_cell_id":"G-K0-SITE","query":"\"우륵주공7단지\" 상가"},
+    {"order":3,"query_id":"G-B01-K1-01","platform":"GOOGLE_WEB","knowledge_regime":"K1","bay_id":"CAL-0002-B01","target_entity_ids":["CAL-0002-E01"],"budget_cell_id":"G-K1-B01","query":"편의점 \"우륵 주공7단지아파트\""},
+    {"order":4,"query_id":"G-B02-E02-K1-01","platform":"GOOGLE_WEB","knowledge_regime":"K1","bay_id":"CAL-0002-B02","target_entity_ids":["CAL-0002-E02"],"budget_cell_id":"G-K1-B02","query":"미용실 \"우륵 주공7단지아파트\""},
+    {"order":5,"query_id":"G-B02-E03-K1-01","platform":"GOOGLE_WEB","knowledge_regime":"K1","bay_id":"CAL-0002-B02","target_entity_ids":["CAL-0002-E03"],"budget_cell_id":"G-K1-B02","query":"세탁소 \"우륵 주공7단지아파트\""},
+    {"order":6,"query_id":"G-B03-K1-01","platform":"GOOGLE_WEB","knowledge_regime":"K1","bay_id":"CAL-0002-B03","target_entity_ids":["CAL-0002-E04"],"budget_cell_id":"G-K1-B03","query":"공인중개사 \"우륵 주공7단지아파트\""},
+    {"order":7,"query_id":"G-B01-K2-01","platform":"GOOGLE_WEB","knowledge_regime":"K2","bay_id":"CAL-0002-B01","target_entity_ids":["CAL-0002-E01"],"budget_cell_id":"G-K2-B01","query":"\"CU\" \"우륵주공7단지\""},
+    {"order":8,"query_id":"G-B02-E02-K2-01","platform":"GOOGLE_WEB","knowledge_regime":"K2","bay_id":"CAL-0002-B02","target_entity_ids":["CAL-0002-E02"],"budget_cell_id":"G-K2-B02","query":"\"김연주 헤어샵\" 군포 산본"},
+    {"order":9,"query_id":"G-B02-E03-K2-01","platform":"GOOGLE_WEB","knowledge_regime":"K2","bay_id":"CAL-0002-B02","target_entity_ids":["CAL-0002-E03"],"budget_cell_id":"G-K2-B02","query":"\"하얀크리닝\" 군포 산본"},
+    {"order":10,"query_id":"G-B03-K2-01","platform":"GOOGLE_WEB","knowledge_regime":"K2","bay_id":"CAL-0002-B03","target_entity_ids":["CAL-0002-E04"],"budget_cell_id":"G-K2-B03","query":"\"우륵 공인중개사\" 군포"},
+    {"order":11,"query_id":"N-K0-01","platform":"NAVER_WEB","knowledge_regime":"K0","bay_id":null,"target_entity_ids":[],"budget_cell_id":"N-K0-SITE","query":"\"우륵 주공7단지아파트\" 2015"},
+    {"order":12,"query_id":"N-K0-02","platform":"NAVER_WEB","knowledge_regime":"K0","bay_id":null,"target_entity_ids":[],"budget_cell_id":"N-K0-SITE","query":"\"우륵주공7단지\" 상가"},
+    {"order":13,"query_id":"N-B01-K1-01","platform":"NAVER_WEB","knowledge_regime":"K1","bay_id":"CAL-0002-B01","target_entity_ids":["CAL-0002-E01"],"budget_cell_id":"N-K1-B01","query":"편의점 \"우륵 주공7단지아파트\""},
+    {"order":14,"query_id":"N-B02-E02-K1-01","platform":"NAVER_WEB","knowledge_regime":"K1","bay_id":"CAL-0002-B02","target_entity_ids":["CAL-0002-E02"],"budget_cell_id":"N-K1-B02","query":"미용실 \"우륵 주공7단지아파트\""},
+    {"order":15,"query_id":"N-B02-E03-K1-01","platform":"NAVER_WEB","knowledge_regime":"K1","bay_id":"CAL-0002-B02","target_entity_ids":["CAL-0002-E03"],"budget_cell_id":"N-K1-B02","query":"세탁소 \"우륵 주공7단지아파트\""},
+    {"order":16,"query_id":"N-B03-K1-01","platform":"NAVER_WEB","knowledge_regime":"K1","bay_id":"CAL-0002-B03","target_entity_ids":["CAL-0002-E04"],"budget_cell_id":"N-K1-B03","query":"공인중개사 \"우륵 주공7단지아파트\""},
+    {"order":17,"query_id":"N-B01-K2-01","platform":"NAVER_WEB","knowledge_regime":"K2","bay_id":"CAL-0002-B01","target_entity_ids":["CAL-0002-E01"],"budget_cell_id":"N-K2-B01","query":"\"CU\" \"우륵주공7단지\""},
+    {"order":18,"query_id":"N-B02-E02-K2-01","platform":"NAVER_WEB","knowledge_regime":"K2","bay_id":"CAL-0002-B02","target_entity_ids":["CAL-0002-E02"],"budget_cell_id":"N-K2-B02","query":"\"김연주 헤어샵\" 군포 산본"},
+    {"order":19,"query_id":"N-B02-E03-K2-01","platform":"NAVER_WEB","knowledge_regime":"K2","bay_id":"CAL-0002-B02","target_entity_ids":["CAL-0002-E03"],"budget_cell_id":"N-K2-B02","query":"\"하얀크리닝\" 군포 산본"},
+    {"order":20,"query_id":"N-B03-K2-01","platform":"NAVER_WEB","knowledge_regime":"K2","bay_id":"CAL-0002-B03","target_entity_ids":["CAL-0002-E04"],"budget_cell_id":"N-K2-B03","query":"\"우륵 공인중개사\" 군포"}
+  ],
+  "stop_conditions": [
+    "A budget cell exhausts its active-review allowance.",
+    "CAPTCHA or access restriction appears; do not evade it.",
+    "The frozen query cannot be restored after rewrite.",
+    "Safe minimum recording cannot prevent unrelated sensitive-data retention.",
+    "A new schema ambiguity would require collapsing distinct entities or modules."
+  ]
+}

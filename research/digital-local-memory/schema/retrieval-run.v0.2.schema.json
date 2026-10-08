@@ -1,0 +1,435 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/digital-local-memory/retrieval-run.v0.2.schema.json",
+  "title": "Digital Local Memory Retrieval Run V0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_version",
+    "run_id",
+    "plan_id",
+    "scope_id",
+    "cohort_role",
+    "substantive_use_allowed",
+    "investigator",
+    "environment",
+    "stabilization_contract",
+    "budget_cells",
+    "queries",
+    "bay_outcomes",
+    "deviations",
+    "privacy_audit",
+    "run_status",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.2" },
+    "protocol_version": { "const": "PILOT_PROTOCOL_V0.2" },
+    "run_id": { "type": "string", "pattern": "^CAL-[0-9]{4}-DR[0-9]{2}$" },
+    "plan_id": { "type": "string", "pattern": "^CAL-[0-9]{4}-QP[0-9]{2}$" },
+    "scope_id": { "type": "string", "pattern": "^CAL-[0-9]{4}-S[0-9]{2}$" },
+    "cohort_role": { "const": "blind_measurement_calibration" },
+    "substantive_use_allowed": { "const": false },
+    "investigator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["investigator_id", "execution_mode", "prior_target_retrieval_exposure", "second_reader_status"],
+      "properties": {
+        "investigator_id": { "type": "string", "minLength": 1 },
+        "execution_mode": { "enum": ["single_investigator_progressive_ladder", "independent_reader"] },
+        "prior_target_retrieval_exposure": { "type": "boolean" },
+        "second_reader_status": { "enum": ["pending", "completed", "not_available"] }
+      }
+    },
+    "environment": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/platformEnvironment" }
+    },
+    "stabilization_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["probe_interval_ms", "stable_probe_count", "max_stabilization_ms"],
+      "properties": {
+        "probe_interval_ms": { "const": 1000 },
+        "stable_probe_count": { "const": 2 },
+        "max_stabilization_ms": { "const": 8000 }
+      }
+    },
+    "budget_cells": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/budgetCell" }
+    },
+    "queries": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/queryRecord" }
+    },
+    "bay_outcomes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/bayOutcome" }
+    },
+    "deviations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/deviation" }
+    },
+    "privacy_audit": { "$ref": "#/$defs/privacyAudit" },
+    "run_status": {
+      "enum": [
+        "IN_PROGRESS",
+        "FROZEN_CALIBRATION_RECORD",
+        "SINGLE_READER_PASS_SECOND_READER_PENDING",
+        "FAILED_PROTOCOL",
+        "BLOCKED"
+      ]
+    },
+    "claim_boundary": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+  },
+  "$defs": {
+    "dateTime": { "type": "string", "format": "date-time" },
+    "platform": { "enum": ["GOOGLE_WEB", "NAVER_WEB"] },
+    "regime": { "enum": ["K0", "K1", "K2", "K3"] },
+    "identityStatus": { "enum": ["confirmed", "probable", "possible", "conflicting", "unknown"] },
+    "triState": { "enum": ["yes", "no", "ambiguous", "not_assessed"] },
+    "falsePositiveType": {
+      "enum": [
+        "same_name_wrong_address",
+        "same_address_other_business",
+        "product_term_collision",
+        "polysemy_music_software_media",
+        "category_only_same_building",
+        "stale_index_current_page_mismatch",
+        "aggregate_snippet_collision",
+        "automatic_query_fallback",
+        "other"
+      ]
+    },
+    "platformEnvironment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["platform", "observed_at", "account_state", "ui_language", "location_basis", "personalization_request", "notes"],
+      "properties": {
+        "platform": { "$ref": "#/$defs/platform" },
+        "observed_at": { "$ref": "#/$defs/dateTime" },
+        "account_state": { "enum": ["signed_in", "signed_out", "unknown"] },
+        "ui_language": { "type": "string", "minLength": 1 },
+        "location_basis": { "enum": ["ip", "account", "browser", "unknown"] },
+        "personalization_request": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "pauseEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["paused_at", "resumed_at", "reason"],
+      "properties": {
+        "paused_at": { "$ref": "#/$defs/dateTime" },
+        "resumed_at": { "$ref": "#/$defs/dateTime" },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "budgetCell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "budget_cell_id",
+        "platform",
+        "knowledge_regime",
+        "bay_or_site_id",
+        "max_active_review_seconds",
+        "started_at",
+        "ended_at",
+        "active_review_seconds",
+        "network_wait_seconds",
+        "status",
+        "query_ids",
+        "pause_events",
+        "contiguous_execution"
+      ],
+      "properties": {
+        "budget_cell_id": { "type": "string", "minLength": 1 },
+        "platform": { "$ref": "#/$defs/platform" },
+        "knowledge_regime": { "$ref": "#/$defs/regime" },
+        "bay_or_site_id": { "type": "string", "minLength": 1 },
+        "max_active_review_seconds": { "type": "integer", "minimum": 1 },
+        "started_at": { "$ref": "#/$defs/dateTime" },
+        "ended_at": { "$ref": "#/$defs/dateTime" },
+        "active_review_seconds": { "type": "number", "minimum": 0 },
+        "network_wait_seconds": { "type": "number", "minimum": 0 },
+        "status": { "enum": ["within_budget", "budget_exhausted", "blocked", "not_started"] },
+        "query_ids": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "pause_events": { "type": "array", "items": { "$ref": "#/$defs/pauseEvent" } },
+        "contiguous_execution": { "type": "boolean" }
+      }
+    },
+    "stabilizationObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "probe_index",
+        "observed_at",
+        "visible_title_count",
+        "explicit_no_results_signal",
+        "fallback_signal",
+        "blocked_signal",
+        "returned_query"
+      ],
+      "properties": {
+        "probe_index": { "type": "integer", "minimum": 1 },
+        "observed_at": { "$ref": "#/$defs/dateTime" },
+        "visible_title_count": { "type": "integer", "minimum": 0 },
+        "explicit_no_results_signal": { "type": "boolean" },
+        "fallback_signal": { "type": "boolean" },
+        "blocked_signal": { "type": "boolean" },
+        "returned_query": { "type": ["string", "null"] }
+      }
+    },
+    "queryTiming": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "navigation_started_at",
+        "first_probe_at",
+        "terminal_state_at",
+        "ended_at",
+        "stabilization_elapsed_ms",
+        "network_wait_seconds",
+        "active_review_seconds"
+      ],
+      "properties": {
+        "navigation_started_at": { "$ref": "#/$defs/dateTime" },
+        "first_probe_at": { "$ref": "#/$defs/dateTime" },
+        "terminal_state_at": { "$ref": "#/$defs/dateTime" },
+        "ended_at": { "$ref": "#/$defs/dateTime" },
+        "stabilization_elapsed_ms": { "type": "integer", "minimum": 0 },
+        "network_wait_seconds": { "type": "number", "minimum": 0 },
+        "active_review_seconds": { "type": "number", "minimum": 0 }
+      }
+    },
+    "queryTermPresence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name_or_category_term", "location_term", "time_term"],
+      "properties": {
+        "name_or_category_term": { "enum": ["present", "absent", "unknown", "not_applicable"] },
+        "location_term": { "enum": ["present", "absent", "unknown", "not_applicable"] },
+        "time_term": { "enum": ["present", "absent", "unknown", "not_applicable"] }
+      }
+    },
+    "identityAnchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["anchor_type", "value_redacted", "source_result_id", "independence_group"],
+      "properties": {
+        "anchor_type": {
+          "enum": ["exact_address", "unit", "trade_name", "telephone_hash", "date", "category", "adjacent_business", "registration_id", "facade_layout", "other"]
+        },
+        "value_redacted": { "type": "string", "minLength": 1 },
+        "source_result_id": { "type": "string", "minLength": 1 },
+        "independence_group": { "type": "string", "minLength": 1 }
+      }
+    },
+    "resultRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result_id",
+        "position",
+        "title",
+        "url",
+        "snippet_excerpt",
+        "privacy_transform",
+        "displayed_date",
+        "query_term_presence",
+        "disposition",
+        "false_positive_types",
+        "identity_anchors",
+        "independence_group",
+        "candidate_clicked",
+        "notes"
+      ],
+      "properties": {
+        "result_id": { "type": "string", "minLength": 1 },
+        "position": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 },
+        "snippet_excerpt": { "type": ["string", "null"] },
+        "privacy_transform": { "enum": ["none_needed", "phone_redacted", "email_redacted", "sensitive_snippet_suppressed", "multiple"] },
+        "displayed_date": { "type": ["string", "null"] },
+        "query_term_presence": { "$ref": "#/$defs/queryTermPresence" },
+        "disposition": {
+          "enum": ["eligible_evidence", "candidate_ambiguous", "false_positive", "site_only_not_target_bay", "excluded_ad", "excluded_fallback", "privacy_minimized", "not_inspected"]
+        },
+        "false_positive_types": { "type": "array", "items": { "$ref": "#/$defs/falsePositiveType" }, "uniqueItems": true },
+        "identity_anchors": { "type": "array", "items": { "$ref": "#/$defs/identityAnchor" } },
+        "independence_group": { "type": "string", "minLength": 1 },
+        "candidate_clicked": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "moduleRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["module_id", "module_type", "module_screen_order", "rank_system", "outcome_eligible", "results"],
+      "properties": {
+        "module_id": { "type": "string", "minLength": 1 },
+        "module_type": {
+          "enum": [
+            "GOOGLE_ORGANIC_WEB",
+            "GOOGLE_MAP_PLACE",
+            "GOOGLE_AI",
+            "GOOGLE_IMAGE",
+            "GOOGLE_OTHER",
+            "GOOGLE_FALLBACK",
+            "NAVER_PLACE",
+            "NAVER_WEB_DOCUMENT",
+            "NAVER_BLOG_CAFE",
+            "NAVER_IMAGE",
+            "NAVER_AD",
+            "NAVER_OTHER"
+          ]
+        },
+        "module_screen_order": { "type": "integer", "minimum": 1 },
+        "rank_system": { "enum": ["GOOGLE_ORGANIC_RANK", "MODULE_INTERNAL_POSITION", "SCREEN_ORDER_ONLY", "NOT_RANKED"] },
+        "outcome_eligible": { "type": "boolean" },
+        "results": { "type": "array", "items": { "$ref": "#/$defs/resultRecord" } }
+      }
+    },
+    "queryOutcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "search_surface_retrieval_hit",
+        "entity_location_match",
+        "historical_time_anchor",
+        "current_place_listing_match",
+        "identity_status",
+        "false_positive_types"
+      ],
+      "properties": {
+        "search_surface_retrieval_hit": { "enum": ["observed", "not_found_under_protocol", "ambiguous", "not_assessed"] },
+        "entity_location_match": { "$ref": "#/$defs/triState" },
+        "historical_time_anchor": { "enum": ["contemporaneous", "retrospective", "none", "ambiguous", "not_assessed"] },
+        "current_place_listing_match": { "$ref": "#/$defs/triState" },
+        "identity_status": { "$ref": "#/$defs/identityStatus" },
+        "false_positive_types": { "type": "array", "items": { "$ref": "#/$defs/falsePositiveType" }, "uniqueItems": true }
+      }
+    },
+    "queryRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "query_id",
+        "order",
+        "platform",
+        "knowledge_regime",
+        "bay_id",
+        "budget_cell_id",
+        "planned_query",
+        "submitted_query",
+        "returned_query",
+        "suggested_rewrite",
+        "suggestion_followed",
+        "fallback_shown",
+        "match_behavior",
+        "timing",
+        "terminal_page_state",
+        "stabilization_observations",
+        "modules",
+        "aggregate_outcome",
+        "cross_bay_exposure",
+        "notes"
+      ],
+      "properties": {
+        "query_id": { "type": "string", "minLength": 1 },
+        "order": { "type": "integer", "minimum": 1 },
+        "platform": { "$ref": "#/$defs/platform" },
+        "knowledge_regime": { "$ref": "#/$defs/regime" },
+        "bay_id": { "type": ["string", "null"] },
+        "budget_cell_id": { "type": "string", "minLength": 1 },
+        "planned_query": { "type": "string", "minLength": 1 },
+        "submitted_query": { "type": "string", "minLength": 1 },
+        "returned_query": { "type": ["string", "null"] },
+        "suggested_rewrite": { "type": ["string", "null"] },
+        "suggestion_followed": { "type": "boolean" },
+        "fallback_shown": { "type": "boolean" },
+        "match_behavior": { "enum": ["exact", "loose", "rewritten", "unknown"] },
+        "timing": { "$ref": "#/$defs/queryTiming" },
+        "terminal_page_state": { "enum": ["usable_results", "explicit_no_results", "rewritten_or_fallback", "blocked", "render_timeout"] },
+        "stabilization_observations": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/stabilizationObservation" } },
+        "modules": { "type": "array", "items": { "$ref": "#/$defs/moduleRecord" } },
+        "aggregate_outcome": { "$ref": "#/$defs/queryOutcome" },
+        "cross_bay_exposure": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "string" }
+      }
+    },
+    "bayOutcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bay_id",
+        "search_surface_retrieval_hit",
+        "entity_location_match",
+        "historical_time_anchor",
+        "current_place_listing_match",
+        "identity_status",
+        "identity_anchors",
+        "material_conflicts",
+        "false_positive_types",
+        "claim_boundary"
+      ],
+      "properties": {
+        "bay_id": { "type": "string", "minLength": 1 },
+        "search_surface_retrieval_hit": { "enum": ["observed", "not_found_under_protocol", "ambiguous", "not_assessed"] },
+        "entity_location_match": { "$ref": "#/$defs/triState" },
+        "historical_time_anchor": { "enum": ["contemporaneous", "retrospective", "none", "ambiguous", "not_assessed"] },
+        "current_place_listing_match": { "$ref": "#/$defs/triState" },
+        "identity_status": { "$ref": "#/$defs/identityStatus" },
+        "identity_anchors": { "type": "array", "items": { "$ref": "#/$defs/identityAnchor" } },
+        "material_conflicts": { "type": "array", "items": { "type": "string" } },
+        "false_positive_types": { "type": "array", "items": { "$ref": "#/$defs/falsePositiveType" }, "uniqueItems": true },
+        "claim_boundary": { "type": "string", "minLength": 1 }
+      }
+    },
+    "deviation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["deviation_id", "detected_at", "description", "affected_query_ids", "outcome_effect", "resolution"],
+      "properties": {
+        "deviation_id": { "type": "string", "minLength": 1 },
+        "detected_at": { "$ref": "#/$defs/dateTime" },
+        "description": { "type": "string", "minLength": 1 },
+        "affected_query_ids": { "type": "array", "items": { "type": "string" } },
+        "outcome_effect": { "enum": ["none", "bounded", "invalidates_query", "invalidates_run", "unknown"] },
+        "resolution": { "type": "string", "minLength": 1 }
+      }
+    },
+    "privacyAudit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fixture_version",
+        "pre_storage_filter_applied",
+        "post_serialization_scan_applied",
+        "raw_dom_export_created",
+        "sensitive_snippets_suppressed",
+        "phone_like_strings_remaining",
+        "email_like_strings_remaining",
+        "status"
+      ],
+      "properties": {
+        "fixture_version": { "const": "0.2" },
+        "pre_storage_filter_applied": { "type": "boolean" },
+        "post_serialization_scan_applied": { "type": "boolean" },
+        "raw_dom_export_created": { "const": false },
+        "sensitive_snippets_suppressed": { "type": "integer", "minimum": 0 },
+        "phone_like_strings_remaining": { "type": "integer", "minimum": 0 },
+        "email_like_strings_remaining": { "type": "integer", "minimum": 0 },
+        "status": { "enum": ["pass", "fail"] }
+      }
+    }
+  }
+}

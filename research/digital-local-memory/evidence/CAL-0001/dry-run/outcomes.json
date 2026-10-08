@@ -1,0 +1,129 @@
+{
+  "outcome_version": "0.1",
+  "run_id": "CAL-0001-DR01",
+  "plan_id": "CAL-0001-QP01",
+  "scope_id": "CAL-0001-S01",
+  "status": "CALIBRATION_COMPLETED_SUBSTANTIVE_RESULT_PROHIBITED",
+  "execution": {
+    "planned_query_count": 23,
+    "planned_query_pages_submitted": 23,
+    "extra_google_K0_technical_recaptures": 4,
+    "candidate_source_pages_opened": 2,
+    "all_queries_exactly_as_frozen": true,
+    "unplanned_alias_queries": 0,
+    "raw_phone_queries": 0,
+    "captcha_or_block": false,
+    "fully_plan_conformant": false,
+    "reason_not_conformant": [
+      "D01: Google asynchronous rendering required a post-freeze stabilization rule and K0 technical recapture.",
+      "D02: Two Google zero-title pages lacked an explicit no-result signal and remain render_indeterminate.",
+      "D03: N-K0-01 was executed after the shared K0 wall-clock budget expired and is excluded from K0 outcome adjudication.",
+      "D04: Naver integrated search did not provide a single global organic rank compatible with the frozen top-10 rule."
+    ]
+  },
+  "environment": {
+    "google": {
+      "account_state": "signed_in",
+      "account_identifier_recorded": false,
+      "pws_0_requested": true,
+      "ui_said_results_not_personalized": true,
+      "ui_location_basis": "IP-based",
+      "uncontrolled": ["location", "account effects", "search experiments", "index state"]
+    },
+    "naver": {
+      "account_state": "signed_out",
+      "uncontrolled": ["location", "search experiments", "index state"],
+      "spelling_suggestions_not_followed": true
+    }
+  },
+  "site_level": {
+    "K0_google": "The exact address and building are retrievable together with many other tenants, but none of the three frozen facade bays was retrieved.",
+    "K0_naver": "Observed but excluded because the 300-second shared K0 budget had expired.",
+    "historical_2015_anchor_retrieved_outside_anchor_image": false,
+    "anchor_image_counts_as_outcome": false
+  },
+  "bay_outcomes": [
+    {
+      "bay_id": "CAL-0001-B01",
+      "anchor_sign": "야채나라",
+      "K0": "not_found_under_protocol_on_eligible_google_K0",
+      "K1": "not_found_under_protocol",
+      "K2": "candidate_record_observed_without_site_match",
+      "earliest_qualifying_entity_location_match": null,
+      "retrieved_records": [
+        {
+          "source_query_id": "G-B01-K2-02",
+          "record": "A page published 2020-04-26 lists a merchant named 야채나라 among 군포시 regional-currency merchant names.",
+          "location_resolution": "city_only",
+          "identity_status": "possible",
+          "qualifies_as_entity_location_match": false,
+          "qualifies_as_2015_anchor": false
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "source_query_id": "N-B01-K2-01",
+          "reason": "The current 77-row public-data-derived page contains no 야채나라; the only row at 광정로 25-57 is 곡물이야기, without a unit or facade-bay link."
+        }
+      ],
+      "current_brand_place_identity": "unknown",
+      "legal_identity": "unknown"
+    },
+    {
+      "bay_id": "CAL-0001-B02",
+      "anchor_sign": "롤리팝 | 세계수입과자할인점",
+      "K0": "not_found_under_protocol_on_eligible_google_K0",
+      "K1": "ambiguous_candidates_only",
+      "K2": "not_found_under_protocol",
+      "earliest_qualifying_entity_location_match": null,
+      "false_positive_patterns": [
+        "Google matched 롤리팝 as a product on a Paris Baguette page at the same address.",
+        "Google matched candy, stores in other cities, and unrelated pages containing the descriptor.",
+        "Naver matched music, software, games, cameras, and candy meanings of Lollipop.",
+        "Naver surfaced 산본세계과자할인점 at 광정로 68, not the subject address 광정로 25-57.",
+        "A generic first-floor ice-cream-discount listing at the building lacked a unit, date, and sign-name match."
+      ],
+      "current_brand_place_identity": "unknown",
+      "legal_identity": "unknown",
+      "qualifying_2015_text_or_structured_record_retrieved": false
+    },
+    {
+      "bay_id": "CAL-0001-B03",
+      "anchor_sign": "PARIS BAGUETTE",
+      "K0": "not_found_under_protocol_on_eligible_google_K0",
+      "K1": "observed_on_google",
+      "K2": "observed_on_google_and_naver",
+      "earliest_qualifying_entity_location_match": "K1",
+      "retrieved_records": [
+        {
+          "source_query_id": "G-B03-K1-01",
+          "record": "Google displayed 파리바게뜨 산본3단지점 with 광정로 25-57 and units 106, 110, 120 at the first recorded result position.",
+          "qualifies_as_current_entity_location_match": true,
+          "qualifies_as_2015_anchor": false
+        },
+        {
+          "source_query_id": "N-B03-K2-01",
+          "record": "Naver Place displayed 파리바게뜨 산본3단지점 at 광정로 25-57 율곡A상가, units 106, 110, 120.",
+          "qualifies_as_current_entity_location_match": true,
+          "qualifies_as_2015_anchor": false
+        }
+      ],
+      "current_brand_place_listing_match": "confirmed",
+      "brand_observed_at_2015_and_2026_endpoints": true,
+      "continuous_operation_between_endpoints": "unknown",
+      "legal_or_operator_continuity": "unknown"
+    }
+  ],
+  "causal_status": {
+    "cause_isolated": false,
+    "best_current_explanation": "Discoverability differs at the entity-linkage and retrieval layers, not at simple site existence. B03 has a distinctive branch identity, current structured place entry, precise unit data, and repeated web mentions. B01 preserves a name in an aggregate city list but loses the storefront-address link. B02 combines a generic descriptor with a highly polysemous sign string, producing collision-heavy retrieval and no qualifying text or structured site match.",
+    "live_alternatives": [
+      "The B01/B02 businesses never generated durable text or structured records.",
+      "Records were generated but were later removed or not preserved.",
+      "Records survive but are not indexed or ranked inside the frozen queries and budgets.",
+      "The observed sign strings are not the canonical business identifiers used in surviving records.",
+      "Current operation, franchise infrastructure, and marketing footprint are confounded and cannot be separated with this calibration case."
+    ]
+  },
+  "claim_boundary": "This three-bay, selected hard-case calibration cannot estimate prevalence, query difficulty, platform effects, franchise effects, or causal mechanisms."
+}

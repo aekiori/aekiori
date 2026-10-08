@@ -1,0 +1,291 @@
+{
+  "run_id": "CAL-0001-DR01",
+  "plan_id": "CAL-0001-QP01",
+  "plan_manifest_sha256": "85EBCFEC09D50D75959B70B1D5469DCFFD89ADC5953FCD5CB0CDE09335AD4B59",
+  "scope_id": "CAL-0001-S01",
+  "source_channel": "GENERAL_WEB",
+  "search_surface": "GOOGLE_WEB",
+  "knowledge_regime": "K0",
+  "execution_status": "completed_with_D01_technical_recapture",
+  "wall_clock": {
+    "started_at": "2026-08-10T21:44:04.545Z",
+    "finished_at": "2026-08-10T21:45:41.869Z",
+    "seconds": 97.324,
+    "budget_seconds": 300
+  },
+  "environment_observation": {
+    "account_signed_in": true,
+    "account_identifier_recorded": false,
+    "google_ui_said_results_not_personalized": true,
+    "location_basis_ui": "IP-based",
+    "location_label_ui": "산본동, 경기도 군포시",
+    "interpretation": "pws=0 and the footer statement reduce but do not eliminate personalization uncertainty"
+  },
+  "privacy_transform": "Business phone numbers visible in snippets were not copied; excerpt fields are shortened and may contain [phone redacted].",
+  "queries": [
+    {
+      "query_id": "G-K0-01",
+      "query": "\"광정로 25-57\" 2015",
+      "started_at": "2026-08-10T21:45:35.285Z",
+      "observed_at": "2026-08-10T21:45:36.846Z",
+      "query_value_verified": true,
+      "exact_no_results": false,
+      "organic_results_recorded": 9,
+      "module_observation": "An address/map module for 경기도 군포시 광정로 25-57 appeared in the initial DOM snapshot; it is a place anchor, not a target-bay hit.",
+      "results": [
+        {
+          "rank": 1,
+          "title": "군포시 어르신 폐렴구균 예방접종",
+          "url": "https://blog.naver.com/o2gunpo/223026294901",
+          "displayed_date": "2023-02-24",
+          "snippet_excerpt": "미소이비인후과의원과 광정로 25-57의 205호를 연결한다.",
+          "disposition": "site_only_not_target_bay"
+        },
+        {
+          "rank": 2,
+          "title": "하나로마트 오금점 - 지역정보포털",
+          "url": "https://skinnara.co.kr/m/view.asp?seq=AQarBsytBxAN",
+          "displayed_date": null,
+          "snippet_excerpt": "하나로마트 오금점과 광정로 25-57·금정동 876을 연결한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 3,
+          "title": "시ㆍ도회/지회",
+          "url": "https://www.kar.or.kr/pabout/branch.asp",
+          "displayed_date": null,
+          "snippet_excerpt": "광정로 25-57, 109호와 율곡중심상가를 연결한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 4,
+          "title": "2023년 어르신 폐렴구균 예방접종사업 안내 | 경기도 군포시",
+          "url": "https://www.welfarehello.com/community/hometownNews/2023%EB%85%84-%EC%96%B4%EB%A5%B4%EC%8B%A0-%ED%8F%90%EB%A0%B4%EA%B5%AC%EA%B7%A0-%EC%98%88%EB%B0%A9%EC%A0%91%EC%A2%85%EC%82%AC%EC%97%85-%EC%95%88%EB%82%B4--2622813e-d143-4504-99f8-fabcb796dc98",
+          "displayed_date": null,
+          "snippet_excerpt": "2023년 의료기관 목록에 광정로 25-57이 보인다.",
+          "disposition": "site_only_not_target_bay"
+        },
+        {
+          "rank": 5,
+          "title": "경기도 광명시 군포시 이비인후과 전문의 정보 - 아파트먼트 - 티스토리",
+          "url": "https://aptlife.tistory.com/1663",
+          "displayed_date": null,
+          "snippet_excerpt": "군포시 광정로 25-57, 205호와 의원 인허가일을 열거한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 6,
+          "title": "8월14일 의료기관 집단휴진 비상진료 가능병원 안내합니다!",
+          "url": "https://blog.naver.com/o2gunpo/222059529328",
+          "displayed_date": "2020-08-13",
+          "snippet_excerpt": "광정로 25-57, 205호와 율곡아파트 중심상가를 연결한다.",
+          "disposition": "site_only_not_target_bay"
+        },
+        {
+          "rank": 7,
+          "title": "금정동 동네약국 정보(주소, 전화번호)",
+          "url": "https://hospitalk.net/%EA%B8%88%EC%A0%95%EB%8F%99-%EB%8F%99%EB%84%A4%EC%95%BD%EA%B5%AD-%EC%A0%95%EB%B3%B4%EC%A3%BC%EC%86%8C-%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8/",
+          "displayed_date": "2025-03-13",
+          "snippet_excerpt": "율곡아파트 상가 108호의 약국과 개설일을 열거한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 8,
+          "title": "[의료파업] 군포시 병원 의원 비상진료 안내 - 그냥사는거지",
+          "url": "https://kt99.tistory.com/646",
+          "displayed_date": "2024-03-12",
+          "snippet_excerpt": "광정로 25-57, 205호의 의원을 열거한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 9,
+          "title": "경기도 약국 위치 정보 - 정보 공장 - 티스토리",
+          "url": "https://information-factory.tistory.com/192",
+          "displayed_date": "2021-01-10",
+          "snippet_excerpt": "광정로 25-57, 108호의 약국을 열거한다.",
+          "disposition": "site_other_business"
+        }
+      ],
+      "query_outcome": "site_address_retrievable_but_no_target_bay_retrieval_hit"
+    },
+    {
+      "query_id": "G-K0-02",
+      "query": "\"광정로 25-57\" 상가",
+      "started_at": "2026-08-10T21:45:36.846Z",
+      "observed_at": "2026-08-10T21:45:38.522Z",
+      "query_value_verified": true,
+      "exact_no_results": false,
+      "organic_results_recorded": 9,
+      "results": [
+        {
+          "rank": 1,
+          "title": "GS슈퍼 슈퍼마켓 | 경기 군포시 광정로 25-57,율곡아파트 중심 ...",
+          "url": "https://www.tiendeo.co.kr/%EB%A7%A4%EC%9E%A5/%EA%B5%B0%ED%8F%AC%EC%8B%9C/gs%EC%8A%88%ED%8D%BC-%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EA%B4%91%EC%A0%95%EB%A1%9C--%EC%9C%A8%EA%B3%A1%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%A4%91%EC%8B%AC%EC%83%81%EA%B0%80-%EC%A7%80%ED%95%98%EA%B8%88%EC%A0%95%EB%8F%99/188573",
+          "displayed_date": null,
+          "snippet_excerpt": "GS슈퍼와 율곡아파트 중심상가 지하를 연결한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 2,
+          "title": "'금정동 율곡아파트 중심상가'의 매매, 월세, 시세, 후기",
+          "url": "https://zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EA%B8%88%EC%A0%95%EB%8F%99-%EC%9C%A8%EA%B3%A1%EC%95%84%ED%8C%8C%ED%8A%B8%EC%A4%91%EC%8B%AC%EC%83%81%EA%B0%80/1l4tvi",
+          "displayed_date": null,
+          "snippet_excerpt": "광정로 25-57과 금정동 876의 건물 정보를 연결한다.",
+          "disposition": "site_anchor_only"
+        },
+        {
+          "rank": 3,
+          "title": "경기도 군포시 금정동 15.2㎡ 직거래 상가 월세 1000 / 50만원",
+          "url": "https://realty.daangn.com/articles/4028816",
+          "displayed_date": "2026-07-31",
+          "snippet_excerpt": "광정로 25-57 중심상가동의 현재 임대 글이다.",
+          "disposition": "site_anchor_only"
+        },
+        {
+          "rank": 4,
+          "title": "웰치과의원, [business phone redacted], 경기도 군포시 광정로 25-57 ...",
+          "url": "https://mobile.hidoc.co.kr/find/result/view/H0000195234",
+          "displayed_date": null,
+          "snippet_excerpt": "치과와 율곡중심상가 204호를 연결한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 5,
+          "title": "보건당약국 - 경기도 군포시 | 약국 운영 정보",
+          "url": "https://aroundpharm.com/pharmacy/15606",
+          "displayed_date": null,
+          "snippet_excerpt": "약국과 율곡아파트 상가 108호를 연결한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 6,
+          "title": "GS더프레시 군포오금점 위치·판매 주류 (0종) - 술한잔",
+          "url": "https://soolhanjan.com/store/3790/gs%EB%8D%94%ED%94%84%EB%A0%88%EC%8B%9C-%EA%B5%B0%ED%8F%AC%EC%98%A4%EA%B8%88%EC%A0%90",
+          "displayed_date": null,
+          "snippet_excerpt": "GS더프레시 군포오금점과 대상 주소를 연결한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 7,
+          "title": "경기 군포시 금정동 876 율곡아파트 중심상가(광정로 25-57) 거주 ...",
+          "url": "https://tenant.zaritalk.com/real-residence-review/residence/building/1485566",
+          "displayed_date": null,
+          "snippet_excerpt": "대상 주소의 건물·상권 페이지다.",
+          "disposition": "site_anchor_only"
+        },
+        {
+          "rank": 8,
+          "title": "미소이비인후과의원 | 군포시 병원",
+          "url": "https://medieus.com/sub_detail/hospital_detail.asp?hos_num=15007",
+          "displayed_date": null,
+          "snippet_excerpt": "의원과 율곡아파트 중심상가 205호를 연결한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 9,
+          "title": "정수치과의원 | 경기 군포시 | 치과의원 | HIRA 병원 정보",
+          "url": "https://www.damha.kr/hospitals/%EA%B2%BD%EA%B8%B0/%EA%B5%B0%ED%8F%AC%EC%8B%9C/%EC%B9%98%EA%B3%BC%EC%9D%98%EC%9B%90/%EC%A0%95%EC%88%98%EC%B9%98%EA%B3%BC%EC%9D%98%EC%9B%90",
+          "displayed_date": null,
+          "snippet_excerpt": "검색 스니펫에 대상 주소의 다른 의원이 보인다.",
+          "disposition": "site_other_business"
+        }
+      ],
+      "query_outcome": "site_and_other_businesses_retrievable_but_no_target_bay_retrieval_hit"
+    },
+    {
+      "query_id": "G-K0-03",
+      "query": "\"율곡아파트중심상가\" 2015",
+      "started_at": "2026-08-10T21:45:38.522Z",
+      "observed_at": "2026-08-10T21:45:40.197Z",
+      "query_value_verified": true,
+      "exact_no_results": false,
+      "organic_results_recorded": 8,
+      "results": [
+        {
+          "rank": 1,
+          "title": "8월14일 의료기관 집단휴진 비상진료 가능병원 안내합니다!",
+          "url": "https://blog.naver.com/o2gunpo/222059529328",
+          "displayed_date": "2020-08-13",
+          "snippet_excerpt": "대상 주소의 205호 의원을 열거한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 2,
+          "title": "군포2동 주민센터 | 전국 무료 와이파이 지도",
+          "url": "https://ffw.purpleo.co.kr/view/66676",
+          "displayed_date": null,
+          "snippet_excerpt": "2015-12 표기와 함께 대상 건물 106호의 산본세탁을 주변 장소로 표시한다.",
+          "disposition": "ambiguous_site_temporal_candidate_not_target_bay"
+        },
+        {
+          "rank": 3,
+          "title": "오금로 15-17(금정동 875-7) - 원룸·빌라 시세",
+          "url": "https://house.zippoom.com/%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EA%B8%88%EC%A0%95%EB%8F%99-%ED%9D%A5%EC%A7%84%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90/45ucep",
+          "displayed_date": null,
+          "snippet_excerpt": "다른 건물 시세와 대상 건물 사진 링크를 섞어 표시한다.",
+          "disposition": "irrelevant"
+        },
+        {
+          "rank": 4,
+          "title": "최종본점,지소명단",
+          "url": "https://m.futures.co.kr/cmm/fms/FileDownBefore.do?bbsId=BBSMSTR_000000000281&bbsType=HD28",
+          "displayed_date": null,
+          "snippet_excerpt": "금융 지소와 대상 건물 201호를 연결한다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 5,
+          "title": "[의료파업] 군포시 병원 의원 비상진료 안내 - 그냥사는거지",
+          "url": "https://kt99.tistory.com/646",
+          "displayed_date": "2024-03-12",
+          "snippet_excerpt": "대상 건물의 의원을 포함한 목록이다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 6,
+          "title": "군포 추석 명절연휴 병원약국 운영현황",
+          "url": "https://hospitalk.net/%EA%B5%B0%ED%8F%AC-%EC%B6%94%EC%84%9D-%EB%AA%85%EC%A0%88%EC%97%B0%ED%9C%B4-%EB%B3%91%EC%9B%90%EC%95%BD%EA%B5%AD-%EC%9A%B4%EC%98%81%ED%98%84%ED%99%A9/",
+          "displayed_date": null,
+          "snippet_excerpt": "대상 건물의 의원을 포함한 명절 운영 목록이다.",
+          "disposition": "site_other_business"
+        },
+        {
+          "rank": 7,
+          "title": "오금로 15-35(금정동 875-6) - 원룸·빌라 시세",
+          "url": "https://house.zippoom.com/%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EA%B8%88%EC%A0%95%EB%8F%99-%ED%9D%A5%EC%A7%84%EC%A4%91%ED%95%99%EA%B5%90/tphnia",
+          "displayed_date": null,
+          "snippet_excerpt": "다른 건물에서 대상 건물까지의 거리를 표시한다.",
+          "disposition": "irrelevant"
+        },
+        {
+          "rank": 8,
+          "title": "산본도서관 | 전국 무료 와이파이 지도",
+          "url": "https://ffw.purpleo.co.kr/view/66134",
+          "displayed_date": null,
+          "snippet_excerpt": "2015-12 표기와 대상 건물 106호 산본세탁을 주변 장소로 표시한다.",
+          "disposition": "ambiguous_site_temporal_candidate_not_target_bay"
+        }
+      ],
+      "query_outcome": "site_name_retrievable_but_no_target_bay_retrieval_hit"
+    },
+    {
+      "query_id": "G-K0-04",
+      "query": "\"율곡A상가\" 2015",
+      "started_at": "2026-08-10T21:45:40.197Z",
+      "observed_at": "2026-08-10T21:45:41.869Z",
+      "query_value_verified": true,
+      "exact_no_results": true,
+      "automatic_unquoted_fallback_shown": true,
+      "fallback_results_recorded_but_excluded": 8,
+      "fallback_summary": "Google displayed unrelated results after removing quotation marks, dominated by 김천 율곡동 and other 율곡 terms.",
+      "query_outcome": "not_found_under_protocol_for_exact_query; fallback_excluded"
+    }
+  ],
+  "bay_level_outcome": {
+    "CAL-0001-B01": "not_found_under_protocol_at_K0",
+    "CAL-0001-B02": "not_found_under_protocol_at_K0",
+    "CAL-0001-B03": "not_found_under_protocol_at_K0"
+  },
+  "site_level_observation": "The address and building are readily indexed, along with several other tenants. None of the three frozen ground-floor bays was retrieved under K0.",
+  "claim_boundary": "Calibration observation only; no prevalence, platform-effect, or causal claim."
+}

@@ -1,0 +1,248 @@
+{
+  "plan_version": "0.1",
+  "plan_id": "CAL-0001-QP01",
+  "status": "FROZEN_BY_QUERY_PLAN_MANIFEST",
+  "created_at": "2026-08-11T06:39:35+09:00",
+  "site_id": "CAL-0001",
+  "scope_id": "CAL-0001-S01",
+  "execution_mode": "single_investigator_progressive_retrieval_ladder",
+  "substantive_inference_allowed": false,
+  "anchor_image_counts_as_retrieval_outcome": false,
+  "bay_order": [
+    "CAL-0001-B01",
+    "CAL-0001-B02",
+    "CAL-0001-B03"
+  ],
+  "platform_order": [
+    "GOOGLE_WEB",
+    "NAVER_WEB"
+  ],
+  "search_surfaces": {
+    "GOOGLE_WEB": {
+      "url_template": "https://www.google.com/search?hl=ko&pws=0&q={urlencoded_query}",
+      "personalization_control": "pws=0_requested; location, account state, experiments, and index state remain uncontrolled",
+      "role": "primary_lane"
+    },
+    "NAVER_WEB": {
+      "url_template": "https://search.naver.com/search.naver?query={urlencoded_query}",
+      "personalization_control": "account state, location, experiments, and index state remain uncontrolled",
+      "role": "cross_platform_replication_after_google; not blinded and not independent"
+    }
+  },
+  "inspection_rule": {
+    "organic_rank_cap_per_query": 10,
+    "candidate_click_cap_per_query": 2,
+    "ads_excluded": true,
+    "modules_recorded_separately": true,
+    "query_rewriting_allowed": false,
+    "pagination_allowed": false,
+    "raw_phone_query_allowed": false,
+    "unplanned_alias_query_allowed": false
+  },
+  "budgets": {
+    "K0_shared_site_wall_clock_seconds": 300,
+    "K1_per_bay_wall_clock_seconds": 300,
+    "K2_per_bay_wall_clock_seconds": 600,
+    "rule": "Clock begins when the first usable result page for that cell is visible. Network/tool wait is logged separately, but the wall-clock stop decision is not silently extended. Unexecuted planned queries are marked budget_exhausted."
+  },
+  "outcome_contract": {
+    "retrieval_hit": "An inspected result contains a bay-specific identifier plus a location anchor, or at least two non-circular identity anchors. A query-result snippet may establish discoverability but not every fact asserted by the target page.",
+    "entity_location_match": "Evidence links the hypothesized business or storefront sign to the subject site with sufficient identity anchors. Exact name alone, category alone, or address alone is insufficient.",
+    "contemporaneous_2015_anchor": "A source captured or published from 2014-01-01 through 2016-12-31 links the candidate business to the subject site or uniquely matching frontage.",
+    "retrospective_2015_anchor": "A later source explicitly and credibly links the candidate business at the subject site to 2015. A current listing without that temporal statement does not qualify.",
+    "not_found_under_protocol": "No qualifying result was found inside the frozen platform, query, rank, click, and time limits. This is not an existence or internet-wide absence claim."
+  },
+  "execution_order_rule": "Run query_order exactly. Complete all K0, then all K1, then all K2 in the Google lane; then run the frozen Naver replication queries. Record any cross-bay answer exposure and do not repair it by changing queries.",
+  "queries": [
+    {
+      "order": 1,
+      "query_id": "G-K0-01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "query": "\"광정로 25-57\" 2015"
+    },
+    {
+      "order": 2,
+      "query_id": "G-K0-02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "query": "\"광정로 25-57\" 상가"
+    },
+    {
+      "order": 3,
+      "query_id": "G-K0-03",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "query": "\"율곡아파트중심상가\" 2015"
+    },
+    {
+      "order": 4,
+      "query_id": "G-K0-04",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "query": "\"율곡A상가\" 2015"
+    },
+    {
+      "order": 5,
+      "query_id": "G-B01-K1-01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B01",
+      "query": "채소가게 \"광정로 25-57\""
+    },
+    {
+      "order": 6,
+      "query_id": "G-B01-K1-02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B01",
+      "query": "야채가게 율곡아파트 상가"
+    },
+    {
+      "order": 7,
+      "query_id": "G-B02-K1-01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B02",
+      "query": "세계과자할인점 \"광정로 25-57\""
+    },
+    {
+      "order": 8,
+      "query_id": "G-B02-K1-02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B02",
+      "query": "수입과자 할인점 율곡아파트"
+    },
+    {
+      "order": 9,
+      "query_id": "G-B03-K1-01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B03",
+      "query": "빵집 \"광정로 25-57\""
+    },
+    {
+      "order": 10,
+      "query_id": "G-B03-K1-02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B03",
+      "query": "제과점 율곡아파트 상가"
+    },
+    {
+      "order": 11,
+      "query_id": "G-B01-K2-01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B01",
+      "query": "\"야채나라\" \"광정로 25-57\""
+    },
+    {
+      "order": 12,
+      "query_id": "G-B01-K2-02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B01",
+      "query": "\"야채나라\" 군포 산본"
+    },
+    {
+      "order": 13,
+      "query_id": "G-B02-K2-01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B02",
+      "query": "\"롤리팝\" \"광정로 25-57\""
+    },
+    {
+      "order": 14,
+      "query_id": "G-B02-K2-02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B02",
+      "query": "\"롤리팝\" \"세계수입과자할인점\""
+    },
+    {
+      "order": 15,
+      "query_id": "G-B03-K2-01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B03",
+      "query": "\"PARIS BAGUETTE\" \"광정로 25-57\""
+    },
+    {
+      "order": 16,
+      "query_id": "G-B03-K2-02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B03",
+      "query": "\"파리바게뜨\" 율곡아파트"
+    },
+    {
+      "order": 17,
+      "query_id": "N-K0-01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "query": "\"광정로 25-57\" 2015"
+    },
+    {
+      "order": 18,
+      "query_id": "N-B01-K1-01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B01",
+      "query": "야채가게 \"광정로 25-57\""
+    },
+    {
+      "order": 19,
+      "query_id": "N-B02-K1-01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B02",
+      "query": "세계과자할인점 \"광정로 25-57\""
+    },
+    {
+      "order": 20,
+      "query_id": "N-B03-K1-01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0001-B03",
+      "query": "빵집 \"광정로 25-57\""
+    },
+    {
+      "order": 21,
+      "query_id": "N-B01-K2-01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B01",
+      "query": "\"야채나라\" \"광정로 25-57\""
+    },
+    {
+      "order": 22,
+      "query_id": "N-B02-K2-01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B02",
+      "query": "\"롤리팝\" \"광정로 25-57\""
+    },
+    {
+      "order": 23,
+      "query_id": "N-B03-K2-01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0001-B03",
+      "query": "\"파리바게뜨\" \"광정로 25-57\""
+    }
+  ],
+  "stop_conditions": [
+    "A regime-cell wall-clock budget expires.",
+    "The search surface blocks automation or requests CAPTCHA; record blocked and do not evade it.",
+    "The search surface rewrites the query and the exact frozen query cannot be restored.",
+    "A result would require contacting a person, logging into a private account, or exposing non-public personal data."
+  ]
+}

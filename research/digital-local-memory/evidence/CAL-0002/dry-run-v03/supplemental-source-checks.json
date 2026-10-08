@@ -1,0 +1,139 @@
+{
+  "record_version": "0.3",
+  "case_id": "CAL-0002",
+  "run_id": "CAL-0002-DR01",
+  "status": "SUPPLEMENTAL_NON_OUTCOME_EVIDENCE",
+  "raw_dom_export_created": false,
+  "checks": [
+    {
+      "check_id": "CAL-0002-SC01",
+      "query_id": "G-B02-E03-K1-01",
+      "source_url": "https://www.daangn.com/kr/local-profile/%ED%95%98%EC%96%80%EC%84%B8%ED%83%81%EC%86%8C-uvc16hjnxiqp/",
+      "source_family": "daangn-local-profile",
+      "cell_timing": "inside_cell",
+      "originating_module": "GOOGLE_AI",
+      "outcome_eligible": false,
+      "observed_facts": [
+        "Page trade name: 하얀세탁소",
+        "Page address: 경기도 군포시 산본천로 33, 102호",
+        "Displayed page modification date: 2026-07-19"
+      ],
+      "claim_boundary": "The originating AI module is ineligible, and the 2015 sign reads 하얀크리닝 rather than 하얀세탁소."
+    },
+    {
+      "check_id": "CAL-0002-SC02",
+      "query_id": "G-B02-E02-K2-01",
+      "source_url": "http://localmap.co.kr/web/splus/kmap/view.php?sigun=6410000&gugun=4020000&keyno=362&keyname=%EA%B9%80%EC%97%B0%EC%A3%BC%ED%97%A4%EC%96%B4%EC%83%B5&keylink=4020000-211-2001-00012",
+      "source_family": "local-government-license-republisher",
+      "cell_timing": "after_cell_closed",
+      "originating_module": "GOOGLE_ORGANIC_WEB",
+      "outcome_eligible": false,
+      "observed_facts": [
+        "Page trade name: 김연주헤어샵",
+        "Lot address: 경기도 군포시 산본동 1146-12 우륵일반상가 102호",
+        "Road address: 경기도 군포시 산본천로 33, 102호",
+        "Displayed opening date and state: 2001-02-27, 영업/정상",
+        "Page attributes the record to 행정안전부 사업자인허가 data with a displayed 2020-12-11 data basis"
+      ],
+      "claim_boundary": "Strong explanatory evidence for a licensing-data pathway, but checked after the retrieval cell and excluded from the frozen outcome. The government source row was not independently fetched."
+    },
+    {
+      "check_id": "CAL-0002-SC03",
+      "query_id": "G-B03-K2-01",
+      "source_url": "https://place.udanax.org/p/1096316/%EC%9A%B0%EB%A5%B5%EA%B3%B5%EC%9D%B8%EC%A4%91%EA%B0%9C%EC%82%AC",
+      "source_family": "udanax-directory",
+      "cell_timing": "after_cell_closed",
+      "originating_module": "GOOGLE_ORGANIC_WEB",
+      "outcome_eligible": false,
+      "observed_facts": [
+        "Page trade name: 우륵공인중개사",
+        "Page address: 경기도 군포시 산본천로 33, 102호",
+        "Lot address: 경기도 군포시 산본동 1146-12"
+      ],
+      "claim_boundary": "Directory page directly matches name and location but provides no qualifying historical date or independently verified source provenance."
+    },
+    {
+      "check_id": "CAL-0002-SC04",
+      "query_id": "G-B03-K2-01",
+      "source_url": "https://frea.purpleo.co.kr/view/44682",
+      "source_family": "purpleo-public-data-directory",
+      "cell_timing": "after_cell_closed",
+      "originating_module": "GOOGLE_ORGANIC_WEB",
+      "outcome_eligible": false,
+      "observed_facts": [
+        "The opened page was for a neighboring office, not the target",
+        "Its related-office list displayed 우륵공인중개사 at 경기도 군포시 산본천로 33, 102호"
+      ],
+      "claim_boundary": "An aggregate related-item mention is not an independent target-page verification."
+    },
+    {
+      "check_id": "CAL-0002-SC05",
+      "query_id": "G-B01-K2-01",
+      "source_url": "https://aptgin.com/home/popup/pp_danji/apt/am7553em0",
+      "source_family": "apartment-amenity-aggregator",
+      "cell_timing": "after_cell_closed",
+      "originating_module": "GOOGLE_ORGANIC_WEB",
+      "outcome_eligible": false,
+      "observed_facts": [
+        "CU군포우륵점 is displayed 73m from the complex reference point",
+        "CU산본우륵타운점 is also displayed 144m from the same reference point"
+      ],
+      "claim_boundary": "Proximity cannot isolate which current CU corresponds to the 2015 facade."
+    },
+    {
+      "check_id": "CAL-0002-SC06",
+      "query_id": "N-B02-E03-K2-01",
+      "source_url": "https://www.life114.co.kr/html/board/view.asp?M_SEQ=788499",
+      "source_family": "life114-directory",
+      "cell_timing": "after_cell_closed",
+      "originating_module": "NAVER_WEB_DOCUMENT",
+      "outcome_eligible": false,
+      "observed_facts": [
+        "Page trade name: 하얀세탁소",
+        "Page address: 경기 군포시 수리동 1151-9 설악APT8단지상가 103호"
+      ],
+      "claim_boundary": "Wrong locality; a same-name false positive."
+    },
+    {
+      "check_id": "CAL-0002-SC07",
+      "query_id": "N-B02-E03-K2-01",
+      "source_url": "https://life114.co.kr/html/board/view.asp?M_SEQ=740992",
+      "source_family": "life114-directory",
+      "cell_timing": "after_cell_closed",
+      "originating_module": "NAVER_WEB_DOCUMENT",
+      "outcome_eligible": false,
+      "observed_facts": [
+        "Page trade name: 하얀세탁소",
+        "Page address: 경기 군포시 궁내동 1146-11 우륵일반상가 102",
+        "Displayed map coordinate: 37.3596796, 126.925769"
+      ],
+      "claim_boundary": "Location is compatible, but the 2015 sign says 하얀크리닝 and the page supplies no qualifying date or provenance."
+    },
+    {
+      "check_id": "CAL-0002-SC08",
+      "query_id": "N-B03-K2-01",
+      "source_url": "https://www.114.co.kr/search/detail?comp_id=4362164&comp_tp_cd=TEL&upjong_cd=803001",
+      "source_family": "114on-telecom-directory",
+      "cell_timing": "after_cell_closed",
+      "originating_module": "NAVER_WEB_DOCUMENT",
+      "outcome_eligible": false,
+      "observed_facts": [
+        "Page trade name: 우륵공인중개사",
+        "Page address: 경기 군포시 산본천로 33; lot address 산본동 1146-11",
+        "Page states 통신사 제공 and displays a 2026-08-08 final update"
+      ],
+      "claim_boundary": "Strong current directory evidence only; it is neither an eligible in-cell page check nor proof of uninterrupted 2015-2026 continuity."
+    }
+  ],
+  "privacy_audit": {
+    "phone_like_strings_remaining": 0,
+    "email_like_strings_remaining": 0,
+    "business_contacts_retained": false,
+    "status": "pass"
+  },
+  "claim_boundary": [
+    "No check in this file changes CAL-0002-DR01 retrieval or entity outcomes.",
+    "These checks may motivate a preregistered source-pipeline hypothesis for a later calibration run.",
+    "A republisher's source attribution is not equivalent to direct verification of the upstream public dataset."
+  ]
+}

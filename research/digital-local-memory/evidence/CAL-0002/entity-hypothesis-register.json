@@ -1,0 +1,75 @@
+{
+  "register_version": "0.3",
+  "case_id": "CAL-0002",
+  "scope_id": "CAL-0002-S01",
+  "status": "FROZEN_BY_SCOPE_MANIFEST",
+  "source_image": "source/google-streetview-2015-07-candidate21-yaw285-fov120.jpg",
+  "entities": [
+    {
+      "entity_id": "CAL-0002-E01",
+      "bay_ids": ["CAL-0002-B01"],
+      "observed_sign_strings": [
+        {
+          "text": "CU",
+          "role_candidate": "brand",
+          "text_confidence": "high",
+          "role_confidence": "high"
+        }
+      ],
+      "category_clues": ["편의점"],
+      "relation_to_other_entities": "distinct",
+      "pre_search_status": "hypothesis_from_anchor_image"
+    },
+    {
+      "entity_id": "CAL-0002-E02",
+      "bay_ids": ["CAL-0002-B02"],
+      "observed_sign_strings": [
+        {
+          "text": "김연주 헤어샵",
+          "role_candidate": "trade_name",
+          "text_confidence": "high",
+          "role_confidence": "medium"
+        }
+      ],
+      "category_clues": ["미용실"],
+      "relation_to_other_entities": "co_located_unknown",
+      "pre_search_status": "hypothesis_from_anchor_image"
+    },
+    {
+      "entity_id": "CAL-0002-E03",
+      "bay_ids": ["CAL-0002-B02"],
+      "observed_sign_strings": [
+        {
+          "text": "하얀크리닝",
+          "role_candidate": "trade_name",
+          "text_confidence": "high",
+          "role_confidence": "medium"
+        }
+      ],
+      "category_clues": ["세탁소", "크리닝"],
+      "relation_to_other_entities": "co_located_unknown",
+      "pre_search_status": "hypothesis_from_anchor_image"
+    },
+    {
+      "entity_id": "CAL-0002-E04",
+      "bay_ids": ["CAL-0002-B03"],
+      "observed_sign_strings": [
+        {
+          "text": "우륵 공인중개사",
+          "role_candidate": "trade_name",
+          "text_confidence": "high",
+          "role_confidence": "high"
+        }
+      ],
+      "category_clues": ["부동산 중개"],
+      "relation_to_other_entities": "distinct",
+      "pre_search_status": "hypothesis_from_anchor_image"
+    }
+  ],
+  "privacy": {
+    "visible_phone_strings_transcribed": false,
+    "visible_phone_strings_queried": false,
+    "faces_or_vehicle_plates_extracted": false
+  },
+  "substantive_inference_allowed": false
+}

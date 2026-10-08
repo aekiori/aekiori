@@ -1,0 +1,62 @@
+{
+  "fixture_version": "0.2",
+  "synthetic_only": true,
+  "construction_note": "Potential contact strings are stored as segments and reconstructed only in validator memory.",
+  "redaction_marker_phone": "[business phone redacted]",
+  "redaction_marker_email": "[email redacted]",
+  "cases": [
+    {
+      "fixture_id": "P01_KR_LANDLINE_031_NO_SEPARATOR",
+      "kind": "phone",
+      "segments": ["031", "123", "4567"],
+      "joiner": "",
+      "expected": "[business phone redacted]"
+    },
+    {
+      "fixture_id": "P02_KR_LANDLINE_031_HYPHEN",
+      "kind": "phone",
+      "segments": ["031", "123", "4567"],
+      "joiner": "-",
+      "expected": "[business phone redacted]"
+    },
+    {
+      "fixture_id": "P03_KR_MOBILE_SPACE",
+      "kind": "phone",
+      "segments": ["010", "1234", "5678"],
+      "joiner": " ",
+      "expected": "[business phone redacted]"
+    },
+    {
+      "fixture_id": "P04_KR_SEOUL_HYPHEN",
+      "kind": "phone",
+      "segments": ["02", "1234", "5678"],
+      "joiner": "-",
+      "expected": "[business phone redacted]"
+    },
+    {
+      "fixture_id": "E01_EMAIL",
+      "kind": "email",
+      "segments": ["owner", "example.invalid"],
+      "joiner": "@",
+      "expected": "[email redacted]"
+    }
+  ],
+  "negative_cases": [
+    {
+      "fixture_id": "N01_ADDRESS_FRAGMENT",
+      "value": "광정로 25-57"
+    },
+    {
+      "fixture_id": "N02_ISO_TIMESTAMP",
+      "value": "2026-08-11T07:07:20+09:00"
+    },
+    {
+      "fixture_id": "N03_SHA256",
+      "value": "85EBCFEC09D50D75959B70B1D5469DCFFD89ADC5953FCD5CB0CDE09335AD4B59"
+    },
+    {
+      "fixture_id": "N04_COORDINATE",
+      "value": "37.3540936,126.9310404"
+    }
+  ]
+}

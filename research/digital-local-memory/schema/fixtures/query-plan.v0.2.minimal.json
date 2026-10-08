@@ -1,0 +1,16 @@
+{
+  "plan_version": "0.2",
+  "plan_id": "CAL-9999-QP01",
+  "scope_id": "CAL-9999-S01",
+  "queries": [
+    {
+      "order": 1,
+      "query_id": "T-G-K0-01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "budget_cell_id": "GOOGLE_WEB-K0-CAL-9999",
+      "query": "\"테스트로 1\" 2015"
+    }
+  ]
+}

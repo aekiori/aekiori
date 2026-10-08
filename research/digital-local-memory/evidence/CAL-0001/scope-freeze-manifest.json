@@ -1,0 +1,26 @@
+{
+  "manifest_version": "0.1",
+  "scope_id": "CAL-0001-S01",
+  "status": "FROZEN_FOR_CALIBRATION_DRY_RUN",
+  "created_at": "2026-08-11T06:31:38+09:00",
+  "claim_boundary": "Three ground-floor visual bays in the supplied July 2015 Google screenshot; not the complete building.",
+  "bay_ids": [
+    "CAL-0001-B01",
+    "CAL-0001-B02",
+    "CAL-0001-B03"
+  ],
+  "files": [
+    {
+      "path": "provided-google-view-2015-07.png",
+      "sha256": "7A5047F67D11E6A5A9FF621CD1E8509CB3407C29AD32ED947B3F0E43997DB8CF"
+    },
+    {
+      "path": "SCOPE.md",
+      "sha256": "4D688EDE7D5827CEAC2CD035101D923729EB018943E09A1FE77891FC345611BF"
+    },
+    {
+      "path": "facade-bay-register.csv",
+      "sha256": "6426FADD10929FB6F379E3A7E286F08D4A9A5E60F4126918342108433181241D"
+    }
+  ]
+}

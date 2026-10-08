@@ -1,0 +1,167 @@
+{
+  "schema_version": "0.1",
+  "record_id": "CAL-0001",
+  "cohort": {
+    "role": "calibration",
+    "selection_reason": "Known hard-to-retrieve index case selected from the user's prior search experience.",
+    "prior_search_exposure": true
+  },
+  "site": {
+    "user_supplied_address": "경기 군포시 광정로 25-57 율곡아파트 율곡A상가",
+    "exact_unit": null,
+    "scope_id": "CAL-0001-S01",
+    "scope_description": "Ground-floor frontage from the left edge of 야채나라 through the right edge of PARIS BAGUETTE in CAL-0001-E01; three bays only.",
+    "facade_scope_status": "frozen"
+  },
+  "analysis_eligibility": {
+    "protocol_calibration": true,
+    "prevalence_estimation": false,
+    "query_difficulty": false,
+    "causal_effect": false
+  },
+  "evidence_items": [
+    {
+      "evidence_id": "CAL-0001-E01",
+      "source_type": "anchor_image",
+      "provider": "Google",
+      "source_file": "provided-google-view-2015-07.png",
+      "sha256": "7A5047F67D11E6A5A9FF621CD1E8509CB3407C29AD32ED947B3F0E43997DB8CF",
+      "displayed_date": "2015-07",
+      "retrieved_at": "2026-08-11T06:04:25+09:00",
+      "independence_group": "user-provided-google-capture-2015-07",
+      "byte_size": 2505012,
+      "pixel_width": 1920,
+      "pixel_height": 718,
+      "notes": "The Google provider label and July 2015 date are visible in the screenshot. Original platform metadata was not independently queried."
+    },
+    {
+      "evidence_id": "CAL-0001-E02",
+      "source_type": "current_image",
+      "provider": null,
+      "source_file": "provided-recent-view-2026-06.png",
+      "sha256": "76A470476F917607AD23C15E5E27CB10CA192FBDE2679414BD577DCAF5AA624D",
+      "displayed_date": "2026-06",
+      "retrieved_at": "2026-08-11T06:02:51+09:00",
+      "independence_group": "user-provided-current-map-capture-2026-06",
+      "byte_size": 3095019,
+      "pixel_width": 1892,
+      "pixel_height": 917,
+      "notes": "The screenshot shows June 2026 as the latest view. The provider is not asserted in this record."
+    },
+    {
+      "evidence_id": "CAL-0001-E03",
+      "source_type": "user_report",
+      "provider": "user",
+      "source_file": null,
+      "sha256": null,
+      "displayed_date": null,
+      "retrieved_at": "2026-08-11T06:20:28+09:00",
+      "independence_group": "user-report-origin-story-2026-08-11",
+      "byte_size": null,
+      "pixel_width": null,
+      "pixel_height": null,
+      "notes": "The user reports a personal memory, unsuccessful prior searches on multiple services, and eventual discovery through Google historical imagery. This search history has not been reproduced under the protocol."
+    },
+    {
+      "evidence_id": "CAL-0001-E04",
+      "source_type": "web_result",
+      "provider": "Google Maps",
+      "source_file": "google-place-anchor-2026-08-11.txt",
+      "sha256": "4E143FA10218F4E71C36BBBDA44FF58F3A907584530C55E5F12C2F9DB78EA3E4",
+      "displayed_date": null,
+      "retrieved_at": "2026-08-11T06:28:11+09:00",
+      "independence_group": "google-maps-current-place-listing-2026-08-11",
+      "byte_size": 1069,
+      "pixel_width": null,
+      "pixel_height": null,
+      "notes": "Visible place-detail DOM displayed 율곡아파트중심상가 and 경기도 군포시 금정동 광정로 25-57. This is a current place anchor, not proof of the historical canonical name."
+    }
+  ],
+  "observed_signage": [
+    {
+      "text": "롤리팝",
+      "role": "brand_candidate",
+      "text_confidence": "high",
+      "role_confidence": "medium",
+      "evidence_ids": ["CAL-0001-E01"]
+    },
+    {
+      "text": "세계수입과자할인점",
+      "role": "descriptor_candidate",
+      "text_confidence": "high",
+      "role_confidence": "medium",
+      "evidence_ids": ["CAL-0001-E01"]
+    }
+  ],
+  "identity": {
+    "memory_label": "세계과자할인점",
+    "normalized_trade_name": null,
+    "legal_business_name": null,
+    "legal_continuity": "unknown",
+    "brand_continuity": "unknown",
+    "place_continuity": "unknown"
+  },
+  "claims": [
+    {
+      "claim_id": "CAL-0001-C01",
+      "text": "The provided Google screenshot displays July 2015.",
+      "status": "observed",
+      "confidence": "high",
+      "evidence_ids": ["CAL-0001-E01"]
+    },
+    {
+      "claim_id": "CAL-0001-C02",
+      "text": "A yellow storefront immediately left of Paris Baguette displays text read as 롤리팝 and 세계수입과자할인점.",
+      "status": "observed",
+      "confidence": "high",
+      "evidence_ids": ["CAL-0001-E01"]
+    },
+    {
+      "claim_id": "CAL-0001-C03",
+      "text": "The storefront appears likely to have been operating at capture time because merchandise and an open-looking shopfront are visible.",
+      "status": "best_current_explanation",
+      "confidence": "medium",
+      "evidence_ids": ["CAL-0001-E01"]
+    },
+    {
+      "claim_id": "CAL-0001-C04",
+      "text": "The user reports that ordinary text, map, and public-data searches did not recover the shop before spatial discovery in Google historical imagery.",
+      "status": "reported",
+      "confidence": "high",
+      "evidence_ids": ["CAL-0001-E03"]
+    },
+    {
+      "claim_id": "CAL-0001-C05",
+      "text": "The recent image probably aligns the former yellow storefront bay with the present 화사공인중개사 bay.",
+      "status": "best_current_explanation",
+      "confidence": "medium",
+      "evidence_ids": ["CAL-0001-E01", "CAL-0001-E02"]
+    },
+    {
+      "claim_id": "CAL-0001-C06",
+      "text": "Google Maps currently displays the place as 율곡아파트중심상가 at 경기도 군포시 금정동 광정로 25-57.",
+      "status": "observed",
+      "confidence": "high",
+      "evidence_ids": ["CAL-0001-E04"]
+    },
+    {
+      "claim_id": "CAL-0001-C07",
+      "text": "The 궁내동 label in the provided recent-view screenshot may refer to the camera or screen position rather than contradicting the building's 금정동 address.",
+      "status": "best_current_explanation",
+      "confidence": "medium",
+      "evidence_ids": ["CAL-0001-E02", "CAL-0001-E04"]
+    }
+  ],
+  "unknowns": [
+    "Exact unit number",
+    "Legal business name",
+    "Business owner or licensing object",
+    "Opening and closing dates",
+    "Whether 롤리팝 is the registered trade name",
+    "Whether 화사공인중개사 is the direct successor occupant",
+    "The exact prior search queries, budgets, dates, account states, and result captures",
+    "Why the recent-view UI shows 궁내동 while the current Google place listing uses 금정동",
+    "Whether 율곡A상가 and 율곡아파트중심상가 were historically interchangeable names"
+  ],
+  "retrieval_runs": []
+}

@@ -1,0 +1,27 @@
+{
+  "correction_id": "CAL-0001-DR01-C01",
+  "run_id": "CAL-0001-DR01",
+  "detected_at": "2026-08-11T07:06:09+09:00",
+  "status": "APPEND_ONLY_CORRECTION",
+  "target": {
+    "file": "google-k1-k2-results.json",
+    "query_id": "G-B02-K1-02",
+    "display_order": 7,
+    "field": "snippet_excerpt"
+  },
+  "observation": {
+    "unredacted_business_landline_form_strings": 2,
+    "area_code_prefix": "031",
+    "digit_count_each": 10,
+    "separator_present": false,
+    "raw_values_reproduced_in_correction": false
+  },
+  "contract_effect": {
+    "run_file_integrity": "unchanged",
+    "privacy_transform_claim": "failed_for_target_record",
+    "bay_outcomes": "unchanged",
+    "raw_target_file_public_release": "blocked"
+  },
+  "remedy_boundary": "Do not mutate the frozen target. Recollect under a new run ID or create a separately hashed sanitized derivative before external release.",
+  "mutation_rule": "Do not edit this correction. Further corrections require a new correction ID."
+}

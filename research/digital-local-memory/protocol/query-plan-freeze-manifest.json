@@ -1,0 +1,32 @@
+{
+  "manifest_version": "0.1",
+  "plan_id": "CAL-0001-QP01",
+  "scope_id": "CAL-0001-S01",
+  "status": "FROZEN_BEFORE_RETRIEVAL",
+  "frozen_at": "2026-08-11T06:42:35+09:00",
+  "query_count": 23,
+  "first_result_viewed_before_freeze": false,
+  "files": [
+    {
+      "path": "DRY_RUN_QUERY_PLAN_V0.1.md",
+      "sha256": "90D7B1AD54C724A9C0B12202D8A8EAAADDB60E1A4EA37B43D78127405CA6B2A2"
+    },
+    {
+      "path": "dry-run-query-plan.v0.1.json",
+      "sha256": "A7E953B5A4178CAFE71AB76711807056534345B4DB30B1777D3864372E413554"
+    },
+    {
+      "path": "PILOT_PROTOCOL_V0.1.md",
+      "sha256": "9645B355550F29AA9C61210F1B680314C8AFA45672E0BA2AC8FE03BBE3EAF4F1"
+    },
+    {
+      "path": "../evidence/CAL-0001/scope-freeze-manifest.json",
+      "sha256": "76F0BC9187BCC85B3B3D9FE299922DAF52A2C5152F78298A3A9AF65CB49F7CFE"
+    },
+    {
+      "path": "../evidence/CAL-0001/facade-bay-register.csv",
+      "sha256": "6426FADD10929FB6F379E3A7E286F08D4A9A5E60F4126918342108433181241D"
+    }
+  ],
+  "mutation_rule": "Any change to a frozen file invalidates CAL-0001-QP01; create a new plan ID and do not merge results across plan versions."
+}

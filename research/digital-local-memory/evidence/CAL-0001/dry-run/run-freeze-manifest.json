@@ -1,0 +1,54 @@
+{
+  "manifest_version": "0.1",
+  "run_id": "CAL-0001-DR01",
+  "plan_id": "CAL-0001-QP01",
+  "scope_id": "CAL-0001-S01",
+  "status": "FROZEN_CALIBRATION_RECORD",
+  "frozen_at": "2026-08-11T07:00:55+09:00",
+  "substantive_result_allowed": false,
+  "query_plan_manifest_sha256": "85EBCFEC09D50D75959B70B1D5469DCFFD89ADC5953FCD5CB0CDE09335AD4B59",
+  "query_accounting": {
+    "planned": 23,
+    "actual_query_records": 23,
+    "extra_google_K0_technical_recaptures": 4,
+    "candidate_source_checks": 3
+  },
+  "files": [
+    {
+      "path": "candidate-source-checks.json",
+      "byte_size": 3817,
+      "sha256": "9C305743B655E952DE0C62E3B4D938A6DA60BD72B3DF609F92A9E3BCF4BCE959"
+    },
+    {
+      "path": "DRY_RUN_FINDINGS.md",
+      "byte_size": 8110,
+      "sha256": "0AD68CBB5782617C0C7953F8E412EBE9DD4208950126BAF8545191D39DC86E85"
+    },
+    {
+      "path": "EXECUTION_DEVIATIONS.md",
+      "byte_size": 4825,
+      "sha256": "3171394256C18F20669E6780252E70A1DFBDE828058C723D3216ABFE1888B1A4"
+    },
+    {
+      "path": "google-k0-results.json",
+      "byte_size": 14595,
+      "sha256": "F2542D919103577704F1AF0363F4EBBEBFF9588721F000F538BD39D50DE2DCFB"
+    },
+    {
+      "path": "google-k1-k2-results.json",
+      "byte_size": 46189,
+      "sha256": "34E1544B82704E330F465BA72E961BF9FC059C7DFED59E9F61F37F4989F9F7E0"
+    },
+    {
+      "path": "naver-results.json",
+      "byte_size": 20712,
+      "sha256": "95E5062A06361F596002E4ABCECD71E2BA28BB576C57E850B95DF6BFE9E84487"
+    },
+    {
+      "path": "outcomes.json",
+      "byte_size": 6516,
+      "sha256": "16B674BED9C61A29465C6D206C5C0EB7A285FAFC3B54FCD458D609A75CAFC8B4"
+    }
+  ],
+  "mutation_rule": "Do not edit a listed file under this run ID. Corrections require an append-only correction record or a new run ID."
+}

@@ -1,0 +1,3440 @@
+{
+  "schema_version": "0.3",
+  "protocol_version": "PILOT_PROTOCOL_V0.3",
+  "run_id": "CAL-0002-DR01",
+  "plan_id": "CAL-0002-QP01",
+  "scope_id": "CAL-0002-S01",
+  "cohort_role": "blind_measurement_calibration",
+  "substantive_use_allowed": false,
+  "investigator": {
+    "investigator_id": "codex-primary-reader",
+    "execution_mode": "single_investigator_progressive_ladder",
+    "prior_target_retrieval_exposure": false,
+    "second_reader_status": "pending"
+  },
+  "environment": [
+    {
+      "platform": "GOOGLE_WEB",
+      "observed_at": "2026-08-11T07:46:50+09:00",
+      "account_state": "signed_out",
+      "ui_language": "ko",
+      "location_basis": "ip",
+      "personalization_request": "hl=ko;pws=0",
+      "notes": "Google footer exposed an IP-derived 산본동/군포시 location. AI modules were recorded but excluded from eligible outcomes."
+    },
+    {
+      "platform": "NAVER_WEB",
+      "observed_at": "2026-08-11T07:53:34+09:00",
+      "account_state": "signed_out",
+      "ui_language": "ko",
+      "location_basis": "unknown",
+      "personalization_request": "none",
+      "notes": "Login link was visible. Module-specific result order was retained; no global Naver rank was assigned."
+    }
+  ],
+  "stabilization_contract": {
+    "probe_interval_ms": 1000,
+    "stable_probe_count": 2,
+    "max_stabilization_ms": 8000
+  },
+  "entity_hypotheses": [
+    {
+      "entity_id": "CAL-0002-E01",
+      "bay_ids": [
+        "CAL-0002-B01"
+      ],
+      "observed_sign_strings": [
+        {
+          "text": "CU",
+          "role_candidate": "brand",
+          "text_confidence": "high",
+          "role_confidence": "high"
+        }
+      ],
+      "category_clues": [
+        "편의점"
+      ],
+      "relation_to_other_entities": "distinct",
+      "pre_search_status": "hypothesis_from_anchor_image"
+    },
+    {
+      "entity_id": "CAL-0002-E02",
+      "bay_ids": [
+        "CAL-0002-B02"
+      ],
+      "observed_sign_strings": [
+        {
+          "text": "김연주 헤어샵",
+          "role_candidate": "trade_name",
+          "text_confidence": "high",
+          "role_confidence": "medium"
+        }
+      ],
+      "category_clues": [
+        "미용실"
+      ],
+      "relation_to_other_entities": "co_located_unknown",
+      "pre_search_status": "hypothesis_from_anchor_image"
+    },
+    {
+      "entity_id": "CAL-0002-E03",
+      "bay_ids": [
+        "CAL-0002-B02"
+      ],
+      "observed_sign_strings": [
+        {
+          "text": "하얀크리닝",
+          "role_candidate": "trade_name",
+          "text_confidence": "high",
+          "role_confidence": "medium"
+        }
+      ],
+      "category_clues": [
+        "세탁소",
+        "크리닝"
+      ],
+      "relation_to_other_entities": "co_located_unknown",
+      "pre_search_status": "hypothesis_from_anchor_image"
+    },
+    {
+      "entity_id": "CAL-0002-E04",
+      "bay_ids": [
+        "CAL-0002-B03"
+      ],
+      "observed_sign_strings": [
+        {
+          "text": "우륵 공인중개사",
+          "role_candidate": "trade_name",
+          "text_confidence": "high",
+          "role_confidence": "high"
+        }
+      ],
+      "category_clues": [
+        "부동산 중개"
+      ],
+      "relation_to_other_entities": "distinct",
+      "pre_search_status": "hypothesis_from_anchor_image"
+    }
+  ],
+  "budget_cells": [
+    {
+      "budget_cell_id": "G-K0-SITE",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K0",
+      "bay_or_site_id": "CAL-0002",
+      "max_active_review_seconds": 120,
+      "started_at": "2026-08-10T22:46:50.777Z",
+      "ended_at": "2026-08-10T22:48:30.350Z",
+      "active_review_seconds": 78.3,
+      "network_wait_seconds": 8.5,
+      "status": "within_budget",
+      "query_ids": [
+        "G-K0-01",
+        "G-K0-02"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "G-K1-B01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_or_site_id": "CAL-0002-B01",
+      "max_active_review_seconds": 120,
+      "started_at": "2026-08-10T22:49:11.835Z",
+      "ended_at": "2026-08-10T22:49:23.720Z",
+      "active_review_seconds": 8,
+      "network_wait_seconds": 3.9,
+      "status": "within_budget",
+      "query_ids": [
+        "G-B01-K1-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "G-K1-B02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_or_site_id": "CAL-0002-B02",
+      "max_active_review_seconds": 120,
+      "started_at": "2026-08-10T22:49:24.758Z",
+      "ended_at": "2026-08-10T22:50:12.412Z",
+      "active_review_seconds": 35,
+      "network_wait_seconds": 7.5,
+      "status": "within_budget",
+      "query_ids": [
+        "G-B02-E02-K1-01",
+        "G-B02-E03-K1-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "G-K1-B03",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_or_site_id": "CAL-0002-B03",
+      "max_active_review_seconds": 120,
+      "started_at": "2026-08-10T22:52:02.495Z",
+      "ended_at": "2026-08-10T22:52:14.219Z",
+      "active_review_seconds": 8,
+      "network_wait_seconds": 3.7,
+      "status": "within_budget",
+      "query_ids": [
+        "G-B03-K1-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "G-K2-B01",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_or_site_id": "CAL-0002-B01",
+      "max_active_review_seconds": 180,
+      "started_at": "2026-08-10T22:52:18.447Z",
+      "ended_at": "2026-08-10T22:52:30.461Z",
+      "active_review_seconds": 8,
+      "network_wait_seconds": 4,
+      "status": "within_budget",
+      "query_ids": [
+        "G-B01-K2-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "G-K2-B02",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_or_site_id": "CAL-0002-B02",
+      "max_active_review_seconds": 180,
+      "started_at": "2026-08-10T22:52:22.626Z",
+      "ended_at": "2026-08-10T22:52:41.561Z",
+      "active_review_seconds": 24,
+      "network_wait_seconds": 6.8,
+      "status": "within_budget",
+      "query_ids": [
+        "G-B02-E02-K2-01",
+        "G-B02-E03-K2-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "G-K2-B03",
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_or_site_id": "CAL-0002-B03",
+      "max_active_review_seconds": 180,
+      "started_at": "2026-08-10T22:52:29.731Z",
+      "ended_at": "2026-08-10T22:52:43.938Z",
+      "active_review_seconds": 10,
+      "network_wait_seconds": 4.2,
+      "status": "within_budget",
+      "query_ids": [
+        "G-B03-K2-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "N-K0-SITE",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K0",
+      "bay_or_site_id": "CAL-0002",
+      "max_active_review_seconds": 120,
+      "started_at": "2026-08-10T22:53:34.857Z",
+      "ended_at": "2026-08-10T22:55:01.303Z",
+      "active_review_seconds": 23,
+      "network_wait_seconds": 13.3,
+      "status": "within_budget",
+      "query_ids": [
+        "N-K0-01",
+        "N-K0-02"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "N-K1-B01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_or_site_id": "CAL-0002-B01",
+      "max_active_review_seconds": 120,
+      "started_at": "2026-08-10T22:54:53.412Z",
+      "ended_at": "2026-08-10T22:55:02.273Z",
+      "active_review_seconds": 5,
+      "network_wait_seconds": 3.9,
+      "status": "within_budget",
+      "query_ids": [
+        "N-B01-K1-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "N-K1-B02",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_or_site_id": "CAL-0002-B02",
+      "max_active_review_seconds": 120,
+      "started_at": "2026-08-10T22:54:57.566Z",
+      "ended_at": "2026-08-10T22:55:10.581Z",
+      "active_review_seconds": 10,
+      "network_wait_seconds": 7.8,
+      "status": "within_budget",
+      "query_ids": [
+        "N-B02-E02-K1-01",
+        "N-B02-E03-K1-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "N-K1-B03",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_or_site_id": "CAL-0002-B03",
+      "max_active_review_seconds": 120,
+      "started_at": "2026-08-10T22:55:16.342Z",
+      "ended_at": "2026-08-10T22:55:26.956Z",
+      "active_review_seconds": 6,
+      "network_wait_seconds": 4.6,
+      "status": "within_budget",
+      "query_ids": [
+        "N-B03-K1-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "N-K2-B01",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_or_site_id": "CAL-0002-B01",
+      "max_active_review_seconds": 180,
+      "started_at": "2026-08-10T22:55:21.068Z",
+      "ended_at": "2026-08-10T22:55:30.609Z",
+      "active_review_seconds": 6,
+      "network_wait_seconds": 3.5,
+      "status": "within_budget",
+      "query_ids": [
+        "N-B01-K2-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "N-K2-B02",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_or_site_id": "CAL-0002-B02",
+      "max_active_review_seconds": 180,
+      "started_at": "2026-08-10T22:55:24.688Z",
+      "ended_at": "2026-08-10T22:55:41.323Z",
+      "active_review_seconds": 16,
+      "network_wait_seconds": 8.6,
+      "status": "within_budget",
+      "query_ids": [
+        "N-B02-E02-K2-01",
+        "N-B02-E03-K2-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    },
+    {
+      "budget_cell_id": "N-K2-B03",
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_or_site_id": "CAL-0002-B03",
+      "max_active_review_seconds": 180,
+      "started_at": "2026-08-10T22:55:33.415Z",
+      "ended_at": "2026-08-10T22:55:44.290Z",
+      "active_review_seconds": 7,
+      "network_wait_seconds": 3.9,
+      "status": "within_budget",
+      "query_ids": [
+        "N-B03-K2-01"
+      ],
+      "pause_events": [],
+      "contiguous_execution": true
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "G-K0-01",
+      "order": 1,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "target_entity_ids": [],
+      "budget_cell_id": "G-K0-SITE",
+      "planned_query": "\"우륵 주공7단지아파트\" 2015",
+      "submitted_query": "\"우륵 주공7단지아파트\" 2015",
+      "returned_query": "\"우륵 주공7단지아파트\" 2015",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:46:50.777Z",
+        "first_probe_at": "2026-08-10T22:46:52.411Z",
+        "terminal_state_at": "2026-08-10T22:46:54.439Z",
+        "ended_at": "2026-08-10T22:48:05.239Z",
+        "stabilization_elapsed_ms": 2028,
+        "network_wait_seconds": 3.7,
+        "active_review_seconds": 70.8
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:46:52.411Z",
+          "visible_title_count": 8,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": null
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:46:54.069Z",
+          "visible_title_count": 8,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": null
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-K0-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 2,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-K0-01-R01",
+              "position": 1,
+              "title": "우륵주공7단지 아파트 상세 정보",
+              "url": "https://www.apartsearcher.ai/apartment/12324",
+              "snippet_excerpt": "아파트써처 https://www.apartsearcher.ai › apartment 경기도 군포시 산본동에 위치한 우륵주공7단지 아파트 정보입니다. 1312개 동, 15세대 규모의 1994년 준공된 아파트로, 최저 매매가 5만원, 최저 전세가 3만원입니다.",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:www.apartsearcher.ai",
+              "candidate_clicked": false,
+              "notes": ""
+            },
+            {
+              "result_id": "G-K0-01-R02",
+              "position": 2,
+              "title": "산본 우륵주공7단지 703동 & 군포시아파트경매 & 산본동아파트 ...",
+              "url": "https://m.blog.naver.com/PostView.naver?blogId=tack2080&logNo=220818501799&categoryNo=195&proxyReferer=",
+              "snippet_excerpt": "블로그 https://m.blog.naver.com › PostView 2016. 9. 22. — 군포아파트경매물건 * 산본아파트경매물건 * 2015 타경2929. 소재지 ... * 군포시아파트경매물건 산본동 우륵주공7단지아파트 703동 *. . * 군포시 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": "2016-09-22",
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "present"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:m.blog.naver.com",
+              "candidate_clicked": false,
+              "notes": ""
+            },
+            {
+              "result_id": "G-K0-01-R05",
+              "position": 5,
+              "title": "군포시 산본7단지 무인 아이스크림 할인매장 위치 및 가격 종류",
+              "url": "https://kkoongsbrothers.tistory.com/934",
+              "snippet_excerpt": "티스토리 https://kkoongsbrothers.tistory.com › ... 2021. 8. 26. — ... 우륵 주공 7단지 아파트 상가 내 있어 찾기는 어렵지 않습니다. 산본 7단지 아이스크림 할인점 뒤 쪽으로 막혀서 입장은 안됩니다. 산본7단지 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:kkoongsbrothers.tistory.com",
+              "candidate_clicked": false,
+              "notes": "Different non-target shop in the same apartment commercial area."
+            }
+          ]
+        },
+        {
+          "module_id": "G-K0-01-M02",
+          "module_type": "GOOGLE_AI",
+          "module_screen_order": 1,
+          "rank_system": "NOT_RANKED",
+          "outcome_eligible": false,
+          "results": []
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "not_assessed",
+        "historical_time_anchor": "retrospective",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": []
+      },
+      "entity_outcomes": [],
+      "cross_bay_exposure": [
+        "non-target shop: 2021 unmanned ice-cream discount store in the apartment commercial area"
+      ],
+      "notes": "Probe-time returned-query reads were unavailable; an exact post-terminal read was recorded. Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-K0-02",
+      "order": 2,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "target_entity_ids": [],
+      "budget_cell_id": "G-K0-SITE",
+      "planned_query": "\"우륵주공7단지\" 상가",
+      "submitted_query": "\"우륵주공7단지\" 상가",
+      "returned_query": "\"우륵주공7단지\" 상가",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:48:18.010Z",
+        "first_probe_at": "2026-08-10T22:48:19.771Z",
+        "terminal_state_at": "2026-08-10T22:48:22.850Z",
+        "ended_at": "2026-08-10T22:48:30.350Z",
+        "stabilization_elapsed_ms": 3079,
+        "network_wait_seconds": 4.8,
+        "active_review_seconds": 7.5
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:48:19.771Z",
+          "visible_title_count": 9,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵주공7단지\" 상가"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:48:22.107Z",
+          "visible_title_count": 9,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵주공7단지\" 상가"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-K0-02-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 2,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-K0-02-R01",
+              "position": 1,
+              "title": "우륵주공7단지 이야기 | 산본 중심상가, 산본역 금정역 ...",
+              "url": "https://hogangnono.com/community/apts-5253330",
+              "snippet_excerpt": "호갱노노 https://hogangnono.com › community › apts-5253330 살아본 이야기 우륵주공7단지 . Leex7tXdac. 산본 중심 상가 , 산본역 금정역 가깝고 산본 ic 있어서 교통은 정말 좋음 30년 넘은 구축 (주변 전부)이라서 25평임에도 불구 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:hogangnono.com",
+              "candidate_clicked": false,
+              "notes": ""
+            },
+            {
+              "result_id": "G-K0-02-R05",
+              "position": 5,
+              "title": "'산본동 우륵주공7단지'의 매매, 월세, 시세, 후기",
+              "url": "https://zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EC%82%B0%EB%B3%B8%EB%8F%99-%EC%9A%B0%EB%A5%B5%EC%A3%BC%EA%B3%B57%EB%8B%A8%EC%A7%80/ksny8p",
+              "snippet_excerpt": "집품 https://zippoom.com › 경기도 › 군포시 › 산본동 주소: 경기 군포시 산본천로 33 (산본동 1146-11, 우륵주공7단지 ), 세대수: 총 1312세대, 매매 5억 17평형, 교통: 산본역 4호선 도보 12분, '산본동 우륵주공7단지 '의 ... 3.9 (29)",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "exact_address",
+                  "value_redacted": "경기 군포시 산본천로 33",
+                  "source_result_id": "G-K0-02-R05",
+                  "independence_group": "host:zippoom.com"
+                }
+              ],
+              "independence_group": "host:zippoom.com",
+              "candidate_clicked": false,
+              "notes": ""
+            },
+            {
+              "result_id": "G-K0-02-R07",
+              "position": 7,
+              "title": "2단지주공공인중개사사무소",
+              "url": "http://www.kehan0329.kmswb.kr/m/maemul/maemul_list.php?list_div=category&listtype=&gno=1197483",
+              "snippet_excerpt": "kmswb.kr http://www.kehan0329.kmswb.kr › maemul › maemul_list 우륵주공7단지 . 1 /31. 2단지주공공인중개사사무소 ... 주소 경기 군포시 산본로 299 주공2단지 단지 상가 101호 ... 상가 /사무실. 상가 점포 · 귀인마을현대홈타운 · 가야 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "absent",
+                "time_term": "absent"
+              },
+              "disposition": "false_positive",
+              "false_positive_types": [
+                "same_address_other_business"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:www.kehan0329.kmswb.kr",
+              "candidate_clicked": false,
+              "notes": "Different apartment complex and brokerage."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "not_assessed",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "same_address_other_business"
+        ]
+      },
+      "entity_outcomes": [],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-B01-K1-01",
+      "order": 3,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0002-B01",
+      "target_entity_ids": [
+        "CAL-0002-E01"
+      ],
+      "budget_cell_id": "G-K1-B01",
+      "planned_query": "편의점 \"우륵 주공7단지아파트\"",
+      "submitted_query": "편의점 \"우륵 주공7단지아파트\"",
+      "returned_query": "편의점 \"우륵 주공7단지아파트\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:49:11.835Z",
+        "first_probe_at": "2026-08-10T22:49:13.106Z",
+        "terminal_state_at": "2026-08-10T22:49:15.720Z",
+        "ended_at": "2026-08-10T22:49:23.720Z",
+        "stabilization_elapsed_ms": 2614,
+        "network_wait_seconds": 3.9,
+        "active_review_seconds": 8
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:49:13.106Z",
+          "visible_title_count": 8,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "편의점 \"우륵 주공7단지아파트\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:49:15.229Z",
+          "visible_title_count": 8,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "편의점 \"우륵 주공7단지아파트\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-B01-K1-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 2,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-B01-K1-01-R01",
+              "position": 1,
+              "title": "군포아파트경매, 산본역 인근 산본동 우륵주공7단지 ...",
+              "url": "https://blog.naver.com/dsd_auction/222161421136",
+              "snippet_excerpt": "Naver Blog https://blog.naver.com › dsd_auction 우륵주공7단지아파트 . 경기도 군포시 산본천로 33. 저장. [경기도 군포시 산본천로33] ... 편의점 모습입니다. 편의점 이 가까운곳에 위치하고 있으며 24시 운영을 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "candidate_ambiguous",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "category",
+                  "value_redacted": "편의점",
+                  "source_result_id": "G-B01-K1-01-R01",
+                  "independence_group": "host:blog.naver.com"
+                },
+                {
+                  "anchor_type": "exact_address",
+                  "value_redacted": "경기 군포시 산본천로 33",
+                  "source_result_id": "G-B01-K1-01-R01",
+                  "independence_group": "host:blog.naver.com"
+                }
+              ],
+              "independence_group": "host:blog.naver.com",
+              "candidate_clicked": false,
+              "notes": "Category and site are visible; CU identity is not."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "ambiguous",
+        "entity_location_match": "ambiguous",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "possible",
+        "false_positive_types": [
+          "category_only_same_building"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E01",
+          "search_surface_retrieval_hit": "ambiguous",
+          "entity_location_match": "ambiguous",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "possible",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "category_only_same_building"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-B02-E02-K1-01",
+      "order": 4,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0002-B02",
+      "target_entity_ids": [
+        "CAL-0002-E02"
+      ],
+      "budget_cell_id": "G-K1-B02",
+      "planned_query": "미용실 \"우륵 주공7단지아파트\"",
+      "submitted_query": "미용실 \"우륵 주공7단지아파트\"",
+      "returned_query": "미용실 \"우륵 주공7단지아파트\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:49:24.758Z",
+        "first_probe_at": "2026-08-10T22:49:26.426Z",
+        "terminal_state_at": "2026-08-10T22:49:28.706Z",
+        "ended_at": "2026-08-10T22:49:38.706Z",
+        "stabilization_elapsed_ms": 2280,
+        "network_wait_seconds": 3.9,
+        "active_review_seconds": 10
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:49:26.426Z",
+          "visible_title_count": 8,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "미용실 \"우륵 주공7단지아파트\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:49:28.100Z",
+          "visible_title_count": 8,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "미용실 \"우륵 주공7단지아파트\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-B02-E02-K1-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 2,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-B02-E02-K1-01-R01",
+              "position": 1,
+              "title": "[부동산 공부] 신도시 경기도 군포시 산본, 너 몰랐는데 좋구나!",
+              "url": "https://blog.naver.com/pjsoon02231/223063826101?viewType=pc",
+              "snippet_excerpt": "Naver Blog https://blog.naver.com › pjsoon[business phone redacted]. 4. 13. — 산본신도시 최초로 우륵주공7단지 아파트 가 리모델링 도시계획 심의를 통과하면. ... 단지 내 상가에 반찬, 미용실 , 세탁, 음악, 미술, 합기도 등 ...",
+              "privacy_transform": "phone_redacted",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:blog.naver.com",
+              "candidate_clicked": false,
+              "notes": "Site/category discussion, not the target trade name."
+            }
+          ]
+        },
+        {
+          "module_id": "G-B02-E02-K1-01-M02",
+          "module_type": "GOOGLE_AI",
+          "module_screen_order": 1,
+          "rank_system": "NOT_RANKED",
+          "outcome_eligible": false,
+          "results": [
+            {
+              "result_id": "G-B02-E02-K1-01-AI-R01",
+              "position": 1,
+              "title": "헤어공간by보람 산본점",
+              "url": "https://www.google.com/search?module=ai-overview",
+              "snippet_excerpt": "산본천로 39 상가 1층 108호의 다른 현재 미용실.",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "absent",
+                "time_term": "absent"
+              },
+              "disposition": "false_positive",
+              "false_positive_types": [
+                "other"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:www.google.com",
+              "candidate_clicked": false,
+              "notes": "AI-generated module; excluded from outcome."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "not_found_under_protocol",
+        "entity_location_match": "no",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "other"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E02",
+          "search_surface_retrieval_hit": "not_found_under_protocol",
+          "entity_location_match": "no",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "unknown",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "other"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-B02-E03-K1-01",
+      "order": 5,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0002-B02",
+      "target_entity_ids": [
+        "CAL-0002-E03"
+      ],
+      "budget_cell_id": "G-K1-B02",
+      "planned_query": "세탁소 \"우륵 주공7단지아파트\"",
+      "submitted_query": "세탁소 \"우륵 주공7단지아파트\"",
+      "returned_query": "세탁소 \"우륵 주공7단지아파트\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:49:43.835Z",
+        "first_probe_at": "2026-08-10T22:49:45.085Z",
+        "terminal_state_at": "2026-08-10T22:49:47.412Z",
+        "ended_at": "2026-08-10T22:50:12.412Z",
+        "stabilization_elapsed_ms": 2327,
+        "network_wait_seconds": 3.6,
+        "active_review_seconds": 25
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:49:45.085Z",
+          "visible_title_count": 9,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "세탁소 \"우륵 주공7단지아파트\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:49:46.949Z",
+          "visible_title_count": 9,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "세탁소 \"우륵 주공7단지아파트\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-B02-E03-K1-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 2,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-B02-E03-K1-01-R01",
+              "position": 1,
+              "title": "주공세탁소 - 군포시 산본동",
+              "url": "https://fly.purpleo.co.kr/view/11564",
+              "snippet_excerpt": "purpleo.co.kr https://fly.purpleo.co.kr › view 산본7단지 715동 앞 우륵 주공 7단지 아파트 상가 내 있어 찾기는 어렵지 않습니다. 산본 7단지 아이스크림 할인점 뒤 쪽으로 막혀서 입장은 안됩니다. 산본7단지 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "candidate_ambiguous",
+              "false_positive_types": [
+                "aggregate_snippet_collision"
+              ],
+              "identity_anchors": [],
+              "independence_group": "source-family:purpleo-directory",
+              "candidate_clicked": false,
+              "notes": "Different trade name; aggregate directory."
+            }
+          ]
+        },
+        {
+          "module_id": "G-B02-E03-K1-01-M02",
+          "module_type": "GOOGLE_AI",
+          "module_screen_order": 1,
+          "rank_system": "NOT_RANKED",
+          "outcome_eligible": false,
+          "results": [
+            {
+              "result_id": "G-B02-E03-K1-01-AI-R01",
+              "position": 1,
+              "title": "하얀세탁소 | 당근 동네 업체",
+              "url": "https://www.daangn.com/kr/local-profile/%ED%95%98%EC%96%80%EC%84%B8%ED%83%81%EC%86%8C-uvc16hjnxiqp/",
+              "snippet_excerpt": "경기도 군포시 산본천로 33, 102호의 현재형 후보.",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "candidate_ambiguous",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "하얀세탁소",
+                  "source_result_id": "G-B02-E03-K1-01-AI-R01",
+                  "independence_group": "source-family:daangn"
+                },
+                {
+                  "anchor_type": "exact_address",
+                  "value_redacted": "경기도 군포시 산본천로 33",
+                  "source_result_id": "G-B02-E03-K1-01-AI-R01",
+                  "independence_group": "source-family:daangn"
+                },
+                {
+                  "anchor_type": "unit",
+                  "value_redacted": "102호",
+                  "source_result_id": "G-B02-E03-K1-01-AI-R01",
+                  "independence_group": "source-family:daangn"
+                }
+              ],
+              "independence_group": "source-family:daangn",
+              "candidate_clicked": true,
+              "notes": "Candidate page checked inside the cell, but the originating AI module is outcome-ineligible and the 2015 sign reads 하얀크리닝."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "not_found_under_protocol",
+        "entity_location_match": "not_assessed",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "aggregate_snippet_collision"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E03",
+          "search_surface_retrieval_hit": "not_found_under_protocol",
+          "entity_location_match": "not_assessed",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "unknown",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "aggregate_snippet_collision"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-B03-K1-01",
+      "order": 6,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0002-B03",
+      "target_entity_ids": [
+        "CAL-0002-E04"
+      ],
+      "budget_cell_id": "G-K1-B03",
+      "planned_query": "공인중개사 \"우륵 주공7단지아파트\"",
+      "submitted_query": "공인중개사 \"우륵 주공7단지아파트\"",
+      "returned_query": "공인중개사 \"우륵 주공7단지아파트\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:52:02.495Z",
+        "first_probe_at": "2026-08-10T22:52:04.144Z",
+        "terminal_state_at": "2026-08-10T22:52:06.219Z",
+        "ended_at": "2026-08-10T22:52:14.219Z",
+        "stabilization_elapsed_ms": 2075,
+        "network_wait_seconds": 3.7,
+        "active_review_seconds": 8
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:52:04.144Z",
+          "visible_title_count": 9,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "공인중개사 \"우륵 주공7단지아파트\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:52:05.746Z",
+          "visible_title_count": 9,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "공인중개사 \"우륵 주공7단지아파트\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-B03-K1-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 2,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-B03-K1-01-R04",
+              "position": 4,
+              "title": "[경기도 군포시] 우륵공인중개사 | 부동산 | 업체창고",
+              "url": "https://place.udanax.org/p/1096316/%EC%9A%B0%EB%A5%B5%EA%B3%B5%EC%9D%B8%EC%A4%91%EA%B0%9C%EC%82%AC",
+              "snippet_excerpt": "udanax.org https://place.udanax.org › 부동산 › 경기도 › 군포시 23년차 경매 전문 공인중개사 경매 김프로2026년 4월 2일. 우륵주공7단지 아파트 경매 진행 목록 군포시 산본동 매매 정보. 2004년부터 부동산 경매를 전문으로 업무하고 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "eligible_evidence",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "우륵공인중개사",
+                  "source_result_id": "G-B03-K1-01-R04",
+                  "independence_group": "source-family:udanax-directory"
+                },
+                {
+                  "anchor_type": "category",
+                  "value_redacted": "부동산 중개",
+                  "source_result_id": "G-B03-K1-01-R04",
+                  "independence_group": "source-family:udanax-directory"
+                }
+              ],
+              "independence_group": "source-family:udanax-directory",
+              "candidate_clicked": false,
+              "notes": ""
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "ambiguous",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "possible",
+        "false_positive_types": []
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E04",
+          "search_surface_retrieval_hit": "observed",
+          "entity_location_match": "ambiguous",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "possible",
+          "identity_anchors": [
+            {
+              "anchor_type": "trade_name",
+              "value_redacted": "우륵공인중개사",
+              "source_result_id": "G-B03-K1-01-R04",
+              "independence_group": "source-family:udanax-directory"
+            }
+          ],
+          "material_conflicts": [],
+          "false_positive_types": [],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-B01-K2-01",
+      "order": 7,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0002-B01",
+      "target_entity_ids": [
+        "CAL-0002-E01"
+      ],
+      "budget_cell_id": "G-K2-B01",
+      "planned_query": "\"CU\" \"우륵주공7단지\"",
+      "submitted_query": "\"CU\" \"우륵주공7단지\"",
+      "returned_query": "\"CU\" \"우륵주공7단지\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:52:18.447Z",
+        "first_probe_at": "2026-08-10T22:52:19.908Z",
+        "terminal_state_at": "2026-08-10T22:52:22.461Z",
+        "ended_at": "2026-08-10T22:52:30.461Z",
+        "stabilization_elapsed_ms": 2553,
+        "network_wait_seconds": 4,
+        "active_review_seconds": 8
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:52:19.908Z",
+          "visible_title_count": 8,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"CU\" \"우륵주공7단지\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:52:22.037Z",
+          "visible_title_count": 8,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"CU\" \"우륵주공7단지\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-B01-K2-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 2,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-B01-K2-01-R01",
+              "position": 1,
+              "title": "산본동 우륵주공7단지 단지정보",
+              "url": "https://aptgin.com/home/popup/pp_danji/apt/am7553em0",
+              "snippet_excerpt": "부동산지인 https://aptgin.com › home › popup › pp_danji › apt 우륵주공7단지 | 팝업-단지정보 | 우륵주공7단지 단지의 환경정보, 실거래 내역 ... CU 군포우륵점: 거리 : 73m (운전: 0.8분 / 도보: 1.6분). GS25산본솔거점: 거리 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "candidate_ambiguous",
+              "false_positive_types": [
+                "same_name_wrong_address"
+              ],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "CU군포우륵점",
+                  "source_result_id": "G-B01-K2-01-R01",
+                  "independence_group": "host:aptgin.com"
+                },
+                {
+                  "anchor_type": "other",
+                  "value_redacted": "우륵주공7단지 기준 73m",
+                  "source_result_id": "G-B01-K2-01-R01",
+                  "independence_group": "host:aptgin.com"
+                }
+              ],
+              "independence_group": "host:aptgin.com",
+              "candidate_clicked": false,
+              "notes": "Another CU is also shown 144m away; no exact storefront address in the result."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "ambiguous",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "ambiguous",
+        "identity_status": "possible",
+        "false_positive_types": [
+          "same_name_wrong_address"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E01",
+          "search_surface_retrieval_hit": "observed",
+          "entity_location_match": "ambiguous",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "ambiguous",
+          "identity_status": "possible",
+          "identity_anchors": [
+            {
+              "anchor_type": "trade_name",
+              "value_redacted": "CU군포우륵점",
+              "source_result_id": "G-B01-K2-01-R01",
+              "independence_group": "host:aptgin.com"
+            },
+            {
+              "anchor_type": "other",
+              "value_redacted": "우륵주공7단지 기준 73m",
+              "source_result_id": "G-B01-K2-01-R01",
+              "independence_group": "host:aptgin.com"
+            }
+          ],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "same_name_wrong_address"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-B02-E02-K2-01",
+      "order": 8,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0002-B02",
+      "target_entity_ids": [
+        "CAL-0002-E02"
+      ],
+      "budget_cell_id": "G-K2-B02",
+      "planned_query": "\"김연주 헤어샵\" 군포 산본",
+      "submitted_query": "\"김연주 헤어샵\" 군포 산본",
+      "returned_query": "\"김연주 헤어샵\" 군포 산본",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:52:22.626Z",
+        "first_probe_at": "2026-08-10T22:52:23.890Z",
+        "terminal_state_at": "2026-08-10T22:52:25.885Z",
+        "ended_at": "2026-08-10T22:52:37.885Z",
+        "stabilization_elapsed_ms": 1995,
+        "network_wait_seconds": 3.3,
+        "active_review_seconds": 12
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:52:23.890Z",
+          "visible_title_count": 10,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"김연주 헤어샵\" 군포 산본"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:52:25.406Z",
+          "visible_title_count": 10,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"김연주 헤어샵\" 군포 산본"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-B02-E02-K2-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 1,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-B02-E02-K2-01-R01",
+              "position": 1,
+              "title": "김연주헤어샵 ( 경기도 군포시 산본동 ) |헤어미용추천뷰티샵!",
+              "url": "http://localmap.co.kr/web/splus/kmap/view.php?sigun=6410000&gugun=4020000&keyno=362&keyname=%EA%B9%80%EC%97%B0%EC%A3%BC%ED%97%A4%EC%96%B4%EC%83%B5&keylink=4020000-211-2001-00012",
+              "snippet_excerpt": "두리찾기서비스 http://localmap.co.kr › web › splus › kmap › view › ke... 회사이름 김연주헤어샵 . 문의전화 [business phone redacted]. 우편번호 435-822. 지번주소 경기도 군포시 산본동 1146-12 우륵일반상가 102호. 도로주소 경기도 군포시 산본 천로 33, ... 순위닷 https://www.soonwidot.co.kr › rank › detail › stx=산본... 김연주헤어샵 - 산본역미용실 인기순위. 경기도 군포시 산본동 1146-12 연락처 : [business phone redacted] [전화걸기]. 2026-04-24 10:22:17.",
+              "privacy_transform": "phone_redacted",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "eligible_evidence",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "김연주헤어샵",
+                  "source_result_id": "G-B02-E02-K2-01-R01",
+                  "independence_group": "source-family:local-government-license-republisher"
+                },
+                {
+                  "anchor_type": "exact_address",
+                  "value_redacted": "경기도 군포시 산본천로 33",
+                  "source_result_id": "G-B02-E02-K2-01-R01",
+                  "independence_group": "source-family:local-government-license-republisher"
+                },
+                {
+                  "anchor_type": "unit",
+                  "value_redacted": "우륵일반상가 102호",
+                  "source_result_id": "G-B02-E02-K2-01-R01",
+                  "independence_group": "source-family:local-government-license-republisher"
+                }
+              ],
+              "independence_group": "source-family:local-government-license-republisher",
+              "candidate_clicked": false,
+              "notes": "Exact trade name and storefront address/unit are visible in the search snippet."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "yes",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "probable",
+        "false_positive_types": []
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E02",
+          "search_surface_retrieval_hit": "observed",
+          "entity_location_match": "yes",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "probable",
+          "identity_anchors": [
+            {
+              "anchor_type": "trade_name",
+              "value_redacted": "김연주헤어샵",
+              "source_result_id": "G-B02-E02-K2-01-R01",
+              "independence_group": "source-family:local-government-license-republisher"
+            },
+            {
+              "anchor_type": "exact_address",
+              "value_redacted": "경기도 군포시 산본천로 33",
+              "source_result_id": "G-B02-E02-K2-01-R01",
+              "independence_group": "source-family:local-government-license-republisher"
+            },
+            {
+              "anchor_type": "unit",
+              "value_redacted": "우륵일반상가 102호",
+              "source_result_id": "G-B02-E02-K2-01-R01",
+              "independence_group": "source-family:local-government-license-republisher"
+            }
+          ],
+          "material_conflicts": [],
+          "false_positive_types": [],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-B02-E03-K2-01",
+      "order": 9,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0002-B02",
+      "target_entity_ids": [
+        "CAL-0002-E03"
+      ],
+      "budget_cell_id": "G-K2-B02",
+      "planned_query": "\"하얀크리닝\" 군포 산본",
+      "submitted_query": "\"하얀크리닝\" 군포 산본",
+      "returned_query": "\"하얀크리닝\" 군포 산본",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:52:26.066Z",
+        "first_probe_at": "2026-08-10T22:52:27.323Z",
+        "terminal_state_at": "2026-08-10T22:52:29.561Z",
+        "ended_at": "2026-08-10T22:52:41.561Z",
+        "stabilization_elapsed_ms": 2238,
+        "network_wait_seconds": 3.5,
+        "active_review_seconds": 12
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:52:27.323Z",
+          "visible_title_count": 10,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"하얀크리닝\" 군포 산본"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:52:29.140Z",
+          "visible_title_count": 10,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"하얀크리닝\" 군포 산본"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-B02-E03-K2-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 1,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-B02-E03-K2-01-R01",
+              "position": 1,
+              "title": "경기도 군포시 대야미동 이웃들이 자주 가는 세탁소/빨래방",
+              "url": "https://www.daangn.com/kr/local-profile/?in=%EB%8C%80%EC%95%BC%EB%AF%B8%EB%8F%99-4460&search=%EC%84%B8%ED%83%81%EC%86%8C%2F%EB%B9%A8%EB%9E%98%EB%B0%A9",
+              "snippet_excerpt": "당근 https://www.daangn.com › local-profile › 빨래방 하얀크리닝 본오점세탁소/빨래방고품질 항균세탁 ... 산본 세탁세탁소/빨래방경기도 군포시 광정로 25-57 ... 런드리박스세탁소안양, 군포 , 의왕지역 비대면 세탁 수거배달 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "absent",
+                "time_term": "absent"
+              },
+              "disposition": "false_positive",
+              "false_positive_types": [
+                "same_name_wrong_address",
+                "aggregate_snippet_collision"
+              ],
+              "identity_anchors": [],
+              "independence_group": "source-family:daangn",
+              "candidate_clicked": false,
+              "notes": "Same/similar trade name, wrong locality."
+            },
+            {
+              "result_id": "G-B02-E03-K2-01-R03",
+              "position": 3,
+              "title": "전국 세탁소 주소록 - 네이버 블로그",
+              "url": "https://m.blog.naver.com/hankyuldata/222460786224",
+              "snippet_excerpt": "블로그 https://m.blog.naver.com › hankyuldata 2021. 8. 7. — ... 산본 천\",\"세탁소/빨래방\". \"삼성세탁소\",\"15811\",\"경기도 군포시 군포 ...  하얀크리닝 \\\",\\\"28361\\\",\\\"충청북도 청주시 흥덕\\\",\\\"세탁소/빨래방\\\". \\\"효성 ...",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "unknown",
+                "time_term": "absent"
+              },
+              "disposition": "false_positive",
+              "false_positive_types": [
+                "aggregate_snippet_collision"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:m.blog.naver.com",
+              "candidate_clicked": false,
+              "notes": "National address-list aggregation, not a target storefront record."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "not_found_under_protocol",
+        "entity_location_match": "no",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "same_name_wrong_address",
+          "aggregate_snippet_collision"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E03",
+          "search_surface_retrieval_hit": "not_found_under_protocol",
+          "entity_location_match": "no",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "unknown",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "same_name_wrong_address",
+            "aggregate_snippet_collision"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "G-B03-K2-01",
+      "order": 10,
+      "platform": "GOOGLE_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0002-B03",
+      "target_entity_ids": [
+        "CAL-0002-E04"
+      ],
+      "budget_cell_id": "G-K2-B03",
+      "planned_query": "\"우륵 공인중개사\" 군포",
+      "submitted_query": "\"우륵 공인중개사\" 군포",
+      "returned_query": "\"우륵 공인중개사\" 군포",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:52:29.731Z",
+        "first_probe_at": "2026-08-10T22:52:30.982Z",
+        "terminal_state_at": "2026-08-10T22:52:33.938Z",
+        "ended_at": "2026-08-10T22:52:43.938Z",
+        "stabilization_elapsed_ms": 2956,
+        "network_wait_seconds": 4.2,
+        "active_review_seconds": 10
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:52:30.982Z",
+          "visible_title_count": 9,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵 공인중개사\" 군포"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:52:33.381Z",
+          "visible_title_count": 9,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵 공인중개사\" 군포"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "G-B03-K2-01-M01",
+          "module_type": "GOOGLE_ORGANIC_WEB",
+          "module_screen_order": 2,
+          "rank_system": "GOOGLE_ORGANIC_RANK",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "G-B03-K2-01-R01",
+              "position": 1,
+              "title": "[경기도 군포시] 우륵공인중개사 | 부동산 | 업체창고",
+              "url": "https://place.udanax.org/p/1096316/%EC%9A%B0%EB%A5%B5%EA%B3%B5%EC%9D%B8%EC%A4%91%EA%B0%9C%EC%82%AC",
+              "snippet_excerpt": "udanax.org https://place.udanax.org › 부동산 › 경기도 › 군포시 ✓ 방문 전, 이건 꼭 알고 가세요! · ✨ 우륵공인중개사 의 특징 · ⭐ 실제 이용자 평가 · 위치 & 교통 안내 · 🗺️ 근처에 이런 곳도 있어요 · 지금 군포시 소식 ·",
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "eligible_evidence",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "우륵공인중개사",
+                  "source_result_id": "G-B03-K2-01-R01",
+                  "independence_group": "source-family:udanax-directory"
+                },
+                {
+                  "anchor_type": "category",
+                  "value_redacted": "부동산 중개",
+                  "source_result_id": "G-B03-K2-01-R01",
+                  "independence_group": "source-family:udanax-directory"
+                }
+              ],
+              "independence_group": "source-family:udanax-directory",
+              "candidate_clicked": false,
+              "notes": ""
+            },
+            {
+              "result_id": "G-B03-K2-01-R02",
+              "position": 2,
+              "title": "수지공인중개사사무소 - 군포시 산본천로 39",
+              "url": "https://frea.purpleo.co.kr/view/44682",
+              "snippet_excerpt": "전국 공인중개사 사무소 지도 https://frea.purpleo.co.kr › view 온누리공인중개사. 경기도 군포시 광정로 59, 104호(산본동). '수지공인중개사사무소'에서 0.3km. [business phone redacted]. 바로가기 · 우륵공인중개사 . 경기도 군포시 산본천로 33, ... Naver Blog https://blog.naver.com › hjstyle3535 2025. 6. 17. —",
+              "privacy_transform": "phone_redacted",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "eligible_evidence",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "우륵공인중개사",
+                  "source_result_id": "G-B03-K2-01-R02",
+                  "independence_group": "source-family:purpleo-directory"
+                },
+                {
+                  "anchor_type": "exact_address",
+                  "value_redacted": "경기도 군포시 산본천로 33",
+                  "source_result_id": "G-B03-K2-01-R02",
+                  "independence_group": "source-family:purpleo-directory"
+                }
+              ],
+              "independence_group": "source-family:purpleo-directory",
+              "candidate_clicked": false,
+              "notes": "Target appears in the neighboring-office snippet; source-family independence is not assumed."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "yes",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "probable",
+        "false_positive_types": []
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E04",
+          "search_surface_retrieval_hit": "observed",
+          "entity_location_match": "yes",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "probable",
+          "identity_anchors": [
+            {
+              "anchor_type": "trade_name",
+              "value_redacted": "우륵공인중개사",
+              "source_result_id": "G-B03-K2-01-R01",
+              "independence_group": "source-family:udanax-directory"
+            },
+            {
+              "anchor_type": "exact_address",
+              "value_redacted": "경기도 군포시 산본천로 33",
+              "source_result_id": "G-B03-K2-01-R02",
+              "independence_group": "source-family:purpleo-directory"
+            }
+          ],
+          "material_conflicts": [],
+          "false_positive_types": [],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-K0-01",
+      "order": 11,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "target_entity_ids": [],
+      "budget_cell_id": "N-K0-SITE",
+      "planned_query": "\"우륵 주공7단지아파트\" 2015",
+      "submitted_query": "\"우륵 주공7단지아파트\" 2015",
+      "returned_query": "\"우륵 주공7단지아파트\" 2015",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:53:34.857Z",
+        "first_probe_at": "2026-08-10T22:53:40.618Z",
+        "terminal_state_at": "2026-08-10T22:53:43.553Z",
+        "ended_at": "2026-08-10T22:53:58.553Z",
+        "stabilization_elapsed_ms": 2935,
+        "network_wait_seconds": 8.7,
+        "active_review_seconds": 15
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:53:40.618Z",
+          "visible_title_count": 99,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵 주공7단지아파트\" 2015"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:53:43.141Z",
+          "visible_title_count": 99,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵 주공7단지아파트\" 2015"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-K0-01-M01",
+          "module_type": "NAVER_OTHER",
+          "module_screen_order": 1,
+          "rank_system": "NOT_RANKED",
+          "outcome_eligible": false,
+          "results": []
+        },
+        {
+          "module_id": "N-K0-01-M02",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 2,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-K0-01-R01",
+              "position": 1,
+              "title": "우륵주공7단지 711동",
+              "url": "https://fin.land.naver.com/map?layer=NobwRAlgJmBcYEMBOAXCBjANgUwPpWxQQkzABowAHZBAWwGc5xk0tsBJGeAJgDYBmAKwAGYQE5eAdmFgAvhXrZk6ABYAFGgyazZAXSA",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:fin.land.naver.com",
+              "candidate_clicked": false,
+              "notes": ""
+            },
+            {
+              "result_id": "N-K0-01-R02",
+              "position": 2,
+              "title": "우륵주공7단지 아파트 상세 정보",
+              "url": "https://www.apartsearcher.ai/apartment/12324",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:www.apartsearcher.ai",
+              "candidate_clicked": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "module_id": "N-K0-01-M03",
+          "module_type": "NAVER_BLOG_CAFE",
+          "module_screen_order": 3,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-K0-01-R03",
+              "position": 1,
+              "title": "(임장)군포 산본 우륵주공 7단지 아파트",
+              "url": "https://blog.naver.com/startify/224253298354",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:blog.naver.com",
+              "candidate_clicked": false,
+              "notes": ""
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "not_assessed",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": []
+      },
+      "entity_outcomes": [],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-K0-02",
+      "order": 12,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K0",
+      "bay_id": null,
+      "target_entity_ids": [],
+      "budget_cell_id": "N-K0-SITE",
+      "planned_query": "\"우륵주공7단지\" 상가",
+      "submitted_query": "\"우륵주공7단지\" 상가",
+      "returned_query": "\"우륵주공7단지\" 상가",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:54:48.657Z",
+        "first_probe_at": "2026-08-10T22:54:50.670Z",
+        "terminal_state_at": "2026-08-10T22:54:53.303Z",
+        "ended_at": "2026-08-10T22:55:01.303Z",
+        "stabilization_elapsed_ms": 2633,
+        "network_wait_seconds": 4.6,
+        "active_review_seconds": 8
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:54:50.670Z",
+          "visible_title_count": 108,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵주공7단지\" 상가"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:54:52.857Z",
+          "visible_title_count": 108,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵주공7단지\" 상가"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-K0-02-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-K0-02-R01",
+              "position": 1,
+              "title": "우륵주공7단지 702동",
+              "url": "https://fin.land.naver.com/map?layer=NobwRAlgJmBcYEMBOAXCBjANgUwPpWxQQkzABowAHZBAWwGc5xk0tsBJGeAJgDYBmAJwBWfgEYALAA4ADGAC%2BFetmToAFgAUaDJvPkBdIA",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:fin.land.naver.com",
+              "candidate_clicked": false,
+              "notes": ""
+            },
+            {
+              "result_id": "N-K0-02-R02",
+              "position": 2,
+              "title": "우륵주공7단지 - 군포시 산본동",
+              "url": "https://apt.zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EC%82%B0%EB%B3%B8%EB%8F%99-%EC%9A%B0%EB%A5%B5%EC%A3%BC%EA%B3%B57%EB%8B%A8%EC%A7%80/ksny8p",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:apt.zippoom.com",
+              "candidate_clicked": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "module_id": "N-K0-02-M02",
+          "module_type": "NAVER_BLOG_CAFE",
+          "module_screen_order": 2,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-K0-02-R03",
+              "position": 1,
+              "title": "(임장)군포 산본 우륵주공 7단지 아파트",
+              "url": "https://blog.naver.com/startify/224253298354",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "not_applicable",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [],
+              "identity_anchors": [],
+              "independence_group": "host:blog.naver.com",
+              "candidate_clicked": false,
+              "notes": ""
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "not_assessed",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": []
+      },
+      "entity_outcomes": [],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-B01-K1-01",
+      "order": 13,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0002-B01",
+      "target_entity_ids": [
+        "CAL-0002-E01"
+      ],
+      "budget_cell_id": "N-K1-B01",
+      "planned_query": "편의점 \"우륵 주공7단지아파트\"",
+      "submitted_query": "편의점 \"우륵 주공7단지아파트\"",
+      "returned_query": "편의점 \"우륵 주공7단지아파트\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:54:53.412Z",
+        "first_probe_at": "2026-08-10T22:54:55.286Z",
+        "terminal_state_at": "2026-08-10T22:54:57.273Z",
+        "ended_at": "2026-08-10T22:55:02.273Z",
+        "stabilization_elapsed_ms": 1987,
+        "network_wait_seconds": 3.9,
+        "active_review_seconds": 5
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:54:55.286Z",
+          "visible_title_count": 84,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "편의점 \"우륵 주공7단지아파트\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:54:56.636Z",
+          "visible_title_count": 84,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "편의점 \"우륵 주공7단지아파트\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-B01-K1-01-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-B01-K1-01-R01",
+              "position": 1,
+              "title": "'산본동 우륵주공7단지'의 매매, 월세, 시세, 후기",
+              "url": "https://zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EC%82%B0%EB%B3%B8%EB%8F%99-%EC%9A%B0%EB%A5%B5%EC%A3%BC%EA%B3%B57%EB%8B%A8%EC%A7%80/ksny8p",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:zippoom.com",
+              "candidate_clicked": false,
+              "notes": "Site/category result without the target trade name."
+            },
+            {
+              "result_id": "N-B01-K1-01-R02",
+              "position": 2,
+              "title": "'산본 산본동 우륵주공7단지'의 실거래가, 시세, 매물, 주변정보",
+              "url": "https://hogangnono.com/apt/69B7b",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:hogangnono.com",
+              "candidate_clicked": false,
+              "notes": "Site/category result without the target trade name."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "not_found_under_protocol",
+        "entity_location_match": "no",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "category_only_same_building"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E01",
+          "search_surface_retrieval_hit": "not_found_under_protocol",
+          "entity_location_match": "no",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "unknown",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "category_only_same_building"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-B02-E02-K1-01",
+      "order": 14,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0002-B02",
+      "target_entity_ids": [
+        "CAL-0002-E02"
+      ],
+      "budget_cell_id": "N-K1-B02",
+      "planned_query": "미용실 \"우륵 주공7단지아파트\"",
+      "submitted_query": "미용실 \"우륵 주공7단지아파트\"",
+      "returned_query": "미용실 \"우륵 주공7단지아파트\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:54:57.566Z",
+        "first_probe_at": "2026-08-10T22:54:59.445Z",
+        "terminal_state_at": "2026-08-10T22:55:01.652Z",
+        "ended_at": "2026-08-10T22:55:06.652Z",
+        "stabilization_elapsed_ms": 2207,
+        "network_wait_seconds": 4.1,
+        "active_review_seconds": 5
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:54:59.445Z",
+          "visible_title_count": 59,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "미용실 \"우륵 주공7단지아파트\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:55:01.133Z",
+          "visible_title_count": 59,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "미용실 \"우륵 주공7단지아파트\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-B02-E02-K1-01-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-B02-E02-K1-01-R01",
+              "position": 1,
+              "title": "'산본동 우륵주공7단지'의 매매, 월세, 시세, 후기",
+              "url": "https://zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EC%82%B0%EB%B3%B8%EB%8F%99-%EC%9A%B0%EB%A5%B5%EC%A3%BC%EA%B3%B57%EB%8B%A8%EC%A7%80/ksny8p",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:zippoom.com",
+              "candidate_clicked": false,
+              "notes": "Site/category result without the target trade name."
+            },
+            {
+              "result_id": "N-B02-E02-K1-01-R02",
+              "position": 2,
+              "title": "'산본 산본동 우륵주공7단지'의 실거래가, 시세, 매물, 주변정보",
+              "url": "https://hogangnono.com/apt/69B7b",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:hogangnono.com",
+              "candidate_clicked": false,
+              "notes": "Site/category result without the target trade name."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "not_found_under_protocol",
+        "entity_location_match": "no",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "category_only_same_building"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E02",
+          "search_surface_retrieval_hit": "not_found_under_protocol",
+          "entity_location_match": "no",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "unknown",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "category_only_same_building"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-B02-E03-K1-01",
+      "order": 15,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0002-B02",
+      "target_entity_ids": [
+        "CAL-0002-E03"
+      ],
+      "budget_cell_id": "N-K1-B02",
+      "planned_query": "세탁소 \"우륵 주공7단지아파트\"",
+      "submitted_query": "세탁소 \"우륵 주공7단지아파트\"",
+      "returned_query": "세탁소 \"우륵 주공7단지아파트\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:55:01.869Z",
+        "first_probe_at": "2026-08-10T22:55:03.718Z",
+        "terminal_state_at": "2026-08-10T22:55:05.581Z",
+        "ended_at": "2026-08-10T22:55:10.581Z",
+        "stabilization_elapsed_ms": 1863,
+        "network_wait_seconds": 3.7,
+        "active_review_seconds": 5
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:55:03.718Z",
+          "visible_title_count": 54,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "세탁소 \"우륵 주공7단지아파트\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:55:05.269Z",
+          "visible_title_count": 54,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "세탁소 \"우륵 주공7단지아파트\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-B02-E03-K1-01-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-B02-E03-K1-01-R01",
+              "position": 1,
+              "title": "'산본 산본동 우륵주공7단지'의 실거래가, 시세, 매물, 주변정보",
+              "url": "https://hogangnono.com/apt/69B7b",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:hogangnono.com",
+              "candidate_clicked": false,
+              "notes": "Site/category result without the target trade name."
+            },
+            {
+              "result_id": "N-B02-E03-K1-01-R02",
+              "position": 2,
+              "title": "'우륵주공7단지' 매매 6억",
+              "url": "https://hogangnono.com/region/41410/item-catalog/800704/0",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:hogangnono.com",
+              "candidate_clicked": false,
+              "notes": "Site/category result without the target trade name."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "not_found_under_protocol",
+        "entity_location_match": "no",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "category_only_same_building"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E03",
+          "search_surface_retrieval_hit": "not_found_under_protocol",
+          "entity_location_match": "no",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "unknown",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "category_only_same_building"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-B03-K1-01",
+      "order": 16,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K1",
+      "bay_id": "CAL-0002-B03",
+      "target_entity_ids": [
+        "CAL-0002-E04"
+      ],
+      "budget_cell_id": "N-K1-B03",
+      "planned_query": "공인중개사 \"우륵 주공7단지아파트\"",
+      "submitted_query": "공인중개사 \"우륵 주공7단지아파트\"",
+      "returned_query": "공인중개사 \"우륵 주공7단지아파트\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:55:16.342Z",
+        "first_probe_at": "2026-08-10T22:55:18.275Z",
+        "terminal_state_at": "2026-08-10T22:55:20.956Z",
+        "ended_at": "2026-08-10T22:55:26.956Z",
+        "stabilization_elapsed_ms": 2681,
+        "network_wait_seconds": 4.6,
+        "active_review_seconds": 6
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:55:18.275Z",
+          "visible_title_count": 77,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "공인중개사 \"우륵 주공7단지아파트\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:55:20.495Z",
+          "visible_title_count": 77,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "공인중개사 \"우륵 주공7단지아파트\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-B03-K1-01-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-B03-K1-01-R01",
+              "position": 1,
+              "title": "'산본 산본동 우륵주공7단지'의 실거래가, 시세, 매물, 주변정보",
+              "url": "https://hogangnono.com/apt/69B7b",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:hogangnono.com",
+              "candidate_clicked": false,
+              "notes": "Site/category result without the target trade name."
+            },
+            {
+              "result_id": "N-B03-K1-01-R03",
+              "position": 2,
+              "title": "우륵주공7단지 - 무지개공인중개사사무소 홈페이지에 오신걸 환영합니다",
+              "url": "https://mm3948949.kmswb.kr/maemul/maemul_detail.php?rno=A&res_no=29092109",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "category_only_same_building"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:mm3948949.kmswb.kr",
+              "candidate_clicked": false,
+              "notes": "Site/category result without the target trade name."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "not_found_under_protocol",
+        "entity_location_match": "no",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "category_only_same_building"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E04",
+          "search_surface_retrieval_hit": "not_found_under_protocol",
+          "entity_location_match": "no",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "unknown",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "category_only_same_building"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-B01-K2-01",
+      "order": 17,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0002-B01",
+      "target_entity_ids": [
+        "CAL-0002-E01"
+      ],
+      "budget_cell_id": "N-K2-B01",
+      "planned_query": "\"CU\" \"우륵주공7단지\"",
+      "submitted_query": "\"CU\" \"우륵주공7단지\"",
+      "returned_query": "\"CU\" \"우륵주공7단지\"",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:55:21.068Z",
+        "first_probe_at": "2026-08-10T22:55:22.859Z",
+        "terminal_state_at": "2026-08-10T22:55:24.609Z",
+        "ended_at": "2026-08-10T22:55:30.609Z",
+        "stabilization_elapsed_ms": 1750,
+        "network_wait_seconds": 3.5,
+        "active_review_seconds": 6
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:55:22.859Z",
+          "visible_title_count": 81,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"CU\" \"우륵주공7단지\""
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:55:24.344Z",
+          "visible_title_count": 81,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"CU\" \"우륵주공7단지\""
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-B01-K2-01-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-B01-K2-01-R01",
+              "position": 1,
+              "title": "우륵주공7단지 - 군포시 산본동",
+              "url": "https://apt.zippoom.com/%EB%B6%80%EB%8F%99%EC%82%B0/%EA%B2%BD%EA%B8%B0-%EA%B5%B0%ED%8F%AC%EC%8B%9C-%EC%82%B0%EB%B3%B8%EB%8F%99-%EC%9A%B0%EB%A5%B5%EC%A3%BC%EA%B3%B57%EB%8B%A8%EC%A7%80/ksny8p",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "same_name_wrong_address"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:apt.zippoom.com",
+              "candidate_clicked": false,
+              "notes": "No exact CU storefront identity surfaced."
+            },
+            {
+              "result_id": "N-B01-K2-01-R02",
+              "position": 2,
+              "title": "'산본 산본동 우륵주공7단지'의 실거래가, 시세, 매물, 주변정보",
+              "url": "https://hogangnono.com/apt/69B7b",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "site_only_not_target_bay",
+              "false_positive_types": [
+                "same_name_wrong_address"
+              ],
+              "identity_anchors": [],
+              "independence_group": "host:hogangnono.com",
+              "candidate_clicked": false,
+              "notes": "No exact CU storefront identity surfaced."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "not_found_under_protocol",
+        "entity_location_match": "no",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "unknown",
+        "false_positive_types": [
+          "same_name_wrong_address"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E01",
+          "search_surface_retrieval_hit": "not_found_under_protocol",
+          "entity_location_match": "no",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "unknown",
+          "identity_anchors": [],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "same_name_wrong_address"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-B02-E02-K2-01",
+      "order": 18,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0002-B02",
+      "target_entity_ids": [
+        "CAL-0002-E02"
+      ],
+      "budget_cell_id": "N-K2-B02",
+      "planned_query": "\"김연주 헤어샵\" 군포 산본",
+      "submitted_query": "\"김연주 헤어샵\" 군포 산본",
+      "returned_query": "\"김연주 헤어샵\" 군포 산본",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:55:24.688Z",
+        "first_probe_at": "2026-08-10T22:55:26.680Z",
+        "terminal_state_at": "2026-08-10T22:55:28.775Z",
+        "ended_at": "2026-08-10T22:55:36.775Z",
+        "stabilization_elapsed_ms": 2095,
+        "network_wait_seconds": 4.1,
+        "active_review_seconds": 8
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:55:26.680Z",
+          "visible_title_count": 67,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"김연주 헤어샵\" 군포 산본"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:55:28.556Z",
+          "visible_title_count": 67,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"김연주 헤어샵\" 군포 산본"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-B02-E02-K2-01-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-B02-E02-K2-01-R01",
+              "position": 1,
+              "title": "김연주헤어샵 ( 경기도 군포시 산본동 ) |헤어미용추천뷰티샵!::로컬맵 군포수....",
+              "url": "http://duli.co.kr/web/splus/kmap/view.php?sigun=6410000&gugun=4020000&keyno=362&keyname=%EA%B9%80%EC%97%B0%EC%A3%BC%ED%97%A4%EC%96%B4%EC%83%B5&keylink=4020000-211-2001-00012",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "eligible_evidence",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "김연주헤어샵",
+                  "source_result_id": "N-B02-E02-K2-01-R01",
+                  "independence_group": "source-family:local-government-license-republisher"
+                },
+                {
+                  "anchor_type": "category",
+                  "value_redacted": "일반미용업",
+                  "source_result_id": "N-B02-E02-K2-01-R01",
+                  "independence_group": "source-family:local-government-license-republisher"
+                }
+              ],
+              "independence_group": "source-family:local-government-license-republisher",
+              "candidate_clicked": false,
+              "notes": "Exact-name page result; Google result supplies the exact storefront address."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "ambiguous",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "possible",
+        "false_positive_types": []
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E02",
+          "search_surface_retrieval_hit": "observed",
+          "entity_location_match": "ambiguous",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "possible",
+          "identity_anchors": [
+            {
+              "anchor_type": "trade_name",
+              "value_redacted": "김연주헤어샵",
+              "source_result_id": "N-B02-E02-K2-01-R01",
+              "independence_group": "source-family:local-government-license-republisher"
+            }
+          ],
+          "material_conflicts": [],
+          "false_positive_types": [],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-B02-E03-K2-01",
+      "order": 19,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0002-B02",
+      "target_entity_ids": [
+        "CAL-0002-E03"
+      ],
+      "budget_cell_id": "N-K2-B02",
+      "planned_query": "\"하얀크리닝\" 군포 산본",
+      "submitted_query": "\"하얀크리닝\" 군포 산본",
+      "returned_query": "\"하얀크리닝\" 군포 산본",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:55:28.849Z",
+        "first_probe_at": "2026-08-10T22:55:31.756Z",
+        "terminal_state_at": "2026-08-10T22:55:33.323Z",
+        "ended_at": "2026-08-10T22:55:41.323Z",
+        "stabilization_elapsed_ms": 1567,
+        "network_wait_seconds": 4.5,
+        "active_review_seconds": 8
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:55:31.756Z",
+          "visible_title_count": 58,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"하얀크리닝\" 군포 산본"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:55:33.034Z",
+          "visible_title_count": 58,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"하얀크리닝\" 군포 산본"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-B02-E03-K2-01-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-B02-E03-K2-01-R02",
+              "position": 1,
+              "title": "미소세탁소 ( 경기도 군포시 산본동 ) |세탁소추천검색!::로컬맵 군포수리산두....",
+              "url": "http://duli.co.kr/web/splus/kmap/view.php?sigun=6410000&gugun=4020000&keyno=258&keyname=%EB%AF%B8%EC%86%8C%EC%84%B8%ED%83%81%EC%86%8C&keylink=4020000-205-1998-00009",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "false_positive",
+              "false_positive_types": [
+                "same_name_wrong_address"
+              ],
+              "identity_anchors": [],
+              "independence_group": "source-family:local-government-license-republisher",
+              "candidate_clicked": false,
+              "notes": "Different laundry trade name."
+            },
+            {
+              "result_id": "N-B02-E03-K2-01-R03",
+              "position": 2,
+              "title": "세탁소 하얀세탁소 (경기 군포시 수리동)",
+              "url": "https://www.life114.co.kr/html/board/view.asp?M_SEQ=788499",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "absent",
+                "time_term": "absent"
+              },
+              "disposition": "false_positive",
+              "false_positive_types": [
+                "same_name_wrong_address"
+              ],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "하얀세탁소",
+                  "source_result_id": "N-B02-E03-K2-01-R03",
+                  "independence_group": "source-family:114on-telecom-directory"
+                }
+              ],
+              "independence_group": "source-family:114on-telecom-directory",
+              "candidate_clicked": false,
+              "notes": "수리동 listing, wrong target locality."
+            },
+            {
+              "result_id": "N-B02-E03-K2-01-R04",
+              "position": 3,
+              "title": "세탁소 하얀세탁소 (경기 군포시 궁내동)",
+              "url": "https://life114.co.kr/html/board/view.asp?M_SEQ=740992",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "candidate_ambiguous",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "하얀세탁소",
+                  "source_result_id": "N-B02-E03-K2-01-R04",
+                  "independence_group": "source-family:114on-telecom-directory"
+                },
+                {
+                  "anchor_type": "other",
+                  "value_redacted": "군포시 궁내동",
+                  "source_result_id": "N-B02-E03-K2-01-R04",
+                  "independence_group": "source-family:114on-telecom-directory"
+                }
+              ],
+              "independence_group": "source-family:114on-telecom-directory",
+              "candidate_clicked": false,
+              "notes": "Location-compatible variant name; exact 2015 sign was 하얀크리닝."
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "ambiguous",
+        "entity_location_match": "ambiguous",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "ambiguous",
+        "identity_status": "possible",
+        "false_positive_types": [
+          "same_name_wrong_address",
+          "aggregate_snippet_collision"
+        ]
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E03",
+          "search_surface_retrieval_hit": "ambiguous",
+          "entity_location_match": "ambiguous",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "ambiguous",
+          "identity_status": "possible",
+          "identity_anchors": [
+            {
+              "anchor_type": "trade_name",
+              "value_redacted": "하얀세탁소",
+              "source_result_id": "N-B02-E03-K2-01-R04",
+              "independence_group": "host:life114.co.kr"
+            },
+            {
+              "anchor_type": "other",
+              "value_redacted": "군포시 궁내동",
+              "source_result_id": "N-B02-E03-K2-01-R04",
+              "independence_group": "host:life114.co.kr"
+            }
+          ],
+          "material_conflicts": [],
+          "false_positive_types": [
+            "same_name_wrong_address",
+            "aggregate_snippet_collision"
+          ],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    },
+    {
+      "query_id": "N-B03-K2-01",
+      "order": 20,
+      "platform": "NAVER_WEB",
+      "knowledge_regime": "K2",
+      "bay_id": "CAL-0002-B03",
+      "target_entity_ids": [
+        "CAL-0002-E04"
+      ],
+      "budget_cell_id": "N-K2-B03",
+      "planned_query": "\"우륵 공인중개사\" 군포",
+      "submitted_query": "\"우륵 공인중개사\" 군포",
+      "returned_query": "\"우륵 공인중개사\" 군포",
+      "suggested_rewrite": null,
+      "suggestion_followed": false,
+      "fallback_shown": false,
+      "match_behavior": "exact",
+      "timing": {
+        "navigation_started_at": "2026-08-10T22:55:33.415Z",
+        "first_probe_at": "2026-08-10T22:55:35.182Z",
+        "terminal_state_at": "2026-08-10T22:55:37.290Z",
+        "ended_at": "2026-08-10T22:55:44.290Z",
+        "stabilization_elapsed_ms": 2108,
+        "network_wait_seconds": 3.9,
+        "active_review_seconds": 7
+      },
+      "terminal_page_state": "usable_results",
+      "stabilization_observations": [
+        {
+          "probe_index": 1,
+          "observed_at": "2026-08-10T22:55:35.182Z",
+          "visible_title_count": 78,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵 공인중개사\" 군포"
+        },
+        {
+          "probe_index": 2,
+          "observed_at": "2026-08-10T22:55:36.883Z",
+          "visible_title_count": 78,
+          "explicit_no_results_signal": false,
+          "fallback_signal": false,
+          "blocked_signal": false,
+          "returned_query": "\"우륵 공인중개사\" 군포"
+        }
+      ],
+      "modules": [
+        {
+          "module_id": "N-B03-K2-01-M01",
+          "module_type": "NAVER_WEB_DOCUMENT",
+          "module_screen_order": 1,
+          "rank_system": "MODULE_INTERNAL_POSITION",
+          "outcome_eligible": true,
+          "results": [
+            {
+              "result_id": "N-B03-K2-01-R02",
+              "position": 1,
+              "title": "우륵공인중개사 - 114On",
+              "url": "https://www.114.co.kr/search/detail?comp_id=4362164&comp_tp_cd=TEL&upjong_cd=803001",
+              "snippet_excerpt": null,
+              "privacy_transform": "none_needed",
+              "displayed_date": null,
+              "query_term_presence": {
+                "name_or_category_term": "present",
+                "location_term": "present",
+                "time_term": "absent"
+              },
+              "disposition": "eligible_evidence",
+              "false_positive_types": [],
+              "identity_anchors": [
+                {
+                  "anchor_type": "trade_name",
+                  "value_redacted": "우륵공인중개사",
+                  "source_result_id": "N-B03-K2-01-R02",
+                  "independence_group": "source-family:114on-telecom-directory"
+                },
+                {
+                  "anchor_type": "category",
+                  "value_redacted": "부동산 중개",
+                  "source_result_id": "N-B03-K2-01-R02",
+                  "independence_group": "source-family:114on-telecom-directory"
+                }
+              ],
+              "independence_group": "source-family:114on-telecom-directory",
+              "candidate_clicked": false,
+              "notes": ""
+            }
+          ]
+        }
+      ],
+      "aggregate_outcome": {
+        "search_surface_retrieval_hit": "observed",
+        "entity_location_match": "ambiguous",
+        "historical_time_anchor": "none",
+        "current_place_listing_match": "not_assessed",
+        "identity_status": "possible",
+        "false_positive_types": []
+      },
+      "entity_outcomes": [
+        {
+          "entity_id": "CAL-0002-E04",
+          "search_surface_retrieval_hit": "observed",
+          "entity_location_match": "ambiguous",
+          "historical_time_anchor": "none",
+          "current_place_listing_match": "not_assessed",
+          "identity_status": "possible",
+          "identity_anchors": [
+            {
+              "anchor_type": "trade_name",
+              "value_redacted": "우륵공인중개사",
+              "source_result_id": "N-B03-K2-01-R02",
+              "independence_group": "source-family:114on-telecom-directory"
+            }
+          ],
+          "material_conflicts": [],
+          "false_positive_types": [],
+          "claim_boundary": "This query alone does not establish historical continuity."
+        }
+      ],
+      "cross_bay_exposure": [],
+      "notes": "Only privacy-minimized selected results are serialized; no raw DOM is exported. Active-review time is a bounded manual reconstruction; see deviations."
+    }
+  ],
+  "bay_outcomes": [
+    {
+      "bay_id": "CAL-0002-B01",
+      "entity_ids": [
+        "CAL-0002-E01"
+      ],
+      "boundary_status": "frozen",
+      "claim_boundary": "One visually bounded convenience-store bay."
+    },
+    {
+      "bay_id": "CAL-0002-B02",
+      "entity_ids": [
+        "CAL-0002-E02",
+        "CAL-0002-E03"
+      ],
+      "boundary_status": "ambiguous",
+      "claim_boundary": "One visually selected facade segment carries two live entity hypotheses; V0.3 preserves both without merger."
+    },
+    {
+      "bay_id": "CAL-0002-B03",
+      "entity_ids": [
+        "CAL-0002-E04"
+      ],
+      "boundary_status": "frozen",
+      "claim_boundary": "One visually bounded brokerage bay."
+    }
+  ],
+  "entity_outcomes": [
+    {
+      "entity_id": "CAL-0002-E01",
+      "search_surface_retrieval_hit": "observed",
+      "entity_location_match": "ambiguous",
+      "historical_time_anchor": "none",
+      "current_place_listing_match": "ambiguous",
+      "identity_status": "possible",
+      "identity_anchors": [
+        {
+          "anchor_type": "trade_name",
+          "value_redacted": "CU",
+          "source_result_id": "CAL-0002-ANCHOR-2015-07",
+          "independence_group": "google-streetview-anchor"
+        },
+        {
+          "anchor_type": "date",
+          "value_redacted": "2015-07",
+          "source_result_id": "CAL-0002-ANCHOR-2015-07",
+          "independence_group": "google-streetview-anchor"
+        },
+        {
+          "anchor_type": "trade_name",
+          "value_redacted": "CU군포우륵점",
+          "source_result_id": "G-B01-K2-01-R01",
+          "independence_group": "host:aptgin.com"
+        },
+        {
+          "anchor_type": "other",
+          "value_redacted": "우륵주공7단지 기준 73m",
+          "source_result_id": "G-B01-K2-01-R01",
+          "independence_group": "host:aptgin.com"
+        }
+      ],
+      "material_conflicts": [],
+      "false_positive_types": [
+        "same_name_wrong_address"
+      ],
+      "claim_boundary": "A generic franchise sign plus a 73m proximity result does not isolate the 2015 storefront."
+    },
+    {
+      "entity_id": "CAL-0002-E02",
+      "search_surface_retrieval_hit": "observed",
+      "entity_location_match": "yes",
+      "historical_time_anchor": "none",
+      "current_place_listing_match": "not_assessed",
+      "identity_status": "probable",
+      "identity_anchors": [
+        {
+          "anchor_type": "trade_name",
+          "value_redacted": "김연주 헤어샵",
+          "source_result_id": "CAL-0002-ANCHOR-2015-07",
+          "independence_group": "google-streetview-anchor"
+        },
+        {
+          "anchor_type": "date",
+          "value_redacted": "2015-07",
+          "source_result_id": "CAL-0002-ANCHOR-2015-07",
+          "independence_group": "google-streetview-anchor"
+        },
+        {
+          "anchor_type": "exact_address",
+          "value_redacted": "경기도 군포시 산본천로 33",
+          "source_result_id": "G-B02-E02-K2-01-R01",
+          "independence_group": "source-family:local-government-license-republisher"
+        },
+        {
+          "anchor_type": "unit",
+          "value_redacted": "우륵일반상가 102호",
+          "source_result_id": "G-B02-E02-K2-01-R01",
+          "independence_group": "source-family:local-government-license-republisher"
+        }
+      ],
+      "material_conflicts": [],
+      "false_positive_types": [],
+      "claim_boundary": "Exact trade name and storefront address/unit match the anchor image, but uninterrupted legal continuity and an eligible historical web date were not established."
+    },
+    {
+      "entity_id": "CAL-0002-E03",
+      "search_surface_retrieval_hit": "ambiguous",
+      "entity_location_match": "ambiguous",
+      "historical_time_anchor": "none",
+      "current_place_listing_match": "ambiguous",
+      "identity_status": "possible",
+      "identity_anchors": [
+        {
+          "anchor_type": "trade_name",
+          "value_redacted": "하얀크리닝",
+          "source_result_id": "CAL-0002-ANCHOR-2015-07",
+          "independence_group": "google-streetview-anchor"
+        },
+        {
+          "anchor_type": "date",
+          "value_redacted": "2015-07",
+          "source_result_id": "CAL-0002-ANCHOR-2015-07",
+          "independence_group": "google-streetview-anchor"
+        },
+        {
+          "anchor_type": "trade_name",
+          "value_redacted": "하얀세탁소",
+          "source_result_id": "N-B02-E03-K2-01-R04",
+          "independence_group": "host:life114.co.kr"
+        },
+        {
+          "anchor_type": "other",
+          "value_redacted": "군포시 궁내동",
+          "source_result_id": "N-B02-E03-K2-01-R04",
+          "independence_group": "host:life114.co.kr"
+        }
+      ],
+      "material_conflicts": [],
+      "false_positive_types": [
+        "same_name_wrong_address",
+        "aggregate_snippet_collision"
+      ],
+      "claim_boundary": "The retrievable name is 하얀세탁소, while the 2015 sign is 하얀크리닝; same-entity continuity remains unresolved."
+    },
+    {
+      "entity_id": "CAL-0002-E04",
+      "search_surface_retrieval_hit": "observed",
+      "entity_location_match": "yes",
+      "historical_time_anchor": "none",
+      "current_place_listing_match": "not_assessed",
+      "identity_status": "probable",
+      "identity_anchors": [
+        {
+          "anchor_type": "trade_name",
+          "value_redacted": "우륵 공인중개사",
+          "source_result_id": "CAL-0002-ANCHOR-2015-07",
+          "independence_group": "google-streetview-anchor"
+        },
+        {
+          "anchor_type": "date",
+          "value_redacted": "2015-07",
+          "source_result_id": "CAL-0002-ANCHOR-2015-07",
+          "independence_group": "google-streetview-anchor"
+        },
+        {
+          "anchor_type": "exact_address",
+          "value_redacted": "경기도 군포시 산본천로 33",
+          "source_result_id": "G-B03-K2-01-R02",
+          "independence_group": "source-family:purpleo-directory"
+        },
+        {
+          "anchor_type": "trade_name",
+          "value_redacted": "우륵공인중개사",
+          "source_result_id": "N-B03-K2-01-R02",
+          "independence_group": "source-family:114on-telecom-directory"
+        }
+      ],
+      "material_conflicts": [],
+      "false_positive_types": [],
+      "claim_boundary": "Exact trade name and address are retrievable, but uninterrupted legal continuity and a qualifying historical web date were not established."
+    }
+  ],
+  "deviations": [
+    {
+      "deviation_id": "CAL-0002-SEL-D01",
+      "detected_at": "2026-08-11T07:20:00+09:00",
+      "description": "Candidates 22 and 23 were availability-checked before candidate 21 was visually adjudicated.",
+      "affected_query_ids": [],
+      "outcome_effect": "bounded",
+      "resolution": "Only panorama availability was exposed; no image, sign, address, or business name was seen. Candidate 21 remained the first eligible site."
+    },
+    {
+      "deviation_id": "CAL-0002-PF01",
+      "detected_at": "2026-08-11T07:35:00+09:00",
+      "description": "V0.2 could not represent two entity hypotheses in one selected facade bay.",
+      "affected_query_ids": [],
+      "outcome_effect": "none",
+      "resolution": "No target query had run. V0.2 was frozen as a pre-retrieval failure and V0.3 was independently frozen before retrieval."
+    },
+    {
+      "deviation_id": "CAL-0002-EX-D01",
+      "detected_at": "2026-08-11T07:46:54+09:00",
+      "description": "The first Google query helper did not read returned_query during stabilization probes.",
+      "affected_query_ids": [
+        "G-K0-01"
+      ],
+      "outcome_effect": "bounded",
+      "resolution": "Probe fields remain null; an exact post-terminal returned-query read was recorded, and the helper was corrected before query 2."
+    },
+    {
+      "deviation_id": "CAL-0002-EX-D02",
+      "detected_at": "2026-08-11T07:52:34+09:00",
+      "description": "Some adjacent frozen query cells were browser-executed in one helper batch before the combined snapshots were returned for review.",
+      "affected_query_ids": [
+        "G-B01-K2-01",
+        "G-B02-E02-K2-01",
+        "G-B02-E03-K2-01",
+        "G-B03-K2-01",
+        "N-K0-02",
+        "N-B01-K1-01",
+        "N-B02-E02-K1-01",
+        "N-B02-E03-K1-01",
+        "N-B03-K1-01",
+        "N-B01-K2-01",
+        "N-B02-E02-K2-01",
+        "N-B02-E03-K2-01",
+        "N-B03-K2-01"
+      ],
+      "outcome_effect": "bounded",
+      "resolution": "Query text/order was frozen, each terminal snapshot was retained in memory, and no intermediate result was exposed to the investigator before the batch ended. Review was performed in frozen cell order."
+    },
+    {
+      "deviation_id": "CAL-0002-EX-D03",
+      "detected_at": "2026-08-11T07:56:00+09:00",
+      "description": "Several direct candidate-source checks occurred after their retrieval budget cells had closed.",
+      "affected_query_ids": [
+        "G-B01-K2-01",
+        "G-B02-E02-K2-01",
+        "G-B03-K2-01",
+        "N-B02-E03-K2-01",
+        "N-B03-K2-01"
+      ],
+      "outcome_effect": "none",
+      "resolution": "They are stored in supplemental-source-checks.json with outcome_eligible=false and did not change run query or entity adjudication."
+    },
+    {
+      "deviation_id": "CAL-0002-EX-D04",
+      "detected_at": "2026-08-11T08:05:00+09:00",
+      "description": "Active-review seconds were bounded and manually reconstructed from terminal/query/tool boundaries rather than captured by an automatic pause-aware clock.",
+      "affected_query_ids": [
+        "G-K0-01",
+        "G-K0-02",
+        "G-B01-K1-01",
+        "G-B02-E02-K1-01",
+        "G-B02-E03-K1-01",
+        "G-B03-K1-01",
+        "G-B01-K2-01",
+        "G-B02-E02-K2-01",
+        "G-B02-E03-K2-01",
+        "G-B03-K2-01",
+        "N-K0-01",
+        "N-K0-02",
+        "N-B01-K1-01",
+        "N-B02-E02-K1-01",
+        "N-B02-E03-K1-01",
+        "N-B03-K1-01",
+        "N-B01-K2-01",
+        "N-B02-E02-K2-01",
+        "N-B02-E03-K2-01",
+        "N-B03-K2-01"
+      ],
+      "outcome_effect": "bounded",
+      "resolution": "All reconstructed cells remain at least 40 seconds below their cap. Exact time is not claimed; a one-query-at-a-time timer is required for the next run."
+    },
+    {
+      "deviation_id": "CAL-0002-EX-D05",
+      "detected_at": "2026-08-11T07:53:43+09:00",
+      "description": "Naver stabilization counts include visible title-like links from ineligible modules such as AI/Mate surfaces.",
+      "affected_query_ids": [
+        "N-K0-01",
+        "N-K0-02",
+        "N-B01-K1-01",
+        "N-B02-E02-K1-01",
+        "N-B02-E03-K1-01",
+        "N-B03-K1-01",
+        "N-B01-K2-01",
+        "N-B02-E02-K2-01",
+        "N-B02-E03-K2-01",
+        "N-B03-K2-01"
+      ],
+      "outcome_effect": "bounded",
+      "resolution": "Counts were used only to establish a stable positive rendered page. Outcome coding separately excluded ineligible modules and preserved module-specific order."
+    }
+  ],
+  "privacy_audit": {
+    "fixture_version": "0.2",
+    "pre_storage_filter_applied": true,
+    "post_serialization_scan_applied": true,
+    "raw_dom_export_created": false,
+    "sensitive_snippets_suppressed": 0,
+    "phone_like_strings_remaining": 0,
+    "email_like_strings_remaining": 0,
+    "status": "pass"
+  },
+  "run_status": "SINGLE_READER_PASS_SECOND_READER_PENDING",
+  "claim_boundary": [
+    "Blind measurement calibration only; substantive inference is forbidden.",
+    "The 2015 Street View anchor forms the target hypothesis and does not count as a retrieval hit.",
+    "No eligible target result carried a qualifying historical time anchor; current/directory retrieval is not historical persistence.",
+    "Post-cell supplemental page checks are excluded from query and entity outcomes.",
+    "Active-review times are bounded manual reconstructions, not instrument-verified exact durations.",
+    "A second blind reader has not adjudicated page states or identity outcomes.",
+    "This run distinguishes retrieval patterns but does not isolate a causal mechanism."
+  ]
+}
+

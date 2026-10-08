@@ -1,0 +1,4 @@
+site_id,capture_id,bay_id,facade_order,floor,boundary_status,occupancy_observation,sign_text_raw,sign_readability,operating_appearance,phone_visible,left_anchor,right_anchor,evidence_id,eligible_for_search,exclusion_reason,notes
+CAL-0001,CAL-0001-E01,CAL-0001-B01,1,1,frozen,occupied_candidate,야채나라,high,appears_open,true,야채나라_전면_좌측경계,롤리팝_전면_좌측경계,CAL-0001-E01,true,,상품_진열_정황_관측
+CAL-0001,CAL-0001-E01,CAL-0001-B02,2,1,frozen,occupied_candidate,롤리팝|세계수입과자할인점,high,appears_open,false,롤리팝_전면_좌측경계,파리바게뜨_전면_좌측경계,CAL-0001-E01,true,,주_상호와_업종_설명_역할은_미확정
+CAL-0001,CAL-0001-E01,CAL-0001-B03,3,1,frozen,occupied_candidate,PARIS BAGUETTE,high,appears_open,false,파리바게뜨_전면_좌측경계,다음_부동산_간판_시작전,CAL-0001-E01,true,,프랜차이즈_양성_대조_후보

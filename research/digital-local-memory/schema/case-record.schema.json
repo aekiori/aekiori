@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/digital-local-memory/case-record.schema.json",
+  "title": "Digital Local Memory Case Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "cohort",
+    "site",
+    "analysis_eligibility",
+    "evidence_items",
+    "observed_signage",
+    "identity",
+    "claims",
+    "unknowns",
+    "retrieval_runs"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "record_id": { "type": "string", "pattern": "^(CAL|INFER)-[0-9]{4}$" },
+    "cohort": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "selection_reason", "prior_search_exposure"],
+      "properties": {
+        "role": { "enum": ["calibration", "inference"] },
+        "selection_reason": { "type": "string", "minLength": 1 },
+        "prior_search_exposure": { "type": "boolean" }
+      }
+    },
+    "site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["user_supplied_address", "exact_unit", "scope_id", "scope_description", "facade_scope_status"],
+      "properties": {
+        "user_supplied_address": { "type": "string", "minLength": 1 },
+        "exact_unit": { "type": ["string", "null"] },
+        "scope_id": { "type": "string", "minLength": 1 },
+        "scope_description": { "type": "string", "minLength": 1 },
+        "facade_scope_status": { "enum": ["unbounded", "draft", "frozen"] }
+      }
+    },
+    "analysis_eligibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protocol_calibration", "prevalence_estimation", "query_difficulty", "causal_effect"],
+      "properties": {
+        "protocol_calibration": { "type": "boolean" },
+        "prevalence_estimation": { "type": "boolean" },
+        "query_difficulty": { "type": "boolean" },
+        "causal_effect": { "type": "boolean" }
+      }
+    },
+    "evidence_items": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/evidenceItem" }
+    },
+    "observed_signage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "role", "text_confidence", "role_confidence", "evidence_ids"],
+        "properties": {
+          "text": { "type": "string", "minLength": 1 },
+          "role": { "enum": ["brand_candidate", "descriptor_candidate", "other", "unknown"] },
+          "text_confidence": { "$ref": "#/$defs/confidence" },
+          "role_confidence": { "$ref": "#/$defs/confidence" },
+          "evidence_ids": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+        }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["memory_label", "normalized_trade_name", "legal_business_name", "legal_continuity", "brand_continuity", "place_continuity"],
+      "properties": {
+        "memory_label": { "type": ["string", "null"] },
+        "normalized_trade_name": { "type": ["string", "null"] },
+        "legal_business_name": { "type": ["string", "null"] },
+        "legal_continuity": { "$ref": "#/$defs/identityStatus" },
+        "brand_continuity": { "$ref": "#/$defs/identityStatus" },
+        "place_continuity": { "$ref": "#/$defs/identityStatus" }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "text", "status", "confidence", "evidence_ids"],
+        "properties": {
+          "claim_id": { "type": "string", "minLength": 1 },
+          "text": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["observed", "reported", "best_current_explanation", "hypothesis"] },
+          "confidence": { "$ref": "#/$defs/confidence" },
+          "evidence_ids": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "retrieval_runs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/retrievalRun" }
+    }
+  },
+  "$defs": {
+    "confidence": { "enum": ["high", "medium", "low", "unknown"] },
+    "identityStatus": { "enum": ["confirmed", "probable", "possible", "conflicting", "unknown"] },
+    "evidenceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "source_type", "provider", "source_file", "sha256", "displayed_date", "retrieved_at", "independence_group"],
+      "properties": {
+        "evidence_id": { "type": "string", "minLength": 1 },
+        "source_type": { "enum": ["anchor_image", "current_image", "user_report", "web_result", "administrative_record", "other"] },
+        "provider": { "type": ["string", "null"] },
+        "source_file": { "type": ["string", "null"] },
+        "sha256": { "type": ["string", "null"], "pattern": "^[A-Fa-f0-9]{64}$" },
+        "displayed_date": { "type": ["string", "null"] },
+        "retrieved_at": { "type": "string", "format": "date-time" },
+        "independence_group": { "type": "string", "minLength": 1 },
+        "byte_size": { "type": ["integer", "null"], "minimum": 0 },
+        "pixel_width": { "type": ["integer", "null"], "minimum": 1 },
+        "pixel_height": { "type": ["integer", "null"], "minimum": 1 },
+        "notes": { "type": "string" }
+      }
+    },
+    "retrievalRun": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "knowledge_regime", "source_channel", "mode", "started_at", "budget_seconds", "outcome", "queries"],
+      "properties": {
+        "run_id": { "type": "string", "minLength": 1 },
+        "knowledge_regime": { "enum": ["K0", "K1", "K2", "K3"] },
+        "source_channel": { "enum": ["GENERAL_WEB", "MAP_PLACE", "HISTORICAL_IMAGE_OTHER", "ADMIN", "NEWS", "UGC", "WEB_ARCHIVE", "DIRECTORY_OTHER"] },
+        "mode": { "enum": ["progressive", "independent"] },
+        "started_at": { "type": "string", "format": "date-time" },
+        "budget_seconds": { "type": "integer", "minimum": 1 },
+        "outcome": { "enum": ["observed", "not_found_under_protocol", "ambiguous", "stopped"] },
+        "queries": { "type": "array", "items": { "type": "string" } },
+        "evidence_ids": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/digital-local-memory/retrieval-run.v0.3.schema.json",
+  "title": "Digital Local Memory Retrieval Run V0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_version",
+    "run_id",
+    "plan_id",
+    "scope_id",
+    "cohort_role",
+    "substantive_use_allowed",
+    "investigator",
+    "environment",
+    "stabilization_contract",
+    "entity_hypotheses",
+    "budget_cells",
+    "queries",
+    "bay_outcomes",
+    "entity_outcomes",
+    "deviations",
+    "privacy_audit",
+    "run_status",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.3" },
+    "protocol_version": { "const": "PILOT_PROTOCOL_V0.3" },
+    "run_id": { "type": "string", "pattern": "^CAL-[0-9]{4}-DR[0-9]{2}$" },
+    "plan_id": { "type": "string", "pattern": "^CAL-[0-9]{4}-QP[0-9]{2}$" },
+    "scope_id": { "type": "string", "pattern": "^CAL-[0-9]{4}-S[0-9]{2}$" },
+    "cohort_role": { "const": "blind_measurement_calibration" },
+    "substantive_use_allowed": { "const": false },
+    "investigator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["investigator_id", "execution_mode", "prior_target_retrieval_exposure", "second_reader_status"],
+      "properties": {
+        "investigator_id": { "type": "string", "minLength": 1 },
+        "execution_mode": { "enum": ["single_investigator_progressive_ladder", "independent_reader"] },
+        "prior_target_retrieval_exposure": { "type": "boolean" },
+        "second_reader_status": { "enum": ["pending", "completed", "not_available"] }
+      }
+    },
+    "environment": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/platformEnvironment" }
+    },
+    "stabilization_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["probe_interval_ms", "stable_probe_count", "max_stabilization_ms"],
+      "properties": {
+        "probe_interval_ms": { "const": 1000 },
+        "stable_probe_count": { "const": 2 },
+        "max_stabilization_ms": { "const": 8000 }
+      }
+    },
+    "entity_hypotheses": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/entityHypothesis" }
+    },
+    "budget_cells": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/budgetCell" }
+    },
+    "queries": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/queryRecordV03" }
+    },
+    "bay_outcomes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/bayOutcomeV03" }
+    },
+    "entity_outcomes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/entityOutcome" }
+    },
+    "deviations": {
+      "type": "array",
+      "items": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/deviation" }
+    },
+    "privacy_audit": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/privacyAudit" },
+    "run_status": {
+      "enum": [
+        "IN_PROGRESS",
+        "FROZEN_CALIBRATION_RECORD",
+        "SINGLE_READER_PASS_SECOND_READER_PENDING",
+        "FAILED_PROTOCOL",
+        "BLOCKED"
+      ]
+    },
+    "claim_boundary": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+  },
+  "$defs": {
+    "signObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "role_candidate", "text_confidence", "role_confidence"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "role_candidate": { "enum": ["brand", "trade_name", "service", "building_or_complex", "legacy_sign", "unknown"] },
+        "text_confidence": { "enum": ["high", "medium", "low", "unknown"] },
+        "role_confidence": { "enum": ["high", "medium", "low", "unknown"] }
+      }
+    },
+    "entityHypothesis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity_id", "bay_ids", "observed_sign_strings", "category_clues", "relation_to_other_entities", "pre_search_status"],
+      "properties": {
+        "entity_id": { "type": "string", "pattern": "^CAL-[0-9]{4}-E[0-9]{2}$" },
+        "bay_ids": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "observed_sign_strings": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/signObservation" } },
+        "category_clues": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "relation_to_other_entities": { "enum": ["distinct", "possibly_same", "co_located_unknown", "successor_unknown", "unknown"] },
+        "pre_search_status": { "const": "hypothesis_from_anchor_image" }
+      }
+    },
+    "entityOutcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_id",
+        "search_surface_retrieval_hit",
+        "entity_location_match",
+        "historical_time_anchor",
+        "current_place_listing_match",
+        "identity_status",
+        "identity_anchors",
+        "material_conflicts",
+        "false_positive_types",
+        "claim_boundary"
+      ],
+      "properties": {
+        "entity_id": { "type": "string", "minLength": 1 },
+        "search_surface_retrieval_hit": { "enum": ["observed", "not_found_under_protocol", "ambiguous", "not_assessed"] },
+        "entity_location_match": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/triState" },
+        "historical_time_anchor": { "enum": ["contemporaneous", "retrospective", "none", "ambiguous", "not_assessed"] },
+        "current_place_listing_match": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/triState" },
+        "identity_status": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/identityStatus" },
+        "identity_anchors": { "type": "array", "items": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/identityAnchor" } },
+        "material_conflicts": { "type": "array", "items": { "type": "string" } },
+        "false_positive_types": { "type": "array", "items": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/falsePositiveType" }, "uniqueItems": true },
+        "claim_boundary": { "type": "string", "minLength": 1 }
+      }
+    },
+    "queryRecordV03": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "query_id",
+        "order",
+        "platform",
+        "knowledge_regime",
+        "bay_id",
+        "target_entity_ids",
+        "budget_cell_id",
+        "planned_query",
+        "submitted_query",
+        "returned_query",
+        "suggested_rewrite",
+        "suggestion_followed",
+        "fallback_shown",
+        "match_behavior",
+        "timing",
+        "terminal_page_state",
+        "stabilization_observations",
+        "modules",
+        "aggregate_outcome",
+        "entity_outcomes",
+        "cross_bay_exposure",
+        "notes"
+      ],
+      "properties": {
+        "query_id": { "type": "string", "minLength": 1 },
+        "order": { "type": "integer", "minimum": 1 },
+        "platform": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/platform" },
+        "knowledge_regime": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/regime" },
+        "bay_id": { "type": ["string", "null"] },
+        "target_entity_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "budget_cell_id": { "type": "string", "minLength": 1 },
+        "planned_query": { "type": "string", "minLength": 1 },
+        "submitted_query": { "type": "string", "minLength": 1 },
+        "returned_query": { "type": ["string", "null"] },
+        "suggested_rewrite": { "type": ["string", "null"] },
+        "suggestion_followed": { "type": "boolean" },
+        "fallback_shown": { "type": "boolean" },
+        "match_behavior": { "enum": ["exact", "loose", "rewritten", "unknown"] },
+        "timing": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/queryTiming" },
+        "terminal_page_state": { "enum": ["usable_results", "explicit_no_results", "rewritten_or_fallback", "blocked", "render_timeout"] },
+        "stabilization_observations": { "type": "array", "minItems": 1, "items": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/stabilizationObservation" } },
+        "modules": { "type": "array", "items": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/moduleRecord" } },
+        "aggregate_outcome": { "$ref": "retrieval-run.v0.2.schema.json#/$defs/queryOutcome" },
+        "entity_outcomes": { "type": "array", "items": { "$ref": "#/$defs/entityOutcome" } },
+        "cross_bay_exposure": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "notes": { "type": "string" }
+      }
+    },
+    "bayOutcomeV03": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bay_id", "entity_ids", "boundary_status", "claim_boundary"],
+      "properties": {
+        "bay_id": { "type": "string", "minLength": 1 },
+        "entity_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "boundary_status": { "enum": ["frozen", "ambiguous", "occluded", "unreadable"] },
+        "claim_boundary": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

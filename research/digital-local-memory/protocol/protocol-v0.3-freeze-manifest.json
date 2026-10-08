@@ -1,0 +1,50 @@
+{
+  "manifest_version": "0.3",
+  "protocol_version": "PILOT_PROTOCOL_V0.3",
+  "base_protocol_manifest_sha256": "A359F0DADEE3C6CA4298A32E4538057197BB238FCA9A779993B07D19B12F33F5",
+  "failure_trigger": "CAL-0002-PF01",
+  "status": "FROZEN_BEFORE_TARGET_QUERY_PLAN",
+  "frozen_at": "2026-08-11T07:39:14+09:00",
+  "target_queries_before_freeze": 0,
+  "substantive_result_allowed": false,
+  "validation": {
+    "json_syntax": "pass",
+    "privacy_fixture": "pass",
+    "minimal_plan_run_contract_fixture": "pass",
+    "entity_bay_bidirectional_cross_reference": "pass_in_fixture",
+    "third_party_draft_2020_12_engine": "unverified_dependency_missing"
+  },
+  "files": [
+    {
+      "path": "PILOT_PROTOCOL_V0.3.md",
+      "byte_size": 3607,
+      "sha256": "D9A8D37702D9393F38BBA19BFACC46BF12C7CB2209395B9081F094D2A8ACDDCC"
+    },
+    {
+      "path": "V0.2_SITE_MODEL_FAILURE.md",
+      "byte_size": 1833,
+      "sha256": "EBA56354B4D1957D6D64CD7CBCCEA3BB0C5CFB94AD02C5522D918534D44F0842"
+    },
+    {
+      "path": "../schema/retrieval-run.v0.3.schema.json",
+      "byte_size": 9342,
+      "sha256": "B12D4AB56E04E7890173660E336EBB1AED2C2D95CF0DBA52EB217E88FC9621F3"
+    },
+    {
+      "path": "../schema/fixtures/query-plan.v0.3.minimal.json",
+      "byte_size": 378,
+      "sha256": "7D6BAA6356DBF3E95979DE5088C5353A8F139A7A3D0199B107E119F7B56E8929"
+    },
+    {
+      "path": "../schema/fixtures/retrieval-run.v0.3.minimal.json",
+      "byte_size": 6288,
+      "sha256": "1BCD020CB88C1FB5D11AD91CE01F7BA08598D8030A578B013B714A543864C146"
+    },
+    {
+      "path": "../tools/validate-v0.3.ps1",
+      "byte_size": 12392,
+      "sha256": "F4C5F71863BAA802D823FA6615236E69585385BCA9BF11B5C6C3B4758B739C14"
+    }
+  ],
+  "mutation_rule": "Do not edit listed files. A further pre-retrieval contract failure requires V0.4; a post-retrieval correction cannot retroactively validate the same run."
+}

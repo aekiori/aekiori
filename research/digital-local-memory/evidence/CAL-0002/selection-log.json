@@ -1,0 +1,36 @@
+{
+  "selection_id": "CAL-0002-SEL01",
+  "protocol_manifest_sha256": "A359F0DADEE3C6CA4298A32E4538057197BB238FCA9A779993B07D19B12F33F5",
+  "target_retrieval_queries_before_selection": 0,
+  "selected_candidate": 21,
+  "selected_coordinate_request": {
+    "latitude": 37.3591752,
+    "longitude": 126.9246476
+  },
+  "google_pano_id": "1VQdRuuei3DwrmxGDgKDxA",
+  "displayed_capture_date": "2015-07",
+  "spatial_anchor": {
+    "residential_complex": "우륵 주공7단지아파트",
+    "road": "산본천로",
+    "quarter": "궁내동",
+    "exact_house_number": null,
+    "source": "OSM Nominatim and Overpass address-only fields"
+  },
+  "facade_image": "source/google-streetview-2015-07-candidate21-yaw285-fov120.jpg",
+  "selection_status": "FIRST_ELIGIBLE_WITH_BOUNDED_OVERSHOOT_DEVIATION",
+  "deviations": [
+    {
+      "deviation_id": "CAL-0002-SEL-D01",
+      "description": "Candidates 21 through 23 were batch-checked for official pano availability before candidate 21 was visually adjudicated.",
+      "exposure": "Candidates 22 and 23: pano availability only; no image, sign, address, or business-name inspection.",
+      "effect": "bounded_no_target_result_exposure"
+    }
+  ],
+  "pre_retrieval_protocol_failure": {
+    "failure_id": "CAL-0002-PF01",
+    "reason": "One physical bay contains more than one live entity hypothesis, but V0.2 stores only one bay identity.",
+    "target_queries_executed": 0,
+    "required_protocol_version": "0.3"
+  },
+  "substantive_inference_allowed": false
+}

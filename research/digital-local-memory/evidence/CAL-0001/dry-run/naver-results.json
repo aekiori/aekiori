@@ -1,0 +1,474 @@
+{
+  "run_id": "CAL-0001-DR01",
+  "plan_id": "CAL-0001-QP01",
+  "plan_manifest_sha256": "85EBCFEC09D50D75959B70B1D5469DCFFD89ADC5953FCD5CB0CDE09335AD4B59",
+  "source_channel": "GENERAL_WEB_and_MAP_PLACE_modules",
+  "search_surface": "NAVER_WEB",
+  "account_state": "logged_out_ui",
+  "rank_contract_status": "not_operationalizable_as_written_on_integrated_search",
+  "privacy_transform": "Business phone strings are redacted; long signed tracking URLs are reduced to origin and pathname.",
+  "queries": [
+    {
+      "query_id": "N-K0-01",
+      "query": "\"광정로 25-57\" 2015",
+      "started_at": "2026-08-10T21:49:45.078Z",
+      "observed_at": "2026-08-10T21:50:58.540Z",
+      "measurement_status": "executed_after_K0_budget_expiry_excluded_from_outcome",
+      "query_value": "\"광정로 25-57\" 2015",
+      "query_value_verified": true,
+      "account_signed_in": false,
+      "suggestion_shown": true,
+      "suggestion_text": "\"광적로 25-57\" 2015",
+      "detailed_search_offered": true,
+      "module_headings": [
+        "인기글",
+        "이미지"
+      ],
+      "global_organic_rank_defined": false,
+      "title_candidate_extraction": "Heuristic display order across visible non-ad title links; modules are not globally comparable.",
+      "title_candidates": [
+        {
+          "heuristic_display_order": 1,
+          "title": "식품자동판매기업_인허가 | 데이터",
+          "url": "https://data.gg.go.kr/portal/data/service/selectServicePage.do?infId=9T7FXD6DCJWYWWF7JCQU27915291&infSeq=1"
+        },
+        {
+          "heuristic_display_order": 2,
+          "title": "https://rhs.mohw.go.kr/Disclosure/downloadFile.do?requestFile=10000004_202604300519540340.xlsx&requestOrg....",
+          "url": "https://rhs.mohw.go.kr/Disclosure/downloadFile.do?requestFile=10000004_202604300519540340.xlsx&requestOrgFile=(260424)2025%EB%85%84+%EA%B0%90%EB%A9%B4.xlsx"
+        },
+        {
+          "heuristic_display_order": 3,
+          "title": "지에스25 대화엠시티 | 일산서구 위치, 운영시간, 리뷰 - 편잇",
+          "url": "https://easehub.co.kr/hospital/detail/58501"
+        },
+        {
+          "heuristic_display_order": 4,
+          "title": "아파트현황 - 군포시청",
+          "url": "https://www.gunpo.go.kr/www/contents.do?key=4471"
+        },
+        {
+          "heuristic_display_order": 5,
+          "title": "경상남도 담배판매 소매업체 목록 2.",
+          "url": "https://ilovebusiness.tistory.com/7781"
+        },
+        {
+          "heuristic_display_order": 6,
+          "title": "경기도 아파트 매매 실거래가 시세 (2017년 03월)",
+          "url": "https://cafe.naver.com/pricesinformation/5318"
+        },
+        {
+          "heuristic_display_order": 7,
+          "title": "경기/인천지역 스웨트롤 판매 약국리스트(업데이트)",
+          "url": "https://blog.naver.com/sweatrol/220356388343"
+        },
+        {
+          "heuristic_display_order": 8,
+          "title": "식약처 펌) 공적물량 마스크를 구할수 있는 전국 약국 명단",
+          "url": "https://blog.naver.com/dead81/221831565783"
+        },
+        {
+          "heuristic_display_order": 9,
+          "title": "병역기피자 (병역기피 공개자) 명단",
+          "url": "https://blog.naver.com/todikim/222615269152"
+        },
+        {
+          "heuristic_display_order": 10,
+          "title": "2024.06.11 아파트 실거래가 조회 현황",
+          "url": "https://blog.naver.com/borame365/223481035297"
+        }
+      ]
+    },
+    {
+      "query_id": "N-B01-K1-01",
+      "query": "야채가게 \"광정로 25-57\"",
+      "started_at": "2026-08-10T21:51:22.369Z",
+      "observed_at": "2026-08-10T21:51:25.647Z",
+      "measurement_status": "module_display_order_not_global_organic_rank",
+      "query_value": "야채가게 \"광정로 25-57\"",
+      "query_value_verified": true,
+      "account_signed_in": false,
+      "suggestion_shown": false,
+      "suggestion_text": null,
+      "detailed_search_offered": true,
+      "module_headings": [
+        "야채가게\"광정로25-57\"\n관련 광고",
+        "인기글"
+      ],
+      "global_organic_rank_defined": false,
+      "title_candidate_extraction": "Heuristic display order across visible non-ad title links; modules are not globally comparable.",
+      "title_candidates": [
+        {
+          "heuristic_display_order": 1,
+          "title": "2022-12-25.온누리상품권 크롤링 리스트.xlsx",
+          "url": "https://blog.kakaocdn.net/dn/bZ8bSr/btrUCh0mGLs/JnQUMzlcdMB8KKsGM8ONdK/2022-12-25.%EC%98%A8%EB%88%84%EB%A6%AC%EC%83%81%ED%92%88%EA%B6%8C%20%ED%81%AC%EB%A1%A4%EB%A7%81%20%EB%A6%AC%EC%8A%A4%ED%8A%B8.xlsx?attach=1&knm=tfile.xlsx"
+        },
+        {
+          "heuristic_display_order": 2,
+          "title": "함안군 식품관련업 현황.xlsx",
+          "url": "https://www.haman.go.kr/board/download.do?idx=12909454&fnum=1&gcode=2568"
+        },
+        {
+          "heuristic_display_order": 3,
+          "title": "1_★(공통DB) K-미식벨트 국내미식 자원.xlsx",
+          "url": "https://www.hansik.or.kr/file/download?atchSn=62706&&fileSeq=14&&menuSn=31&&bbsId=001"
+        },
+        {
+          "heuristic_display_order": 4,
+          "title": "수지구청역 앞 과일채소가게 (수지농산물)",
+          "url": "https://cafe.naver.com/sujilovemom/804180"
+        },
+        {
+          "heuristic_display_order": 5,
+          "title": "지역화폐되는 채소가게 있을까요?",
+          "url": "https://cafe.naver.com/ilovegm1/2628804"
+        },
+        {
+          "heuristic_display_order": 6,
+          "title": "청량리 경동시장 정육점,마늘직판장,채소가게 추천(이천농장,최강마늘,다판다)",
+          "url": "https://blog.naver.com/dlsdk1225/224295186617"
+        },
+        {
+          "heuristic_display_order": 7,
+          "title": "현금만 받는 채소가게 있나요?",
+          "url": "https://cafe.naver.com/ira111/913440"
+        },
+        {
+          "heuristic_display_order": 8,
+          "title": "쏘쏘했던 이성당",
+          "url": "https://cafe.naver.com/thebbangs/296506"
+        },
+        {
+          "heuristic_display_order": 9,
+          "title": "과일 채소가게인데 구리시장에서 도매로 받으려면 어케해야하나요??",
+          "url": "https://cafe.naver.com/jihosoccer123/3664049"
+        },
+        {
+          "heuristic_display_order": 10,
+          "title": "북수원 홈플러스 재오픈했어요:)",
+          "url": "https://cafe.naver.com/byungs94/7844767"
+        }
+      ]
+    },
+    {
+      "query_id": "N-B02-K1-01",
+      "query": "세계과자할인점 \"광정로 25-57\"",
+      "started_at": "2026-08-10T21:51:25.647Z",
+      "observed_at": "2026-08-10T21:51:28.847Z",
+      "measurement_status": "module_display_order_not_global_organic_rank",
+      "query_value": "세계과자할인점 \"광정로 25-57\"",
+      "query_value_verified": true,
+      "account_signed_in": false,
+      "suggestion_shown": true,
+      "suggestion_text": "세계과자할인점 \"광적로 25-57\"",
+      "detailed_search_offered": true,
+      "module_headings": [
+        "네이버 가격비교",
+        "인기글"
+      ],
+      "global_organic_rank_defined": false,
+      "title_candidate_extraction": "Heuristic display order across visible non-ad title links; modules are not globally comparable.",
+      "title_candidates": [
+        {
+          "heuristic_display_order": 1,
+          "title": "군포시 지역화폐 가맹점 | 산본세계과자할인점 - 소매업; 자동차 제외 위치·전....",
+          "url": "https://easehub.co.kr/franchise/detail/2503332"
+        },
+        {
+          "heuristic_display_order": 2,
+          "title": "세계과자할인점(광흥창)-유**(최종수정일:20260704), 2790501779",
+          "url": "https://marketbz.com/companyDetail/2790501779"
+        },
+        {
+          "heuristic_display_order": 3,
+          "title": "산본세계과자할인점",
+          "url": "https://bizno.net/article/1232935666"
+        },
+        {
+          "heuristic_display_order": 4,
+          "title": "대전 둔산동 수입과자/추억의간식 세계과자할인점 둔산점",
+          "url": "https://blog.naver.com/rowoon95/224296311779"
+        },
+        {
+          "heuristic_display_order": 5,
+          "title": "영칼로리 서면점 후기 | 서면 세계과자할인점, 추억의 과자 구경하기 좋은 곳",
+          "url": "https://blog.naver.com/pt_07/224317605231"
+        },
+        {
+          "heuristic_display_order": 6,
+          "title": "파리사는 사람이 한국갈때 사가는 몽쥬약국 쇼핑리스트 + 마트 과자 + 메르시 기념품",
+          "url": "https://cafe.naver.com/momsolleh/892078"
+        },
+        {
+          "heuristic_display_order": 7,
+          "title": "달달한 과자가 가득! 반월당 세계 과자점 추천드립니다 천원세계과자 할인점",
+          "url": "https://blog.naver.com/heeeyas_sis/224288207444"
+        },
+        {
+          "heuristic_display_order": 8,
+          "title": "남대문 세계과자 할인점 스낵월드 남대문점에서 만난 해외 과자들",
+          "url": "https://blog.naver.com/inna_9/224311380970"
+        },
+        {
+          "heuristic_display_order": 9,
+          "title": "아산 숨은 쇼핑 성지｜들어갔다가 지갑 열리는 창고형 할인매장",
+          "url": "https://blog.naver.com/sudol_pick/224322420409"
+        },
+        {
+          "heuristic_display_order": 10,
+          "title": "홍대 아이와 가볼 만한 곳, 세계과자할인점 홍대점 구경 후기",
+          "url": "https://blog.naver.com/dlswjd8383/224348477174"
+        }
+      ]
+    },
+    {
+      "query_id": "N-B03-K1-01",
+      "query": "빵집 \"광정로 25-57\"",
+      "started_at": "2026-08-10T21:51:28.847Z",
+      "observed_at": "2026-08-10T21:51:31.960Z",
+      "measurement_status": "module_display_order_not_global_organic_rank",
+      "query_value": "빵집 \"광정로 25-57\"",
+      "query_value_verified": true,
+      "account_signed_in": false,
+      "suggestion_shown": true,
+      "suggestion_text": "빵집 \"광적로 25-57\"",
+      "detailed_search_offered": true,
+      "module_headings": [
+        "플레이스",
+        "인기글"
+      ],
+      "global_organic_rank_defined": false,
+      "title_candidate_extraction": "Heuristic display order across visible non-ad title links; modules are not globally comparable.",
+      "title_candidates": [
+        {
+          "heuristic_display_order": 1,
+          "title": "제과점 - 나무위키",
+          "url": "https://namu.wiki/w/%EC%A0%9C%EA%B3%BC%EC%A0%90"
+        },
+        {
+          "heuristic_display_order": 2,
+          "title": "베이커리 - 위키백과 한국어",
+          "url": "https://ko.wikipedia.org/wiki/%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC"
+        },
+        {
+          "heuristic_display_order": 3,
+          "title": "베이커리 - 오설록",
+          "url": "https://www.osulloc.com/kr/ko/shop/item/list?category=bakery&line=178"
+        },
+        {
+          "heuristic_display_order": 4,
+          "title": "베이커리 - 디아넥스",
+          "url": "https://theannex.thepinx.co.kr/p/Bakery"
+        },
+        {
+          "heuristic_display_order": 5,
+          "title": "인절미 크림빵을 찾아서.. 소맥베이커리!",
+          "url": "https://cafe.naver.com/thebbangs/296736"
+        },
+        {
+          "heuristic_display_order": 6,
+          "title": "[대전빵집] 오리지날 크렘소쿠니가 기가막힌 베이커리 카페 ㄹㄹ",
+          "url": "https://cafe.naver.com/dieselmania/47335438"
+        },
+        {
+          "heuristic_display_order": 7,
+          "title": "양산대형카페 대형베이커리카페 [초이]",
+          "url": "https://blog.naver.com/jiyoon21291/224367573855"
+        },
+        {
+          "heuristic_display_order": 8,
+          "title": "을지로 맛집 추천 \"아소토 베이커리\"",
+          "url": "https://cafe.naver.com/directwedding/9222086"
+        },
+        {
+          "heuristic_display_order": 9,
+          "title": "신세계강남 폼폼푸린 베이커리 카페 오픈",
+          "url": "https://cafe.naver.com/loyaltylife/347146"
+        },
+        {
+          "heuristic_display_order": 10,
+          "title": "인천 베이커리율교P3120 후기",
+          "url": "https://cafe.naver.com/loyaltylife/347637"
+        }
+      ]
+    },
+    {
+      "query_id": "N-B01-K2-01",
+      "query": "\"야채나라\" \"광정로 25-57\"",
+      "started_at": "2026-08-10T21:51:31.960Z",
+      "observed_at": "2026-08-10T21:51:34.553Z",
+      "measurement_status": "module_display_order_not_global_organic_rank",
+      "query_value": "\"야채나라\" \"광정로 25-57\"",
+      "query_value_verified": true,
+      "account_signed_in": false,
+      "suggestion_shown": false,
+      "suggestion_text": null,
+      "detailed_search_offered": true,
+      "module_headings": [
+        "인기글",
+        "이미지"
+      ],
+      "global_organic_rank_defined": false,
+      "title_candidate_extraction": "Heuristic display order across visible non-ad title links; modules are not globally comparable.",
+      "title_candidates": [
+        {
+          "heuristic_display_order": 1,
+          "title": "2022-12-25.온누리상품권 크롤링 리스트.xlsx",
+          "url": "https://blog.kakaocdn.net/dn/bZ8bSr/btrUCh0mGLs/JnQUMzlcdMB8KKsGM8ONdK/2022-12-25.%EC%98%A8%EB%88%84%EB%A6%AC%EC%83%81%ED%92%88%EA%B6%8C%20%ED%81%AC%EB%A1%A4%EB%A7%81%20%EB%A6%AC%EC%8A%A4%ED%8A%B8.xlsx?attach=1&knm=tfile.xlsx"
+        },
+        {
+          "heuristic_display_order": 2,
+          "title": "군포시 지역화폐 농산물,청과물 사용 가능한 곳 찾기",
+          "url": "https://kroung.com/local-currency/gyeonggi-do/gunpo/view.php?cat=%EB%86%8D%EC%82%B0%EB%AC%BC%2C%EC%B2%AD%EA%B3%BC%EB%AC%BC"
+        },
+        {
+          "heuristic_display_order": 3,
+          "title": "1_★(공통DB) K-미식벨트 국내미식 자원.xlsx",
+          "url": "https://www.hansik.or.kr/file/download?atchSn=62706&&fileSeq=14&&menuSn=31&&bbsId=001"
+        },
+        {
+          "heuristic_display_order": 4,
+          "title": "[도깨비나라] 4인 100만원 살기 8월 5일 / 지마켓 토스쇼핑 야채 롯마",
+          "url": "https://cafe.naver.com/onepieceholicplus/6122884"
+        },
+        {
+          "heuristic_display_order": 5,
+          "title": "hy프레딧 하루야채 4종 후기 내돈내산ㅣ한국야쿠르트 구독으로 1일 야채 권장량 채우기 프렌디 엠버서더 추천인 혜택 XO 요구르트 무료 쿠폰 선물",
+          "url": "https://blog.naver.com/springonion_eggs/224279909154"
+        },
+        {
+          "heuristic_display_order": 6,
+          "title": "중랑구 동부시장 가볼만한곳 국가대표 야채 과일 생선가게 시장통감성 구경맛집 어르신들 단골장소 영업시간 꿀팁",
+          "url": "https://blog.naver.com/sign_9/224296356030"
+        },
+        {
+          "heuristic_display_order": 7,
+          "title": "끝나라 휴가",
+          "url": "https://cafe.naver.com/sogam0515/2019288"
+        },
+        {
+          "heuristic_display_order": 8,
+          "title": "원당시장 맛집 :: 국가대표 곱창 (노포 곱창볶음 맛집, 야채곱창 내돈내산 후기)",
+          "url": "https://blog.naver.com/zll0223/224342317339"
+        },
+        {
+          "heuristic_display_order": 9,
+          "title": "동과 아세요? 첨보는 야채인데",
+          "url": "https://cafe.naver.com/jihosoccer123/3705918"
+        },
+        {
+          "heuristic_display_order": 10,
+          "title": "[hy] 한국야쿠르트 하루야채 30가지",
+          "url": "https://blog.naver.com/beh1203/224180975430"
+        }
+      ]
+    },
+    {
+      "query_id": "N-B02-K2-01",
+      "query": "\"롤리팝\" \"광정로 25-57\"",
+      "started_at": "2026-08-10T21:51:34.553Z",
+      "observed_at": "2026-08-10T21:51:36.901Z",
+      "measurement_status": "module_display_order_not_global_organic_rank",
+      "query_value": "\"롤리팝\" \"광정로 25-57\"",
+      "query_value_verified": true,
+      "account_signed_in": false,
+      "suggestion_shown": false,
+      "suggestion_text": null,
+      "detailed_search_offered": true,
+      "module_headings": [
+        "네이버 가격비교",
+        "인기글"
+      ],
+      "global_organic_rank_defined": false,
+      "title_candidate_extraction": "Heuristic display order across visible non-ad title links; modules are not globally comparable.",
+      "title_candidates": [
+        {
+          "heuristic_display_order": 1,
+          "title": "Lollipop - 나무위키",
+          "url": "https://namu.wiki/w/Lollipop"
+        },
+        {
+          "heuristic_display_order": 2,
+          "title": "Lollipop",
+          "url": "https://www.lollipop.camera/"
+        },
+        {
+          "heuristic_display_order": 3,
+          "title": "LOLLIPOP - 멜론",
+          "url": "http://www.melon.com/album/detail.htm?albumId=2664149"
+        },
+        {
+          "heuristic_display_order": 4,
+          "title": "Android Lollipop",
+          "url": "https://developer.android.com/about/versions/lollipop?hl=ko"
+        },
+        {
+          "heuristic_display_order": 5,
+          "title": "The Chordettes가 부른 Lollipop",
+          "url": "https://blog.naver.com/acme_english/224226096439"
+        },
+        {
+          "heuristic_display_order": 6,
+          "title": "[v26.03.13] v1.1.7롤리팝 체인소 리팝 LOLLIPOP CHAINSAW RePOP 한글패치",
+          "url": "https://blog.naver.com/gusrud6151/223923713700"
+        },
+        {
+          "heuristic_display_order": 7,
+          "title": "또리아빠님, CronotempVs Collectors Lollipop.",
+          "url": "https://cafe.naver.com/xiaomis3/12379"
+        },
+        {
+          "heuristic_display_order": 8,
+          "title": "미국 '롤리팝 스타(Lollipop Star)' 뮤지컬 사탕",
+          "url": "https://blog.naver.com/eomtank/224353152503"
+        },
+        {
+          "heuristic_display_order": 9,
+          "title": "나의 롤리팝 소년 (사탕처럼 달콤하고 리듬처럼 톡톡 튀는 사랑 고백)- 'My Boy Lollipop', 밀리 스몰 (Millie Small)",
+          "url": "https://blog.naver.com/tssrjy07/224262289267"
+        },
+        {
+          "heuristic_display_order": 10,
+          "title": "한글화 떳냐?! 롤리팝 체인소 RePOP 예판들어갑니닷!! 'Lollipop Chainsaw RePOP'",
+          "url": "https://blog.naver.com/xoalsakswo/224262937187"
+        }
+      ]
+    },
+    {
+      "query_id": "N-B03-K2-01",
+      "query": "\"파리바게뜨\" \"광정로 25-57\"",
+      "started_at": "2026-08-10T21:51:36.901Z",
+      "observed_at": "2026-08-10T21:51:39.985Z",
+      "measurement_status": "module_display_order_not_global_organic_rank",
+      "query_value": "\"파리바게뜨\" \"광정로 25-57\"",
+      "query_value_verified": true,
+      "account_signed_in": false,
+      "suggestion_shown": false,
+      "suggestion_text": null,
+      "detailed_search_offered": true,
+      "module_headings": [
+        "\"파리바게뜨\"\"광정로25-57\"\n관련 광고",
+        "플레이스"
+      ],
+      "global_organic_rank_defined": false,
+      "title_candidate_extraction": "Heuristic display order across visible non-ad title links; modules are not globally comparable.",
+      "title_candidates": [
+        {
+          "heuristic_display_order": 1,
+          "title": "파리바게뜨 산본3단지점 도시군포시 - 관심의 세계,정보 검색 시스템",
+          "url": "https://kr.worldorgs.com/%EB%AA%A9%EB%A1%9D/%EA%B5%B0%ED%8F%AC%EC%8B%9C/%EC%A0%9C%EA%B3%BC%EC%A0%90/%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%EB%9C%A8-%EC%82%B0%EB%B3%B83%EB%8B%A8%EC%A7%80%EC%A0%90"
+        },
+        {
+          "heuristic_display_order": 2,
+          "title": "파리바게뜨산본3단지점 | 경기도 군포 광정로 25-57",
+          "url": "https://food3.korea724.info/kr/%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%EB%9C%A8%EC%82%B0%EB%B3%B83%EB%8B%A8%EC%A7%80%EC%A0%90-82-31-[business-phone-redacted].html"
+        },
+        {
+          "heuristic_display_order": 3,
+          "title": "파리바게뜨 산본3단지점 | 경기도 군포시 금정동 | 베이커리",
+          "url": "https://www.daangn.com/kr/local-profile/%ED%8C%8C%EB%A6%AC%EB%B0%94%EA%B2%8C%EB%9C%A8-%EC%82%B0%EB%B3%B83%EB%8B%A8%EC%A7%80%EC%A0%90-hh957r4ygt69/"
+        }
+      ]
+    }
+  ]
+}

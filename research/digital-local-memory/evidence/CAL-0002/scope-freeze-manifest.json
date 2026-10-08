@@ -1,0 +1,56 @@
+{
+  "manifest_version": "0.3",
+  "case_id": "CAL-0002",
+  "scope_id": "CAL-0002-S01",
+  "selection_id": "CAL-0002-SEL01",
+  "protocol_version": "PILOT_PROTOCOL_V0.3",
+  "protocol_manifest_sha256": "95C7A872A02A3F6345CBBF8D993CD46E2550030DEDE08802EEF8F5DC1C16511F",
+  "status": "FROZEN_BEFORE_QUERY_PLAN",
+  "frozen_at": "2026-08-11T07:41:48+09:00",
+  "target_queries_before_freeze": 0,
+  "scope_counts": {
+    "fully_visible_ground_floor_bays": 3,
+    "entity_hypotheses": 4,
+    "multi_entity_bays": 1
+  },
+  "source_image_metadata": {
+    "provider": "Google Street View",
+    "pano_id": "1VQdRuuei3DwrmxGDgKDxA",
+    "displayed_capture_date": "2015-07",
+    "pixel_width": 1024,
+    "pixel_height": 512
+  },
+  "files": [
+    {
+      "path": "source/google-streetview-2015-07-candidate21-yaw285-fov120.jpg",
+      "byte_size": 152632,
+      "sha256": "AD14A2DE99FF5594EDF09E3708D05BF32D3737F1187EEB940E6BF1C04E6F15B2"
+    },
+    {
+      "path": "SELECTION_LOG.md",
+      "byte_size": 2509,
+      "sha256": "8B8B6D04D4A964C76958AFE13A5C27BBCCA0C0962DF74F82DDA789D51D375D9E"
+    },
+    {
+      "path": "selection-log.json",
+      "byte_size": 1500,
+      "sha256": "B48C648600A8105DC25BF5360FE371B332C15E372E9CA303EFEB881634830998"
+    },
+    {
+      "path": "SCOPE.md",
+      "byte_size": 2687,
+      "sha256": "FA1543559093DD60C28A8EEF95688A329C90B960DD3A06CBE49656C4CD5E31CA"
+    },
+    {
+      "path": "facade-bay-register.csv",
+      "byte_size": 624,
+      "sha256": "6E810FF238DA7DB253271641A1803DFFC8982B995EF7D5D3074E487F79D631BD"
+    },
+    {
+      "path": "entity-hypothesis-register.json",
+      "byte_size": 2237,
+      "sha256": "48715C926D5B4B00D2827E66EE7AB2D9B78015AF15F6AD4B89F07DBCC4795D65"
+    }
+  ],
+  "mutation_rule": "Do not edit listed files. A boundary or entity correction requires a new scope ID and query plan."
+}

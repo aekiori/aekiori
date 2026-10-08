@@ -1,0 +1,53 @@
+{
+  "manifest_version": "0.3",
+  "manifest_id": "CAL-0002-DR01-FREEZE01",
+  "run_id": "CAL-0002-DR01",
+  "created_at": "2026-08-11T08:11:00.9251183+09:00",
+  "status": "FROZEN_CALIBRATION_RECORD_SECOND_READER_PENDING",
+  "substantive_use_allowed": false,
+  "upstream_receipts": {
+    "protocol_v0_3_manifest_sha256": "95C7A872A02A3F6345CBBF8D993CD46E2550030DEDE08802EEF8F5DC1C16511F",
+    "query_plan_manifest_sha256": "C2EDEF8A8A3D39A819C227EF306462455B1EA032EA1608EA97751B2329773E12",
+    "scope_manifest_sha256": "EC9C6D3D97B13E79B061E204320AB5F7454FDAEFDEFE3E74B5B2B239628346C6",
+    "anchor_image_sha256": "AD14A2DE99FF5594EDF09E3708D05BF32D3737F1187EEB940E6BF1C04E6F15B2"
+  },
+  "files": [
+    {
+      "path": "EXECUTION_DEVIATIONS.md",
+      "bytes": 2685,
+      "sha256": "5AC52D23450CA4732B903E43C0DFC4F11A8520DE28EBDFC4DADBDFAA98DF421D"
+    },
+    {
+      "path": "FINDINGS.md",
+      "bytes": 7370,
+      "sha256": "18205F740BCBB7364F8F2F38868A20C518E013BB49A926657326C0EB2268EDE2"
+    },
+    {
+      "path": "retrieval-run.json",
+      "bytes": 136569,
+      "sha256": "CF492CD9FEE7CD8328DB6C43C7BA17F417B6820C2E35AF6A79FEC855ECF5E268"
+    },
+    {
+      "path": "supplemental-source-checks.json",
+      "bytes": 6587,
+      "sha256": "42D8AB658945FE871BEDD8AAA2E3EB65E81A2F6B7CFD500F71CBB8C5110B8D44"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 2731,
+      "sha256": "0875F1847FD6958900FA79EF0F6B8E86B9417648892457C0535A39C5FF9DFB1B"
+    }
+  ],
+  "privacy": {
+    "raw_dom_export_created": false,
+    "phone_like_strings_remaining": 0,
+    "email_like_strings_remaining": 0,
+    "status": "pass"
+  },
+  "claim_boundary": [
+    "Calibration only; no causal mechanism is isolated.",
+    "Supplemental page checks are not frozen retrieval outcomes.",
+    "Second-reader adjudication is pending.",
+    "Do not edit listed files; corrections must be append-only successors."
+  ]
+}

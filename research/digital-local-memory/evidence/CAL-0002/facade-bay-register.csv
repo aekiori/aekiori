@@ -1,0 +1,4 @@
+scope_id,bay_id,order,boundary_status,occupancy_observation,fully_visible,sign_texts,category_clues,entity_ids,eligible_for_search,notes
+CAL-0002-S01,CAL-0002-B01,1,frozen,occupied_candidate,true,CU,편의점,CAL-0002-E01,true,왼쪽 외벽부터 B02 경계까지
+CAL-0002-S01,CAL-0002-B02,2,frozen,occupied_candidate,true,김연주 헤어샵|하얀크리닝,미용|세탁·크리닝,CAL-0002-E02|CAL-0002-E03,true,한 물리 bay의 복수 entity 후보
+CAL-0002-S01,CAL-0002-B03,3,frozen,occupied_candidate,true,우륵 공인중개사,부동산 중개,CAL-0002-E04,true,B02 경계부터 오른쪽 주차공간 경계까지
